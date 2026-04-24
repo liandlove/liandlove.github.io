@@ -179,18 +179,6 @@ function initMobileMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  try {
-    const ua = String(navigator.userAgent || "");
-    const isTelegram =
-      // Telegram WebView often exposes one of these objects
-      typeof window.TelegramWebviewProxy !== "undefined" ||
-      typeof window.Telegram !== "undefined" ||
-      // Fallback: UA hints (some clients include it, some don't)
-      /Telegram|TelegramBot|TDesktop|TgWebView|Telegraph/i.test(ua);
-    if (isTelegram) document.body.classList.add("tg-browser");
-  } catch {
-    // ignore
-  }
   initFeatured();
   initCatalog(PRODUCTS);
   initNavIndicator();
