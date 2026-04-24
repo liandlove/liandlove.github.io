@@ -157,6 +157,46 @@ a:focus-visible {
   overflow: clip;
 }
 
+/* Mobile header (tvn24-like): fixed, compact, always visible */
+@media (max-width: 980px) {
+  :root {
+    --mobile-header-h: 66px;
+  }
+
+  .site-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    border-bottom-color: rgba(13, 13, 13, 0.10);
+    box-shadow: 0 10px 28px rgba(13, 13, 13, 0.08);
+  }
+
+  body {
+    padding-top: var(--mobile-header-h);
+  }
+
+  .header-inner {
+    min-height: var(--mobile-header-h);
+    padding-block: 0;
+  }
+
+  .brand-logo {
+    height: 44px;
+    max-width: min(220px, 55vw);
+  }
+
+  .nav-toggle {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(13, 13, 13, 0.12);
+  }
+
+  .mobile-menu-panel {
+    top: calc(var(--mobile-header-h) + var(--space-2));
+  }
+}
+
 .site-header::before {
   content: "";
   position: absolute;
