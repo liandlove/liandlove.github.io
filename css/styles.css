@@ -1480,7 +1480,7 @@ a:focus-visible {
     margin-bottom: 16px;
   }
   .hero-art {
-    width: min(80vw, 420px);
+    width: min(78vw, 360px);
     aspect-ratio: 1 / 1;
   }
   .hero-product-wrap {
@@ -1516,6 +1516,28 @@ a:focus-visible {
     letter-spacing: 0.18em;
     text-align: center;
     width: 100%;
+  }
+
+  /* Mobile: calmer shape + more visible soft orb */
+  .hero-bg-orb {
+    inset: -14% -10%;
+    filter: blur(34px);
+    opacity: 0.92;
+  }
+
+  .hero-product {
+    /* keep the same signature shape as desktop */
+    border-radius: 38% 62% 46% 54% / 42% 44% 56% 58%;
+  }
+
+  .hero-product-wrap::before,
+  .hero-product-wrap::after {
+    border-radius: 40% 60% 48% 52% / 44% 46% 54% 56%;
+  }
+
+  .hero-bracelet {
+    transform: scale(1.08);
+    object-position: 50% 45%;
   }
   .feature-grid {
     grid-template-columns: 1fr;
