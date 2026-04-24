@@ -157,17 +157,6 @@ a:focus-visible {
   overflow: clip;
 }
 
-/* Telegram in-app browser: keep header pinned on scroll */
-@media (max-width: 980px) {
-  body.tg-browser .site-header {
-    position: static;
-  }
-
-  body.tg-browser {
-    padding-top: 0;
-  }
-}
-
 .site-header::before {
   content: "";
   position: absolute;

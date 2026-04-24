@@ -4,19 +4,6 @@ import { initCatalog } from "./filters.js";
 import { initScrollReveal } from "./animations.js";
 import { initProductModal } from "./productModal.js";
 
-function initTelegramBrowserClass() {
-  try {
-    const ua = String(navigator.userAgent || "");
-    const isTelegram =
-      typeof window.TelegramWebviewProxy !== "undefined" ||
-      typeof window.Telegram !== "undefined" ||
-      /Telegram|TelegramBot|TDesktop|TgWebView|Telegraph/i.test(ua);
-    if (isTelegram) document.body.classList.add("tg-browser");
-  } catch {
-    // ignore
-  }
-}
-
 function initFeatured() {
   const featuredGrid = document.getElementById("featuredGrid");
   if (!featuredGrid) return;
@@ -192,7 +179,6 @@ function initMobileMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initTelegramBrowserClass();
   initFeatured();
   initCatalog(PRODUCTS);
   initNavIndicator();
