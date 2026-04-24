@@ -97,9 +97,10 @@ body::before {
 
 /* Subtle motion primitives */
 [data-reveal] {
-  opacity: 1;
-  transform: none;
-  transition: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+  will-change: opacity, transform;
 }
 
 [data-reveal].is-revealed {
