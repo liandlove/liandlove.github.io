@@ -195,10 +195,6 @@ a:focus-visible {
   }
 }
 
-/* TEMP: debug Telegram class */
-body.tg-browser {
-  background: red !important;
-}
 
 .site-header::before {
   content: "";
