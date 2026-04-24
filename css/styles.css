@@ -1540,6 +1540,8 @@ a:focus-visible {
     object-position: 50% 45%;
     border-radius: 38% 62% 46% 54% / 42% 44% 56% 58%;
     opacity: 1;
+    /* iOS/Telegram: avoid square overlay from drop-shadow filter */
+    filter: none;
   }
   .feature-grid {
     grid-template-columns: 1fr;
