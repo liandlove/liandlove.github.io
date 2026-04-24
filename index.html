@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Minimalistyczna, luksusowa marka bransoletek. Nowoczesny design, wysokiej jakości materiały, ponadczasowe formy."
+    />
+    <title>Li &amp; Love · Bransoletki</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="icon" href="./assets/images/logo-mark.png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Li &amp; Love — strona główna">
+          <img class="brand-logo" src="./assets/images/logo-header.png" alt="Li &amp; Love" />
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" aria-label="Główna nawigacja">
+          <a class="nav-link is-active" href="./index.html">Strona główna</a>
+          <a class="nav-link" href="./catalog.html">Katalog</a>
+          <a class="nav-link" href="#materials">Materiały</a>
+          <a class="nav-link" href="#contact">Kontakt</a>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="mobile-menu-backdrop" data-close="1"></div>
+      <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <a class="mobile-menu-link" href="./index.html">Strona główna</a>
+        <a class="mobile-menu-link" href="./catalog.html">Katalog</a>
+        <a class="mobile-menu-link" href="#materials">Materiały</a>
+        <a class="mobile-menu-link" href="#contact">Kontakt</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" data-reveal>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Minimalny luksus</p>
+            <h1 class="hero-title">Bransoletki, które noszą się naturalnie.</h1>
+            <p class="hero-subtitle">
+              Subtelny akcent w najlepszych materiałach — stworzone na co dzień i na lata.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="./catalog.html">Zobacz katalog</a>
+              <a class="btn btn-ghost" href="#materials">Poznaj materiały</a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="hero-art" aria-hidden="true">
+              <div class="hero-bg-orb"></div>
+              <div class="hero-product-wrap">
+                <div class="hero-product">
+                  <img
+                    class="hero-bracelet"
+                    src="./assets/images/bracelet-hero-new.png"
+                    alt="Bransoletka Li &amp; Love"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="materials" data-reveal>
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Materiały dopracowane w detalu.</h2>
+            <p class="section-subtitle">
+              Srebro 925, naturalne kamienie i ręczne wykonanie — spokojna estetyka, perfekcyjny detal i jakość na lata.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature">
+              <h3 class="feature-title">Srebro 925</h3>
+              <p class="feature-text">Szlachetne srebro próby 925 — czyste wykończenie, subtelny połysk i trwałość na lata.</p>
+            </article>
+            <article class="feature">
+              <h3 class="feature-title">Naturalne kamienie</h3>
+              <p class="feature-text">Onyks, jaspis, angelit i inne — dobierane pod kolor, strukturę i spokojną kompozycję.</p>
+            </article>
+            <article class="feature">
+              <h3 class="feature-title">Ręczne wykonanie</h3>
+              <p class="feature-text">Każda bransoletka składana ręcznie — z uwagą na proporcje, detal i perfekcyjne wykończenie.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-contrast" data-reveal>
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Wybrane modele</h2>
+            <p class="section-subtitle">Krótka selekcja — każdy model to minimalizm i detal.</p>
+          </div>
+
+          <div class="product-grid" id="featuredGrid" aria-live="polite"></div>
+
+          <div class="section-actions">
+            <a class="btn btn-primary" href="./catalog.html">Zobacz cały katalog</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" data-reveal>
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Kontakt</h2>
+            <p class="section-subtitle">Odwiedź nas w salonach lub napisz na socialach — odpowiadamy szybko.</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature">
+              <h3 class="feature-title">Aleje Jerozolimskie 179</h3>
+              <p class="feature-text">Blue City</p>
+            </article>
+            <article class="feature">
+              <h3 class="feature-title">ul. Ostrobramskiej 75C</h3>
+              <p class="feature-text">G City Promenada</p>
+            </article>
+            <article class="feature">
+              <h3 class="feature-title">ul. Głębocka 15</h3>
+              <p class="feature-text">G City Targówek</p>
+            </article>
+          </div>
+
+          <div class="section-actions">
+            <a class="btn btn-primary" href="tel:+48888888555" aria-label="Zadzwoń: +48 888 888 555">+48 888 888 555</a>
+            <a class="btn btn-ghost" href="#" aria-label="Instagram: @bizuteria_li_andlove">Instagram</a>
+            <a class="btn btn-ghost" href="#" aria-label="Facebook: bizuteria_li_andlove">Facebook</a>
+            <a class="btn btn-ghost" href="#" aria-label="TikTok: bizuteria_li_andlove">TikTok</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p class="footer-brand">Li &amp; Love</p>
+          <p class="footer-note">© LyublyuLilyu Designs</p>
+        </div>
+        <div class="footer-right">
+          <a class="footer-link" href="tel:+48888888555">+48 888 888 555</a>
+          <a class="footer-link" href="./catalog.html">Katalog</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
+

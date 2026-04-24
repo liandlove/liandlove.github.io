@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E6E6E6"/>
+      <stop offset="1" stop-color="#F8F8F7"/>
+    </linearGradient>
+    <radialGradient id="r" cx="30%" cy="25%" r="85%">
+      <stop offset="0" stop-color="#0D0D0D" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#0D0D0D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#g)"/>
+  <rect width="1200" height="1500" fill="url(#r)"/>
+  <rect x="70" y="70" width="1060" height="1360" rx="48" fill="none" stroke="#0D0D0D" stroke-opacity="0.10"/>
+  <text x="110" y="200" fill="#0D0D0D" font-size="56" font-family="ui-sans-serif, system-ui" letter-spacing="6">Li &amp; Love</text>
+  <text x="110" y="262" fill="#0D0D0D" fill-opacity="0.62" font-size="22" font-family="ui-sans-serif, system-ui" letter-spacing="6">STEEL</text>
+</svg>
+

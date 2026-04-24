@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Poznaj katalog bransoletek. Filtruj według koloru, materiału i ceny." />
+    <title>Katalog · Li &amp; Love</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/catalog.css" />
+    <link rel="icon" href="./assets/images/logo-mark.png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Li &amp; Love — strona główna">
+          <img class="brand-logo" src="./assets/images/logo-header.png" alt="Li &amp; Love" />
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" aria-label="Główna nawigacja">
+          <a class="nav-link" href="./index.html">Strona główna</a>
+          <a class="nav-link is-active" href="./catalog.html">Katalog</a>
+          <a class="nav-link" href="./index.html#materials">Materiały</a>
+          <a class="nav-link" href="./index.html#contact">Kontakt</a>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="mobile-menu-backdrop" data-close="1"></div>
+      <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <a class="mobile-menu-link" href="./index.html">Strona główna</a>
+        <a class="mobile-menu-link" href="./catalog.html">Katalog</a>
+        <a class="mobile-menu-link" href="./index.html#materials">Materiały</a>
+        <a class="mobile-menu-link" href="./index.html#contact">Kontakt</a>
+      </div>
+    </div>
+
+    <main id="main" class="catalog-page">
+      <section class="catalog-hero" data-reveal>
+        <div class="container">
+          <p class="eyebrow">Katalog</p>
+          <h1 class="catalog-title">Spokojna forma. Wykończenie premium.</h1>
+          <p class="catalog-subtitle">Filtruj po kategoriach i cenie — a potem zamów jednym kliknięciem.</p>
+        </div>
+      </section>
+
+      <section class="catalog-body" data-reveal>
+        <div class="container catalog-layout">
+          <aside class="catalog-aside" aria-label="Filtry">
+            <div class="filters-panel" id="filtersPanel">
+              <div class="filters">
+                <div class="filters-inner">
+                  <div class="filters-group">
+                    <h2 class="filters-title">Kategorie</h2>
+                    <div class="filters-options" id="filterCategories"></div>
+                  </div>
+
+                  <div class="filters-group">
+                    <h2 class="filters-title">Cena</h2>
+                    <div class="filters-row">
+                      <label class="field">
+                        <span class="field-label">Max</span>
+                        <input class="input" id="priceMax" inputmode="numeric" type="number" min="0" step="1" placeholder="250" />
+                      </label>
+                      <label class="field">
+                        <span class="field-label">Min</span>
+                        <input class="input" id="priceMin" inputmode="numeric" type="number" min="0" step="1" placeholder="0" />
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="filters-actions">
+                    <button class="btn btn-ghost" type="button" id="resetFilters">Wyczyść</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <section class="catalog-main" aria-label="Produkty">
+            <div class="catalog-toolbar">
+              <p class="results" id="resultsCount" aria-live="polite"></p>
+              <button class="btn btn-ghost filters-open" type="button" id="openFilters">Filtry</button>
+            </div>
+
+            <div class="product-grid" id="catalogGrid" aria-live="polite"></div>
+
+            <div class="empty-state" id="emptyState" hidden>
+              <p class="empty-title">Brak wyników.</p>
+              <p class="empty-text">Zmień filtry lub wyczyść je, aby zobaczyć całą kolekcję.</p>
+              <button class="btn btn-primary" type="button" id="resetFiltersEmpty">Wyczyść filtry</button>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div class="filters-drawer" id="filtersDrawer" hidden>
+      <div class="filters-drawer-backdrop" data-close="1"></div>
+      <div class="filters-drawer-sheet" role="dialog" aria-modal="true" aria-label="Filtry">
+        <div class="filters-drawer-head">
+          <p class="filters-drawer-title">Filtry</p>
+          <button class="filters-drawer-close" type="button" aria-label="Zamknij" data-close="1">×</button>
+        </div>
+        <div class="filters-drawer-body" id="filtersDrawerBody"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p class="footer-brand">Li &amp; Love</p>
+          <p class="footer-note">© LyublyuLilyu Designs</p>
+        </div>
+        <div class="footer-right">
+          <a class="footer-link" href="tel:+48888888555">+48 888 888 555</a>
+          <a class="footer-link" href="./index.html">Strona główna</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
+
