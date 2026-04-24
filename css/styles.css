@@ -767,6 +767,20 @@ a:focus-visible {
   animation: none;
 }
 
+/* iPad / touch devices: match mobile blob clipping */
+@media (hover: none) and (pointer: coarse) and (min-width: 981px) {
+  .hero-product {
+    background-image: url("../assets/images/bracelet-hero-new.png");
+    background-size: cover;
+    background-position: 50% 45%;
+  }
+
+  .hero-bracelet {
+    filter: none;
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .hero-bracelet {
     animation: heroFloat 6.5s var(--ease) infinite;
