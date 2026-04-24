@@ -97,10 +97,9 @@ body::before {
 
 /* Subtle motion primitives */
 [data-reveal] {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
-  will-change: opacity, transform;
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 [data-reveal].is-revealed {
@@ -156,6 +155,20 @@ a:focus-visible {
   background-repeat: repeat;
   isolation: isolate;
   overflow: clip;
+}
+
+/* Telegram in-app browser: keep header pinned on scroll */
+@media (max-width: 980px) {
+  body.tg-browser .site-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  body.tg-browser {
+    padding-top: 110px;
+  }
 }
 
 .site-header::before {
