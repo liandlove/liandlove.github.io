@@ -29,6 +29,11 @@ body {
   overflow-x: clip;
 }
 
+/* iOS safe-area (notch) support */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+}
+
 html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
@@ -148,7 +153,7 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 500;
-  padding-top: env(safe-area-inset-top);
+  padding-top: var(--safe-top);
   border-bottom: 1px solid var(--hairline);
   background: var(--white);
   background-image: url("../assets/textures/marble.png");
@@ -342,7 +347,7 @@ a:focus-visible {
 .mobile-menu-panel {
   position: absolute;
   right: var(--space-2);
-  top: calc(110px + var(--space-2) + env(safe-area-inset-top));
+  top: calc(110px + var(--space-2) + var(--safe-top));
   width: min(320px, calc(100% - 2 * var(--space-2)));
   border-radius: calc(var(--radius) + 6px);
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -357,6 +362,13 @@ a:focus-visible {
     opacity 220ms var(--ease),
     transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
+}
+
+/* Legacy iOS (constant()) */
+@supports (padding-top: constant(safe-area-inset-top)) {
+  :root {
+    --safe-top: constant(safe-area-inset-top);
+  }
 }
 
 .mobile-menu.is-open .mobile-menu-backdrop {
