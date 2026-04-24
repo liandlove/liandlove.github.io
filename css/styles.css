@@ -171,6 +171,11 @@ a:focus-visible {
     --header-h: 110px;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .site-header {
     position: fixed;
     left: 0;
@@ -1527,6 +1532,7 @@ a:focus-visible {
   .hero-art {
     width: min(78vw, 360px);
     aspect-ratio: 1 / 1;
+    overflow: hidden;
   }
   .hero-product-wrap {
     transform: translateY(10px);
