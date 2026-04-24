@@ -1483,11 +1483,12 @@ a:focus-visible {
     aspect-ratio: 1 / 1;
   }
   .hero-product-wrap {
-    transform: translateY(10px);
+    transform: none;
     animation: none;
+    margin-top: 10px;
   }
   .hero-product-wrap:hover {
-    transform: translateY(6px) scale(1.02);
+    transform: none;
   }
   .hero-copy::before {
     content: "";
@@ -1528,6 +1529,7 @@ a:focus-visible {
     /* keep the same signature shape as desktop */
     border-radius: 38% 62% 46% 54% / 42% 44% 56% 58%;
     overflow: hidden;
+    transform: translateZ(0);
   }
 
   .hero-product-wrap::before,
