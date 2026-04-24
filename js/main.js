@@ -179,6 +179,9 @@ function initMobileMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (navigator.userAgent.includes("Telegram")) {
+    document.body.classList.add("tg-browser");
+  }
   initFeatured();
   initCatalog(PRODUCTS);
   initNavIndicator();
