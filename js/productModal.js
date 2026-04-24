@@ -11,27 +11,8 @@ function formatPrice(value, currency) {
   }
 }
 
-function buildOrderMailto(product) {
-  const subject = `Li & Love – zamówienie: ${product.name}`;
-  const bodyLines = [
-    "Dzień dobry Li & Love,",
-    "",
-    `Chcę zamówić: ${product.name}`,
-    `ID produktu: ${product.id}`,
-    `Cena: ${formatPrice(product.price, product.currency)}`,
-    "",
-    "Obwód nadgarstka:",
-    "Kraj dostawy:",
-    "",
-    "Dziękuję.",
-  ];
-
-  const params = new URLSearchParams({
-    subject,
-    body: bodyLines.join("\n"),
-  });
-
-  return `mailto:orders@example.com?${params.toString()}`;
+function buildOrderLink() {
+  return "./index.html#contact";
 }
 
 function ensureModalShell() {
@@ -221,7 +202,7 @@ export function initProductModal(products) {
     titleEl.textContent = product.name;
     descEl.textContent = product.description ?? "Minimalistyczny projekt, dopracowany w detalu.";
     priceEl.textContent = formatPrice(product.price, product.currency);
-    orderEl.href = buildOrderMailto(product);
+    orderEl.href = buildOrderLink();
 
     const specs = product.specs ?? null;
     if (specs && typeof specs === "object") {

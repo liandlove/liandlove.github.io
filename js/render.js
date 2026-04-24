@@ -11,27 +11,8 @@ function formatPrice(value, currency) {
   }
 }
 
-function buildOrderMailto(product) {
-  const subject = `Li & Love – zamówienie: ${product.name}`;
-  const bodyLines = [
-    "Dzień dobry Li & Love,",
-    "",
-    `Chcę zamówić: ${product.name}`,
-    `ID produktu: ${product.id}`,
-    `Cena: ${formatPrice(product.price, product.currency)}`,
-    "",
-    "Obwód nadgarstka:",
-    "Kraj dostawy:",
-    "",
-    "Dziękuję.",
-  ];
-
-  const params = new URLSearchParams({
-    subject,
-    body: bodyLines.join("\n"),
-  });
-
-  return `mailto:orders@example.com?${params.toString()}`;
+function buildOrderLink() {
+  return "./index.html#contact";
 }
 
 export function renderProductCard(product) {
@@ -57,7 +38,7 @@ export function renderProductCard(product) {
         </div>
       </div>
       <div class="card-actions">
-        <a class="btn btn-primary order-link" href="${buildOrderMailto(product)}">Zamów</a>
+        <a class="btn btn-primary order-link" href="${buildOrderLink()}">Zamów</a>
       </div>
     </div>
   `.trim();
