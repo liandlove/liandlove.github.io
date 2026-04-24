@@ -1528,6 +1528,7 @@ a:focus-visible {
   .hero-product {
     /* keep the same signature shape as desktop */
     border-radius: 38% 62% 46% 54% / 42% 44% 56% 58%;
+    overflow: hidden;
   }
 
   .hero-product-wrap::before,
@@ -1538,6 +1539,9 @@ a:focus-visible {
   .hero-bracelet {
     transform: scale(1.08);
     object-position: 50% 45%;
+    /* Mobile browsers: drop-shadow filter can break clipping (square image bug) */
+    filter: none;
+    border-radius: 38% 62% 46% 54% / 42% 44% 56% 58%;
   }
   .feature-grid {
     grid-template-columns: 1fr;
