@@ -1528,10 +1528,6 @@ a:focus-visible {
     /* keep the same signature shape as desktop */
     border-radius: 38% 62% 46% 54% / 42% 44% 56% 58%;
     overflow: hidden;
-    /* Mobile: use background image to guarantee correct blob clipping */
-    background-image: url("../assets/images/bracelet-hero-new.png");
-    background-size: cover;
-    background-position: 50% 45%;
   }
 
   .hero-product-wrap::before,
@@ -1542,10 +1538,8 @@ a:focus-visible {
   .hero-bracelet {
     transform: scale(1.08);
     object-position: 50% 45%;
-    /* Mobile browsers: drop-shadow filter can break clipping (square image bug) */
-    filter: none;
     border-radius: 38% 62% 46% 54% / 42% 44% 56% 58%;
-    opacity: 0;
+    opacity: 1;
   }
   .feature-grid {
     grid-template-columns: 1fr;
