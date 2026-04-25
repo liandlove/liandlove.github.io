@@ -1475,23 +1475,6 @@ a:focus-visible {
   color: var(--black);
 }
 
-@media (min-width: 981px) {
-  .footer-link--cta {
-    padding: 8px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--hairline);
-    color: rgba(13, 13, 13, 0.84);
-    font-size: 13px;
-    letter-spacing: 0.14em;
-    line-height: 1;
-  }
-
-  .footer-link--cta:hover {
-    border-color: rgba(13, 13, 13, 0.24);
-    background: rgba(13, 13, 13, 0.04);
-  }
-}
-
 /* Responsive */
 @media (max-width: 980px) {
   .hero-inner {

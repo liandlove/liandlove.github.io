@@ -87,12 +87,15 @@
   border-radius: 10px;
   border: 1px solid rgba(13, 13, 13, 0.08);
   background: rgba(255, 255, 255, 0.58);
-  transition: background 260ms var(--ease), border-color 260ms var(--ease);
+  transition: background 260ms var(--ease), border-color 260ms var(--ease), transform 260ms var(--ease),
+    box-shadow 260ms var(--ease);
 }
 
 .check:hover {
   background: rgba(255, 255, 255, 0.72);
   border-color: rgba(13, 13, 13, 0.14);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(13, 13, 13, 0.08);
 }
 
 @media (prefers-reduced-motion: reduce) {
