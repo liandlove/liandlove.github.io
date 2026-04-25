@@ -739,6 +739,7 @@ html.is-telegram .site-header {
   z-index: 1;
   border-radius: 38% 62% 46% 54% / 42% 44% 56% 58%;
   overflow: hidden;
+  isolation: isolate;
   background: rgba(255, 255, 255, 0.55);
   box-shadow:
     0 60px 160px rgba(13, 13, 13, 0.14),
@@ -750,6 +751,7 @@ html.is-telegram .site-header {
   content: "";
   position: absolute;
   inset: -20%;
+  border-radius: inherit;
   background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 52%);
   opacity: 0.55;
   pointer-events: none;
@@ -763,6 +765,7 @@ html.is-telegram .site-header {
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 44%);
   mix-blend-mode: soft-light;
   opacity: 0.9;
