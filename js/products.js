@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "personalizacja-grawer-jaspis-kiwi",
+    name: "Personalizacja (Grawer)",
+    price: 145,
+    currency: "PLN",
+    colors: ["silver", "gray"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-12-01.png"],
+    featured: false,
+    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z jaspisu kiwi ze srebrną zawieszką. Delikatny, błękitno-miętowy odcień kamienia z naturalnymi inkluzjami tworzy świeżą i lekką kompozycję. Gładką zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
+    specs: {
+      kamienie: "Jaspis kiwi",
+      metal: "Srebro 925",
+      waga: "0,70 g",
+    },
+    gallery: [
+      "./assets/images/product-12-01.png",
+      "./assets/images/product-12-02.png",
+      "./assets/images/product-12-03.png",
+    ],
+  },
+  {
     id: "li-love-onyx-cuff",
     name: "Bransoletka — biały agat (królik)",
     price: 180,
