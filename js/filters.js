@@ -8,14 +8,18 @@ function getCategoryIcon(category) {
   const common =
     'viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"';
   switch (category) {
-    case "Codzienne":
+    case "Kolekcja":
       return `<svg ${common}><path d="M8 7h8"/><path d="M9 7V5h6v2"/><path d="M7 7l-1 4a9 9 0 0 0 0 2l1 6h10l1-6a9 9 0 0 0 0-2l-1-4"/><path d="M10 11h4"/></svg>`;
     case "Dla par":
       return `<svg ${common}><path d="M8.5 7.2c1-1.5 3.2-1.8 4.2-.3 1-1.5 3.2-1.2 4.2.3 1 1.6.5 3.6-1 4.9L12.7 15 9.5 12.1c-1.5-1.3-2-3.3-1-4.9z"/></svg>`;
     case "Rodzina":
       return `<svg ${common}><path d="M7.5 9.5a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4z"/><path d="M16.5 9.8a1.9 1.9 0 1 0 0-3.8 1.9 1.9 0 0 0 0 3.8z"/><path d="M4.5 19c0-2.6 1.4-4.2 3-4.8"/><path d="M12 19c0-3.2-2-5.2-4.5-5.2S3 15.8 3 19"/><path d="M21 19c0-2.4-1.2-3.9-2.6-4.6"/></svg>`;
-    case "Indywidualne":
-      return `<svg ${common}><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"/><path d="M4 20c.8-3.5 3.6-6 8-6s7.2 2.5 8 6"/></svg>`;
+    case "Runy":
+      return `<svg ${common}><path d="M7 4v16"/><path d="M7 12l10-8"/><path d="M10 14l7 6"/></svg>`;
+    case "Znaki zodiaku":
+      return `<svg ${common}><path d="M6 18c2-6 10-6 12 0"/><path d="M8 6c2 2 6 2 8 0"/><path d="M12 6v12"/></svg>`;
+    case "Symbole":
+      return `<svg ${common}><path d="M12 3l3 7h7l-5.6 4 2.1 7L12 17l-6.5 4 2.1-7L2 10h7z"/></svg>`;
     case "Natura":
       return `<svg ${common}><path d="M20 4c-8 1-13 6-14 14 8-1 13-6 14-14z"/><path d="M6 18c3-6 7-9 14-14"/></svg>`;
     case "Męskie":
@@ -252,10 +256,12 @@ export function initCatalog(products) {
   }
 
   const CATEGORY_ORDER = [
-    "Codzienne",
+    "Kolekcja",
     "Dla par",
     "Rodzina",
-    "Indywidualne",
+    "Runy",
+    "Znaki zodiaku",
+    "Symbole",
     "Natura",
     "Męskie",
     "Zwierzęta",

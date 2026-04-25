@@ -267,7 +267,7 @@ function initContactSequence() {
   const runIfContact = () => {
     if (String(location.hash || "") === "#contact") {
       // Wait a moment for native scroll to settle
-      window.setTimeout(triggerContactSequence, 120);
+      window.setTimeout(triggerContactSequence, 1120);
     }
   };
 

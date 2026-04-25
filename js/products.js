@@ -8,7 +8,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-01-01.png"],
     featured: true,
-    categories: ["Codzienne", "Indywidualne", "Personalizacja"],
+    categories: ["Kolekcja", "Symbole", "Personalizacja"],
     description:
       "Naturalne kamienie z białego agatu, zawieszka w kształcie królika wykonana ze srebra 925, kontur królika wykończony czarną emalią.",
     specs: {
@@ -32,7 +32,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-02-01.png"],
     featured: true,
-    categories: ["Codzienne", "Dla par", "Zestawy"],
+    categories: ["Kolekcja", "Dla par", "Zestawy"],
     description:
       "Bransoletka z kamienia księżycowego i onyksu z srebrnymi zawieszkami Yin‑Yang. Kontrast jasnego kamienia księżycowego i głębokiej czerni onyksu symbolizuje harmonię przeciwieństw, a subtelne srebrne elementy dodają elegancji i znaczenia.",
     specs: {
@@ -56,7 +56,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-03-02.png"],
     featured: true,
-    categories: ["Dla par", "Codzienne", "Personalizacja"],
+    categories: ["Dla par", "Kolekcja", "Personalizacja"],
     description:
       "Bransoletka z różowego kwarcu i onyksu ze srebrnymi zawieszkami w kształcie serca. Delikatny różowy kwarc w połączeniu z głęboką czernią onyksu tworzy harmonijny i elegancki kontrast. Gładkie zawieszki można spersonalizować — dodać imiona, inicjały, datę, znak zodiaku lub własny symbol.",
     specs: {
@@ -80,7 +80,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-04-01.png"],
     featured: true,
-    categories: ["Dla par", "Codzienne"],
+    categories: ["Dla par", "Kolekcja"],
     description:
       "Bransoletka z różowego kwarcu i onyksu ze srebrnymi przekładkami i zawieszkami Playboy. Delikatny różowy kwarc w połączeniu z czarnym onyksem uzupełniają srebrne kuleczki. Zawieszki w formie królików Playboy — dziewczynka z kokardką i chłopiec z muszką — nadają biżuterii zabawny i stylowy charakter.",
     specs: {
@@ -104,7 +104,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-05-01.png"],
     featured: false,
-    categories: ["Natura", "Codzienne"],
+    categories: ["Natura", "Kolekcja"],
     description:
       "Bransoletka z jadeitu w odcieniach różowo‑żółtych ze srebrną zawieszką w kształcie kwiatu hibiskusa. Ciepłe kolory kamieni tworzą subtelną i radosną kompozycję, a delikatna zawieszka w formie hibiskusa nadaje biżuterii lekkości i letniego charakteru.",
     specs: {
@@ -128,7 +128,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-06-01.png"],
     featured: false,
-    categories: ["Natura", "Codzienne"],
+    categories: ["Natura", "Kolekcja"],
     description:
       "Bransoletka z naturalnego bursztynu i pereł ze srebrnymi przekładkami oraz centralną zawieszką w kształcie motyla. Ciepłe odcienie bursztynu pięknie łączą się z delikatnymi perłami, a subtelny motyl nadaje biżuterii lekkości i naturalnego uroku.",
     specs: {
@@ -152,7 +152,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-07-01.png"],
     featured: false,
-    categories: ["Codzienne"],
+    categories: ["Kolekcja"],
     description:
       "Bransoletka z angelitu (Peru), jaspisu dalmatyńskiego i onyksu ze srebrnymi przekładkami. Delikatny błękit angelitu z Peru pięknie łączy się z charakterystycznym jaspisem dalmatyńskim i głęboką czernią onyksu, tworząc wyjątkową kompozycję. Srebrne elementy dodają biżuterii elegancji.",
     specs: {
@@ -176,7 +176,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-08-01.png"],
     featured: false,
-    categories: ["Codzienne"],
+    categories: ["Kolekcja"],
     description:
       "Bransoletka z jaspisu matcha, jaspisu dalmatyńskiego i hematytu ze srebrnymi przekładkami. Delikatna zieleń jaspisu matcha pięknie łączy się z charakterystycznym wzorem jaspisu dalmatyńskiego, a hematyt dodaje głębi i nowoczesnego akcentu. Srebrne elementy podkreślają elegancję biżuterii.",
     specs: {
