@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "pudrowy-awenturyn-grawer",
+    name: "Bransoletka — Pudrowy awenturyn (grawer)",
+    price: 180,
+    currency: "PLN",
+    colors: ["pink", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-18-01.png"],
+    featured: false,
+    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z awenturynu ze srebrnymi przekładkami i zawieszką. Delikatne, pudrowo-brzoskwiniowe odcienie kamienia tworzą lekką i harmonijną kompozycję. Awenturyn uznawany jest za kamień szczęścia, inspiracji i nowych możliwości. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
+    specs: {
+      kamienie: "Awenturin",
+      metal: "Srebro 925",
+      waga: "1,12 g",
+    },
+    gallery: [
+      "./assets/images/product-18-01.png",
+      "./assets/images/product-18-02.png",
+      "./assets/images/product-18-03.png",
+    ],
+  },
+  {
     id: "grawer-kwarc-rozowy",
     name: "Bransoletka — kwarc różowy (grawer)",
     price: 140,
