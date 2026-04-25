@@ -44,7 +44,12 @@ html {
 /* Telegram in-app browser: hard-block horizontal scrolling */
 html.is-telegram,
 html.is-telegram body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  overscroll-behavior-x: none;
+}
+
+html.is-telegram body {
+  touch-action: pan-y;
 }
 
 /* Anchor offset for sticky header */
