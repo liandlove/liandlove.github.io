@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "jaspis-niebieski-ozdobna-przekladka",
+    name: "Bransoletka — jaspis niebieski (ozdobna przekładka)",
+    price: 250,
+    currency: "PLN",
+    colors: ["blue", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-16-01.png"],
+    featured: false,
+    categories: ["Kolekcja"],
+    description:
+      "Bransoletka z niebieskiego jaspisu z ozdobną srebrną przekładką z kamieniami. Intensywne turkusowo-ziemiste odcienie jaspisu symbolizują równowagę, pewność siebie i wewnętrzną stabilność. Centralny element z niebieskimi kamieniami dodaje wyrazistości i nadaje biżuterii wyjątkowego charakteru.",
+    specs: {
+      kamienie: "Jaspis niebieski",
+      metal: "Srebro 925",
+      waga: "2,30 g",
+    },
+    gallery: [
+      "./assets/images/product-16-01.png",
+      "./assets/images/product-16-02.png",
+      "./assets/images/product-16-03.png",
+    ],
+  },
+  {
     id: "ksiezycowy-rak",
     name: "Bransoletka — Księżycowy Rak",
     price: 160,
