@@ -7,6 +7,7 @@ import { initProductModal } from "./productModal.js";
 function isTelegramInAppBrowser() {
   try {
     const ua = String(navigator.userAgent || "");
+    const search = typeof location !== "undefined" ? String(location.search || "") : "";
     const hasTelegramWebApp =
       typeof window !== "undefined" &&
       window.Telegram &&
@@ -14,7 +15,10 @@ function isTelegramInAppBrowser() {
       window.Telegram.WebApp &&
       typeof window.Telegram.WebApp === "object";
 
-    return hasTelegramWebApp || /Telegram/i.test(ua);
+    const hasTelegramProxy = typeof window !== "undefined" && typeof window.TelegramWebviewProxy !== "undefined";
+    const hasTgParams = /tgWebApp/i.test(search);
+
+    return hasTelegramWebApp || hasTelegramProxy || hasTgParams || /Telegram|TDesktop/i.test(ua);
   } catch {
     return false;
   }
