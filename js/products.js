@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "sloneczny-cytryn",
+    name: "Bransoletka — Słoneczny Cytryn",
+    price: 160,
+    currency: "PLN",
+    colors: ["gold", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-14-01.png"],
+    featured: false,
+    categories: ["Kolekcja", "Natura"],
+    description:
+      "Bransoletka z cytrynu ze srebrnymi przekładkami. Ciepłe, złocisto-miodowe odcienie cytrynu tworzą jasną i energetyczną kompozycję. Cytryn uważany jest za kamień obfitości i dobrobytu, przyciągający szczęście oraz sukces finansowy. Srebrne elementy dodają elegancji i harmonii.",
+    specs: {
+      kamienie: "Cytryn",
+      metal: "Srebro 925",
+      waga: "0,57 g",
+    },
+    gallery: [
+      "./assets/images/product-14-01.png",
+      "./assets/images/product-14-02.png",
+      "./assets/images/product-14-03.png",
+    ],
+  },
+  {
     id: "grawer-ametyst",
     name: "Bransoletka — ametyst (grawer)",
     price: 160,
