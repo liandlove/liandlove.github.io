@@ -1,5 +1,24 @@
 export const PRODUCTS = [
   {
+    id: "kocham-warszawe",
+    name: "Bransoletka — Kocham Warszawę",
+    price: 160,
+    currency: "PLN",
+    colors: ["red", "white", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-20-01.png"],
+    featured: false,
+    categories: ["Miasta", "Kolekcja"],
+    description:
+      "Bransoletka z czerwonego i białego howlitu ze srebrną zawieszką w kształcie serca. Kontrastowe kolory kamieni tworzą wyrazistą kompozycję, a napis „Kocham Warszawę” nadaje biżuterii wyjątkowego, osobistego charakteru.",
+    specs: {
+      kamienie: "Howlit biały, czerwony syntetyczny",
+      metal: "Srebro 925",
+      waga: "0,58 g",
+    },
+    gallery: ["./assets/images/product-20-01.png"],
+  },
+  {
     id: "dualizm-blizniat",
     name: "Bransoletka — Dualizm Bliźniąt",
     price: 185,
