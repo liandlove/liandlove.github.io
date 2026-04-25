@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "dualizm-blizniat",
+    name: "Bransoletka — Dualizm Bliźniąt",
+    price: 185,
+    currency: "PLN",
+    colors: ["gray", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-19-01.png"],
+    featured: false,
+    categories: ["Znaki zodiaku", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z szarego agatu pasiastego ze srebrną zawieszką ze znakiem zodiaku Bliźnięta. Szary agat pasiasty symbolizuje równowagę, ochronę i klarowność myśli, wspierając wewnętrzną stabilność. Znak Bliźniąt oznacza komunikatywność, elastyczność i wielowymiarowość osobowości, czyniąc tę bransoletkę wyjątkowym talizmanem harmonii i wyrażania siebie.",
+    specs: {
+      kamienie: "Agat szary pasiasty",
+      metal: "Srebro 925",
+      waga: "0,51 g",
+    },
+    gallery: [
+      "./assets/images/product-19-01.png",
+      "./assets/images/product-19-02.png",
+      "./assets/images/product-19-03.png",
+    ],
+  },
+  {
     id: "pudrowy-awenturyn-grawer",
     name: "Bransoletka — Pudrowy awenturyn (grawer)",
     price: 180,
