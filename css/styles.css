@@ -63,14 +63,6 @@ body {
   letter-spacing: 0.01em;
 }
 
-html.is-telegram body {
-  background: #ff0000 !important;
-}
-
-html.is-telegram body::before {
-  display: none;
-}
-
 /* Luxury grain (very subtle) */
 body::before {
   content: "";
