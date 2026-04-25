@@ -157,6 +157,12 @@ a:focus-visible {
   overflow: clip;
 }
 
+/* Telegram in-app browser: avoid sticky header glitches */
+html.is-telegram .site-header {
+  position: static;
+  top: auto;
+}
+
 .site-header::before {
   content: "";
   position: absolute;

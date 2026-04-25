@@ -4,6 +4,22 @@ import { initCatalog } from "./filters.js";
 import { initScrollReveal } from "./animations.js";
 import { initProductModal } from "./productModal.js";
 
+function isTelegramInAppBrowser() {
+  try {
+    const ua = String(navigator.userAgent || "");
+    const hasTelegramWebApp =
+      typeof window !== "undefined" &&
+      window.Telegram &&
+      typeof window.Telegram === "object" &&
+      window.Telegram.WebApp &&
+      typeof window.Telegram.WebApp === "object";
+
+    return hasTelegramWebApp || /Telegram/i.test(ua);
+  } catch {
+    return false;
+  }
+}
+
 function initFeatured() {
   const featuredGrid = document.getElementById("featuredGrid");
   if (!featuredGrid) return;
@@ -194,6 +210,7 @@ function initBrowserClasses() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initBrowserClasses();
+  if (isTelegramInAppBrowser()) document.documentElement.classList.add("is-telegram");
   initFeatured();
   initCatalog(PRODUCTS);
   initNavIndicator();
