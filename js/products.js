@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "grawer-ametyst",
+    name: "Bransoletka — ametyst (grawer)",
+    price: 160,
+    currency: "PLN",
+    colors: ["silver", "purple"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-13-01.png"],
+    featured: false,
+    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z ametystu ze srebrną zawieszką. Głębokie fioletowe i naturalne, ziemiste odcienie kamienia tworzą wyjątkową, tajemniczą kompozycję. Gładką zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
+    specs: {
+      kamienie: "Ametyst",
+      metal: "Srebro 925",
+      waga: "0,99 g",
+    },
+    gallery: [
+      "./assets/images/product-13-01.png",
+      "./assets/images/product-13-02.png",
+      "./assets/images/product-13-03.png",
+    ],
+  },
+  {
     id: "personalizacja-grawer-jaspis-kiwi",
     name: "Bransoletka — jaspis kiwi (grawer)",
     price: 145,
