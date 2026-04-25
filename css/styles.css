@@ -767,6 +767,18 @@ a:focus-visible {
   animation: none;
 }
 
+/* Safari (macOS): WebKit can break blob clipping; use background-image technique */
+body.is-safari .hero-product {
+  background-image: url("../assets/images/bracelet-hero-new.png");
+  background-size: cover;
+  background-position: 50% 45%;
+}
+
+body.is-safari .hero-bracelet {
+  filter: none;
+  opacity: 0;
+}
+
 /* iPad / touch devices: match mobile blob clipping */
 @media (hover: none) and (pointer: coarse) and (min-width: 981px) {
   .hero-product {

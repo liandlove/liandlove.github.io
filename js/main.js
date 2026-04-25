@@ -178,7 +178,22 @@ function initMobileMenu() {
   });
 }
 
+function initBrowserClasses() {
+  try {
+    const ua = String(navigator.userAgent || "");
+    const vendor = String(navigator.vendor || "");
+    const isSafari =
+      /Safari/i.test(ua) &&
+      /Apple/i.test(vendor) &&
+      !/Chrome|Chromium|CriOS|Edg|OPR/i.test(ua);
+    if (isSafari) document.body.classList.add("is-safari");
+  } catch {
+    // ignore
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initBrowserClasses();
   initFeatured();
   initCatalog(PRODUCTS);
   initNavIndicator();
