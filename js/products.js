@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "grawer-kwarc-rozowy",
+    name: "Bransoletka — kwarc różowy (grawer)",
+    price: 140,
+    currency: "PLN",
+    colors: ["pink", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-17-01.png"],
+    featured: false,
+    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z różowego kwarcu ze srebrną zawieszką. Różowy kwarc symbolizuje miłość, czułość i wewnętrzną harmonię. Gładką zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę, znak zodiaku lub własny symbol.",
+    specs: {
+      kamienie: "Kwarc różowy",
+      metal: "Srebro 925",
+      waga: "0,46 g",
+    },
+    gallery: [
+      "./assets/images/product-17-01.png",
+      "./assets/images/product-17-02.png",
+      "./assets/images/product-17-03.png",
+    ],
+  },
+  {
     id: "jaspis-niebieski-ozdobna-przekladka",
     name: "Bransoletka — jaspis niebieski (ozdobna przekładka)",
     price: 250,
