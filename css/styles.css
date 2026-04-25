@@ -41,6 +41,12 @@ html {
   }
 }
 
+/* Telegram in-app browser: hard-block horizontal scrolling */
+html.is-telegram,
+html.is-telegram body {
+  overflow-x: hidden;
+}
+
 /* Anchor offset for sticky header */
 #materials,
 #contact {
