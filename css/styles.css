@@ -735,11 +735,15 @@ html.is-telegram .site-header {
   position: relative;
   width: min(520px, 100%);
   aspect-ratio: 1 / 1;
-  transform: none;
+  transform: translateZ(0);
+  will-change: transform;
   z-index: 1;
   border-radius: 38% 62% 46% 54% / 42% 44% 56% 58%;
   overflow: hidden;
   isolation: isolate;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   background: rgba(255, 255, 255, 0.55);
   box-shadow:
     0 60px 160px rgba(13, 13, 13, 0.14),
