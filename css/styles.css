@@ -1274,11 +1274,24 @@ body.is-safari .hero-bracelet {
     rgba(255, 255, 255, 0.54);
   border: 1px solid rgba(13, 13, 13, 0.08);
   border-radius: var(--radius);
+  overflow: hidden;
+  isolation: isolate;
   padding: var(--space-3);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: transform 360ms var(--ease), box-shadow 360ms var(--ease), border-color 360ms var(--ease),
     background 360ms var(--ease);
+}
+
+.feature {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+body.is-safari .feature {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
 }
 
 .feature::after {
@@ -1315,6 +1328,24 @@ body.is-safari .hero-bracelet {
   margin-top: 10px;
   color: var(--muted);
   line-height: 1.65;
+}
+
+.feature-map {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13, 13, 13, 0.78);
+  border-bottom: 1px solid rgba(13, 13, 13, 0.18);
+  padding-bottom: 2px;
+}
+
+.feature-map:hover {
+  color: var(--black);
+  border-bottom-color: rgba(13, 13, 13, 0.42);
 }
 
 /* Product grid + cards */
