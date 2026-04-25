@@ -1036,6 +1036,21 @@ body.is-safari .modal-image {
   -webkit-mask-size: 100% 100%;
 }
 
+@media (min-width: 981px) {
+  body.is-safari .modal-dialog {
+    width: min(980px, 100%);
+  }
+
+  body.is-safari .modal-content {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  body.is-safari .modal-gallery,
+  body.is-safari .modal-info {
+    min-width: 0;
+  }
+}
+
 .modal-image img {
   width: 100%;
   height: 100%;

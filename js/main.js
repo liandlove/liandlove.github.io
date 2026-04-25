@@ -267,12 +267,21 @@ function initContactSequence() {
   const runIfContact = () => {
     if (String(location.hash || "") === "#contact") {
       // Wait a moment for native scroll to settle
-      window.setTimeout(triggerContactSequence, 1120);
+      window.setTimeout(triggerContactSequence, 620);
     }
   };
 
   runIfContact();
   window.addEventListener("hashchange", runIfContact);
+
+  // Safari can be flaky with hashchange; ensure click triggers sequence
+  document.addEventListener("click", (e) => {
+    const t = e.target;
+    if (!(t instanceof Element)) return;
+    const a = t.closest('a[href$="#contact"], a[href="#contact"]');
+    if (!(a instanceof HTMLAnchorElement)) return;
+    window.setTimeout(triggerContactSequence, 620);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
