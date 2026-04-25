@@ -1,4 +1,4 @@
-import { PRODUCTS } from "./products.js?v=20260425-miasta1";
+import { PRODUCTS } from "./products.js?v=20260425-miasta2";
 import { renderProductGrid } from "./render.js";
 import { initCatalog } from "./filters.js";
 import { initScrollReveal } from "./animations.js";
