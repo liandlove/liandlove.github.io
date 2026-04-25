@@ -64,7 +64,11 @@ body {
 }
 
 html.is-telegram body {
-  background: #ff0000;
+  background: #ff0000 !important;
+}
+
+html.is-telegram body::before {
+  display: none;
 }
 
 /* Luxury grain (very subtle) */

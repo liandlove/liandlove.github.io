@@ -24,6 +24,9 @@ function isTelegramInAppBrowser() {
   }
 }
 
+// Apply as early as possible (also helps debug CSS toggles)
+if (isTelegramInAppBrowser()) document.documentElement.classList.add("is-telegram");
+
 function initFeatured() {
   const featuredGrid = document.getElementById("featuredGrid");
   if (!featuredGrid) return;
@@ -214,7 +217,7 @@ function initBrowserClasses() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initBrowserClasses();
-  if (isTelegramInAppBrowser()) document.documentElement.classList.add("is-telegram");
+  // Class is applied above as early as possible.
   initFeatured();
   initCatalog(PRODUCTS);
   initNavIndicator();
