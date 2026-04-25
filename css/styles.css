@@ -1400,20 +1400,6 @@ body.is-safari .feature {
 }
 
 /* When navigating to #contact: highlight items sequentially */
-#contact.is-sequencing .feature {
-  animation: contactPulse 900ms var(--ease) both;
-}
-
-#contact.is-sequencing .feature:nth-child(1) {
-  animation-delay: 120ms;
-}
-#contact.is-sequencing .feature:nth-child(2) {
-  animation-delay: 320ms;
-}
-#contact.is-sequencing .feature:nth-child(3) {
-  animation-delay: 520ms;
-}
-
 #contact.is-sequencing .section-actions .btn {
   animation: contactPulse 900ms var(--ease) both;
 }
@@ -1428,6 +1414,11 @@ body.is-safari .feature {
 }
 #contact.is-sequencing .section-actions .btn:nth-child(4) {
   animation-delay: 1180ms;
+}
+
+/* Safari-safe: JS applies .is-pulse sequentially (cards + buttons) */
+#contact .is-pulse {
+  animation: contactPulse 900ms var(--ease) both;
 }
 
 /* Product grid + cards */

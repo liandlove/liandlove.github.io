@@ -256,11 +256,30 @@ function triggerContactSequence() {
   const section = document.getElementById("contact");
   if (!(section instanceof HTMLElement)) return;
 
+  const features = Array.from(section.querySelectorAll(".feature")).filter((el) => el instanceof HTMLElement);
+  const buttons = Array.from(section.querySelectorAll(".section-actions .btn")).filter((el) => el instanceof HTMLElement);
+
+  const pulse = (el, delay) => {
+    window.setTimeout(() => {
+      el.classList.remove("is-pulse");
+      // Force restart animation on the element
+      void el.offsetWidth;
+      el.classList.add("is-pulse");
+      window.setTimeout(() => el.classList.remove("is-pulse"), 980);
+    }, delay);
+  };
+
+  // Keep the previous class for buttons fallback, but drive cards via JS (Safari-safe)
   section.classList.remove("is-sequencing");
-  // Force restart animation
   void section.offsetWidth;
   section.classList.add("is-sequencing");
   window.setTimeout(() => section.classList.remove("is-sequencing"), 1800);
+
+  const featureDelays = [120, 320, 520];
+  features.slice(0, 3).forEach((el, idx) => pulse(el, featureDelays[idx] ?? 120 + idx * 200));
+
+  const btnDelays = [760, 900, 1040, 1180];
+  buttons.slice(0, 4).forEach((el, idx) => pulse(el, btnDelays[idx] ?? 760 + idx * 140));
 }
 
 function initContactSequence() {
