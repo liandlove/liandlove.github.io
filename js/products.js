@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "ksiezycowy-rak",
+    name: "Bransoletka — Księżycowy Rak",
+    price: 160,
+    currency: "PLN",
+    colors: ["white", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-15-01.png"],
+    featured: false,
+    categories: ["Znaki zodiaku", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z białego kamienia księżycowego ze srebrną zawieszką ze znakiem zodiaku Rak. Kamień księżycowy wzmacnia intuicję, harmonię wewnętrzną i równowagę emocjonalną. Znak Raka symbolizuje wrażliwość, troskę oraz silną więź z domem i bliskimi, czyniąc tę bransoletkę wyjątkowym talizmanem.",
+    specs: {
+      kamienie: "Kamień księżycowy",
+      metal: "Srebro 925",
+      waga: "0,54 g",
+    },
+    gallery: [
+      "./assets/images/product-15-01.png",
+      "./assets/images/product-15-02.png",
+      "./assets/images/product-15-03.png",
+    ],
+  },
+  {
     id: "sloneczny-cytryn",
     name: "Bransoletka — Słoneczny Cytryn",
     price: 160,
