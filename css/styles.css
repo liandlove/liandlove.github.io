@@ -906,6 +906,16 @@ body.is-safari .hero-bracelet {
   flex-direction: column;
 }
 
+/* Safari/macOS: stabilize border/clip rendering in modal */
+body.is-safari .modal-dialog {
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+}
+
 .modal.is-open .modal-backdrop {
   opacity: 1;
 }
@@ -1017,6 +1027,13 @@ body.is-safari .hero-bracelet {
   background: linear-gradient(180deg, rgba(248, 248, 247, 1), rgba(230, 230, 230, 0.7));
   aspect-ratio: 4 / 5;
   overflow: clip;
+}
+
+body.is-safari .modal-image {
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
 }
 
 .modal-image img {
@@ -1346,6 +1363,56 @@ body.is-safari .feature {
 .feature-map:hover {
   color: var(--black);
   border-bottom-color: rgba(13, 13, 13, 0.42);
+}
+
+@keyframes contactPulse {
+  0% {
+    transform: translateZ(0);
+    box-shadow: none;
+    border-color: rgba(13, 13, 13, 0.08);
+  }
+  35% {
+    box-shadow:
+      0 18px 44px rgba(13, 13, 13, 0.10),
+      0 6px 16px rgba(13, 13, 13, 0.06);
+    border-color: rgba(13, 13, 13, 0.14);
+  }
+  100% {
+    transform: translateZ(0);
+    box-shadow: none;
+    border-color: rgba(13, 13, 13, 0.08);
+  }
+}
+
+/* When navigating to #contact: highlight items sequentially */
+#contact.is-sequencing .feature {
+  animation: contactPulse 900ms var(--ease) both;
+}
+
+#contact.is-sequencing .feature:nth-child(1) {
+  animation-delay: 120ms;
+}
+#contact.is-sequencing .feature:nth-child(2) {
+  animation-delay: 320ms;
+}
+#contact.is-sequencing .feature:nth-child(3) {
+  animation-delay: 520ms;
+}
+
+#contact.is-sequencing .section-actions .btn {
+  animation: contactPulse 900ms var(--ease) both;
+}
+#contact.is-sequencing .section-actions .btn:nth-child(1) {
+  animation-delay: 760ms;
+}
+#contact.is-sequencing .section-actions .btn:nth-child(2) {
+  animation-delay: 900ms;
+}
+#contact.is-sequencing .section-actions .btn:nth-child(3) {
+  animation-delay: 1040ms;
+}
+#contact.is-sequencing .section-actions .btn:nth-child(4) {
+  animation-delay: 1180ms;
 }
 
 /* Product grid + cards */

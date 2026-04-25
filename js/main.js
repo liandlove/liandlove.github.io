@@ -252,6 +252,29 @@ function initBrowserClasses() {
   }
 }
 
+function triggerContactSequence() {
+  const section = document.getElementById("contact");
+  if (!(section instanceof HTMLElement)) return;
+
+  section.classList.remove("is-sequencing");
+  // Force restart animation
+  void section.offsetWidth;
+  section.classList.add("is-sequencing");
+  window.setTimeout(() => section.classList.remove("is-sequencing"), 1800);
+}
+
+function initContactSequence() {
+  const runIfContact = () => {
+    if (String(location.hash || "") === "#contact") {
+      // Wait a moment for native scroll to settle
+      window.setTimeout(triggerContactSequence, 120);
+    }
+  };
+
+  runIfContact();
+  window.addEventListener("hashchange", runIfContact);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initBrowserClasses();
   // Class is applied above as early as possible.
@@ -262,5 +285,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   initProductModal(PRODUCTS);
   initMobileMenu();
+  initContactSequence();
 });
 
