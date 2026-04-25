@@ -461,7 +461,7 @@ html.is-telegram .site-header {
   background: rgba(13, 13, 13, 0.55);
   transform: translateX(0);
   transition: transform 320ms var(--ease), width 320ms var(--ease), opacity 220ms var(--ease);
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
 }
 

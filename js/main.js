@@ -80,6 +80,36 @@ function initNavIndicator() {
   window.addEventListener("resize", () => setToRaf(getActive()));
 }
 
+function initActiveNavLink() {
+  const nav = document.querySelector(".nav");
+  if (!(nav instanceof HTMLElement)) return;
+
+  const links = Array.from(nav.querySelectorAll(".nav-link")).filter((el) => el instanceof HTMLAnchorElement);
+  if (!links.length) return;
+
+  const currentPath = (() => {
+    const p = String(location.pathname || "/");
+    if (p.endsWith("/")) return `${p}index.html`;
+    return p;
+  })();
+
+  links.forEach((a) => {
+    a.classList.remove("is-active");
+    a.removeAttribute("aria-current");
+
+    try {
+      const hrefPath = new URL(a.href, location.href).pathname;
+      const normalized = hrefPath.endsWith("/") ? `${hrefPath}index.html` : hrefPath;
+      if (normalized === currentPath) {
+        a.classList.add("is-active");
+        a.setAttribute("aria-current", "page");
+      }
+    } catch {
+      // ignore
+    }
+  });
+}
+
 function initMobileMenu() {
   const btn = document.querySelector(".nav-toggle");
   const menu = document.getElementById("mobileMenu");
@@ -220,6 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Class is applied above as early as possible.
   initFeatured();
   initCatalog(PRODUCTS);
+  initActiveNavLink();
   initNavIndicator();
   initScrollReveal();
   initProductModal(PRODUCTS);
