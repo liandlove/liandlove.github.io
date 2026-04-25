@@ -1,7 +1,7 @@
 export const PRODUCTS = [
   {
     id: "personalizacja-grawer-jaspis-kiwi",
-    name: "Personalizacja (Grawer)",
+    name: "Bransoletka — jaspis kiwi (grawer)",
     price: 145,
     currency: "PLN",
     colors: ["silver", "gray"],
