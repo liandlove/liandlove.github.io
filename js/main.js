@@ -62,22 +62,29 @@ function initNavIndicator() {
     raf = requestAnimationFrame(() => setTo(target));
   };
 
-  const active = getActive();
-  if (active) setTo(active);
+  let pinned = getActive();
+  if (pinned) setTo(pinned);
 
   links.forEach((link) => {
-    link.addEventListener("mouseenter", () => setToRaf(link));
-    link.addEventListener("focus", () => setToRaf(link));
+    link.addEventListener("mouseenter", () => {
+      pinned = link;
+      setToRaf(link);
+    });
+    link.addEventListener("focus", () => {
+      pinned = link;
+      setToRaf(link);
+    });
   });
 
-  nav.addEventListener("mouseleave", () => setToRaf(getActive()));
   nav.addEventListener("focusout", (e) => {
     const related = e.relatedTarget;
     if (related instanceof Node && nav.contains(related)) return;
-    setToRaf(getActive());
+    if (pinned) setToRaf(pinned);
   });
 
-  window.addEventListener("resize", () => setToRaf(getActive()));
+  window.addEventListener("resize", () => {
+    if (pinned) setToRaf(pinned);
+  });
 }
 
 function initActiveNavLink() {
