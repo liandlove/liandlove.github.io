@@ -751,29 +751,25 @@ html.is-telegram .site-header {
     0 0 0 1px rgba(255, 255, 255, 0.55) inset;
 }
 
-.hero-product::before {
-  content: "";
-  position: absolute;
-  inset: -20%;
-  border-radius: inherit;
-  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 52%);
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-.hero-product::before {
-  filter: blur(10px);
-}
-
-.hero-product::after {
-  content: "";
+.hero-shine {
   position: absolute;
   inset: 0;
   border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-shine--blur {
+  inset: -20%;
+  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 52%);
+  opacity: 0.55;
+  filter: blur(10px);
+}
+
+.hero-shine--gloss {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 44%);
   mix-blend-mode: soft-light;
   opacity: 0.9;
-  pointer-events: none;
 }
 
 .hero-bracelet {
