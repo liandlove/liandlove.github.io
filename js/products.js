@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "grawer-kwarc-z-turmalinem",
+    name: "Bransoletka — Kwarc z turmalinem (grawer)",
+    price: 160,
+    currency: "PLN",
+    colors: ["gray", "black", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-21-01.png"],
+    featured: false,
+    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z kwarcu z turmalinem ze srebrną wstawką i zawieszką. Jasny kwarc z naturalnymi czarnymi inkluzjami tworzy minimalistyczną i elegancką kompozycję. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
+    specs: {
+      kamienie: "Kwarc z turmalinem",
+      metal: "Srebro 925",
+      waga: "0,58 g",
+    },
+    gallery: [
+      "./assets/images/product-21-01.png",
+      "./assets/images/product-21-02.png",
+      "./assets/images/product-21-03.png",
+    ],
+  },
+  {
     id: "kocham-warszawe",
     name: "Bransoletka — Kocham Warszawę",
     price: 160,
