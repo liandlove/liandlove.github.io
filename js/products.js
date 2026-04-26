@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "bronzyt-oczy",
+    name: "Bransoletka — Bronzyt",
+    price: 375,
+    currency: "PLN",
+    colors: ["brown", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-25-01.png"],
+    featured: false,
+    categories: ["Męskie", "Oczy"],
+    description:
+      "Bransoletka z naturalnego bronzytu w ciepłych, drewnianych odcieniach brązu, uzupełniona ozdobnym elementem ze srebra. Surowa, wyrazista kompozycja inspirowana naturą, idealna dla osób ceniących minimalistyczny i męski styl. Bronzyt kojarzony jest z siłą, stabilnością i pewnością siebie. Doskonała na co dzień jako stylowy, uniwersalny dodatek.",
+    specs: {
+      kamienie: "Bronzyt",
+      metal: "Srebro 925",
+      waga: "5,14 g",
+    },
+    gallery: [
+      "./assets/images/product-25-01.png",
+      "./assets/images/product-25-02.png",
+      "./assets/images/product-25-03.png",
+    ],
+  },
+  {
     id: "grawer-jaspis-pasiasty",
     name: "Bransoletka — Jaspis pasiasty (grawer)",
     price: 150,

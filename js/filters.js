@@ -32,6 +32,8 @@ function getCategoryIcon(category) {
       return `<svg ${common}><path d="M4 20h4l10.5-10.5a2 2 0 0 0 0-2.8l-.2-.2a2 2 0 0 0-2.8 0L5.9 16.1 4 20z"/><path d="M13.5 6.5l4 4"/></svg>`;
     case "Miasta":
       return `<svg ${common}><path d="M4 20V9l6-3v14"/><path d="M10 20V4l10 5v11"/><path d="M14 10h2"/><path d="M14 13h2"/><path d="M14 16h2"/></svg>`;
+    case "Oczy":
+      return `<svg ${common}><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>`;
     default:
       return "";
   }
@@ -264,6 +266,7 @@ export function initCatalog(products) {
     "Symbole",
     "Natura",
     "Męskie",
+    "Oczy",
     "Zwierzęta",
     "Zestawy",
     "Personalizacja",
