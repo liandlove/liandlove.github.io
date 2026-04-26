@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "grawer-jaspis-pasiasty",
+    name: "Bransoletka — Jaspis pasiasty (grawer)",
+    price: 150,
+    currency: "PLN",
+    colors: ["brown", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-24-01.png"],
+    featured: false,
+    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z jaspisu pasiastego ze srebrną zawieszką. Naturalna, spokojna kompozycja w odcieniach brązu. Jaspis wspiera równowagę i wytrwałość. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
+    specs: {
+      kamienie: "Jaspis pasiasty",
+      metal: "Srebro 925",
+      waga: "0,60 g",
+    },
+    gallery: [
+      "./assets/images/product-24-01.png",
+      "./assets/images/product-24-02.png",
+      "./assets/images/product-24-03.png",
+    ],
+  },
+  {
     id: "baran-granat",
     name: "Bransoletka — Baran",
     price: 160,
