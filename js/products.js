@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "baran-granat",
+    name: "Bransoletka — Baran",
+    price: 160,
+    currency: "PLN",
+    colors: ["red", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-23-01.png"],
+    featured: false,
+    categories: ["Znaki zodiaku", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z granatu ze srebrną zawieszką. Srebrna zawieszka z symbolem Barana podkreśla odwagę, determinację i silny charakter tego znaku. Granat wzmacnia energię Barana — dodaje pasji, pewności siebie i motywacji do działania, jednocześnie chroniąc i stabilizując emocje.",
+    specs: {
+      kamienie: "Granat",
+      metal: "Srebro 925",
+      waga: "0,53 g",
+    },
+    gallery: [
+      "./assets/images/product-23-01.png",
+      "./assets/images/product-23-02.png",
+      "./assets/images/product-23-03.png",
+    ],
+  },
+  {
     id: "lew-rozowy-kwarc-masa-perlowa",
     name: "Bransoletka — Lew",
     price: 190,
