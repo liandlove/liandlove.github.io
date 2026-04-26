@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "awenturyn-oczy",
+    name: "Bransoletka — Awenturyn",
+    price: 345,
+    currency: "PLN",
+    colors: ["blue", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-27-01.png"],
+    featured: false,
+    categories: ["Męskie", "Oczy"],
+    description:
+      "Bransoletka z naturalnego awenturynu w odcieniach błękitu, uzupełniona ozdobnym elementem ze srebra. Harmonijna kompozycja o spokojnym, eleganckim charakterze, inspirowana naturą i kolorem nieba. Awenturyn kojarzony jest z równowagą, optymizmem i pozytywną energią. Idealna zarówno na co dzień, jak i jako subtelny akcent do stylizacji.",
+    specs: {
+      kamienie: "Awenturyn",
+      metal: "Srebro 925",
+      waga: "5,14 g",
+    },
+    gallery: [
+      "./assets/images/product-27-01.png",
+      "./assets/images/product-27-02.png",
+      "./assets/images/product-27-03.png",
+    ],
+  },
+  {
     id: "grawer-akwamaryn",
     name: "Bransoletka — Akwamaryn (grawer)",
     price: 170,
