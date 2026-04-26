@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "grawer-akwamaryn",
+    name: "Bransoletka — Akwamaryn (grawer)",
+    price: 170,
+    currency: "PLN",
+    colors: ["blue", "beige", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-26-01.png"],
+    featured: false,
+    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z naturalnego akwamarynu w delikatnych, pastelowych odcieniach błękitu i jasnego beżu, wykończona srebrnym elementem. Lekka i subtelna kompozycja inspirowana spokojem morza i natury. Akwamaryn kojarzony jest z harmonią, wyciszeniem i przejrzystością myśli. Idealna jako codzienny dodatek lub prezent. Istnieje możliwość personalizacji — wykonania graweru z imieniem, inicjałami, datą lub symbolem.",
+    specs: {
+      kamienie: "Akwamaryn",
+      metal: "Srebro 925",
+      waga: "0,68 g",
+    },
+    gallery: [
+      "./assets/images/product-26-01.png",
+      "./assets/images/product-26-02.png",
+      "./assets/images/product-26-03.png",
+    ],
+  },
+  {
     id: "bronzyt-oczy",
     name: "Bransoletka — Bronzyt",
     price: 375,
