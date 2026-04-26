@@ -1,5 +1,24 @@
 export const PRODUCTS = [
   {
+    id: "lew-rozowy-kwarc-masa-perlowa",
+    name: "Bransoletka — Lew",
+    price: 190,
+    currency: "PLN",
+    colors: ["pink", "white", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-22-01.png"],
+    featured: false,
+    categories: ["Znaki zodiaku", "Kolekcja", "Symbole"],
+    description:
+      "Bransoletka z różowego kwarcu i masy perłowej ze srebrną zawieszką serca z symbolem Lwa podkreśla siłę, pewność siebie i naturalny magnetyzm tego znaku. Różowy kwarc wnosi do energii Lwa równowagę — uczy delikatności, miłości i harmonii w relacjach. Masa perłowa dodaje spokoju, intuicji i wewnętrznego wyciszenia, tworząc idealne dopełnienie dla ognistej natury Lwa.",
+    specs: {
+      kamienie: "Kwarc różowy, masa perłowa",
+      metal: "Srebro 925",
+      waga: "0,98 g",
+    },
+    gallery: ["./assets/images/product-22-01.png", "./assets/images/product-22-02.png"],
+  },
+  {
     id: "grawer-kwarc-z-turmalinem",
     name: "Bransoletka — Kwarc z turmalinem (grawer)",
     price: 160,

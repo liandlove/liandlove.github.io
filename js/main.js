@@ -1,4 +1,4 @@
-import { PRODUCTS } from "./products.js?v=20260426-grawer1";
+import { PRODUCTS } from "./products.js?v=20260426-lew1";
 import { renderProductGrid } from "./render.js";
 import { initCatalog } from "./filters.js";
 import { initScrollReveal } from "./animations.js";
