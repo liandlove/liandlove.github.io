@@ -77,7 +77,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-26-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    categories: ["Personalizacja", "Kolekcja"],
     description:
       "Bransoletka z naturalnego akwamarynu w delikatnych, pastelowych odcieniach błękitu i jasnego beżu, wykończona srebrnym elementem. Lekka i subtelna kompozycja inspirowana spokojem morza i natury. Akwamaryn kojarzony jest z harmonią, wyciszeniem i przejrzystością myśli. Idealna jako codzienny dodatek lub prezent. Istnieje możliwość personalizacji — wykonania graweru z imieniem, inicjałami, datą lub symbolem.",
     specs: {
