@@ -1,4 +1,4 @@
-import { PRODUCTS } from "./products.js?v=20260426-perly1";
+import { PRODUCTS } from "./products.js?v=20260426-opalimg1";
 import { renderProductGrid } from "./render.js";
 import { initCatalog } from "./filters.js";
 import { initScrollReveal } from "./animations.js";
