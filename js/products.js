@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "perly-klasyczne-grawer-dla-par",
+    name: "Bransoletka — Perły (grawer)",
+    price: 245,
+    currency: "PLN",
+    colors: ["white", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-29-01.png"],
+    featured: false,
+    categories: ["Klasyczne", "Personalizacja (Grawer)", "Dla par"],
+    description:
+      "Bransoletka z naturalnych pereł o subtelnym, perłowym połysku, wykończona elementami ze srebra oraz zawieszką w formie gładkiego kółka. Elegancka i ponadczasowa kompozycja, która doskonale pasuje zarówno do codziennych, jak i bardziej formalnych stylizacji. Perły symbolizują czystość, harmonię i klasę. Zawieszka daje możliwość personalizacji — można wykonać grawer z imieniem, inicjałami, datą lub wyjątkowym symbolem, tworząc unikalny i osobisty dodatek lub prezent.",
+    specs: {
+      kamienie: "Perły",
+      metal: "Srebro 925",
+      waga: "1,30 g",
+    },
+    gallery: [
+      "./assets/images/product-29-01.png",
+      "./assets/images/product-29-02.png",
+      "./assets/images/product-29-03.png",
+    ],
+  },
+  {
     id: "opal-rzeczny-lapa-grawer",
     name: "Bransoletka — opal rzeczny (łapa)",
     price: 150,
