@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "opal-rzeczny-lapa-grawer",
+    name: "Bransoletka — opal rzeczny (łapa)",
+    price: 150,
+    currency: "PLN",
+    colors: ["green", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-28-01.png"],
+    featured: false,
+    categories: ["Natura", "Zwierzęta"],
+    description:
+      "Bransoletka z naturalnego opalu rzecznego z dodatkiem kamieni w odcieniach zieleni oraz srebrną zawieszką w kształcie łapy. Delikatna, harmonijna kompozycja inspirowana naturą, idealna dla miłośników zwierząt. Opal kojarzony jest ze spokojem i równowagą, podkreślając subtelny charakter biżuterii. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub symbol.",
+    specs: {
+      kamienie: "Opal (kamień rzeczny)",
+      metal: "Srebro 925",
+      waga: "0,67 g",
+    },
+    gallery: [
+      "./assets/images/product-28-01.png",
+      "./assets/images/product-28-02.png",
+      "./assets/images/product-28-03.png",
+    ],
+  },
+  {
     id: "awenturyn-oczy",
     name: "Bransoletka — Awenturyn",
     price: 345,
