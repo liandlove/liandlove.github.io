@@ -30,14 +30,10 @@ function getCategoryIcon(category) {
       return `<svg ${common}><path d="M7 7h10v10H7z"/><path d="M4 10V4h6"/><path d="M20 14v6h-6"/></svg>`;
     case "Personalizacja":
       return `<svg ${common}><path d="M4 20h4l10.5-10.5a2 2 0 0 0 0-2.8l-.2-.2a2 2 0 0 0-2.8 0L5.9 16.1 4 20z"/><path d="M13.5 6.5l4 4"/></svg>`;
-    case "Personalizacja (Grawer)":
-      return `<svg ${common}><path d="M4 20h4l10.5-10.5a2 2 0 0 0 0-2.8l-.2-.2a2 2 0 0 0-2.8 0L5.9 16.1 4 20z"/><path d="M13.5 6.5l4 4"/></svg>`;
     case "Miasta":
       return `<svg ${common}><path d="M4 20V9l6-3v14"/><path d="M10 20V4l10 5v11"/><path d="M14 10h2"/><path d="M14 13h2"/><path d="M14 16h2"/></svg>`;
     case "Oczy":
       return `<svg ${common}><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>`;
-    case "Klasyczne":
-      return `<svg ${common}><path d="M7 7c1.8-1.7 3.4-2.6 5-2.6S15.2 5.3 17 7"/><path d="M6 12c2-2 4-3 6-3s4 .9 6 3"/><path d="M7 17c1.8 1.7 3.4 2.6 5 2.6S15.2 18.7 17 17"/></svg>`;
     default:
       return "";
   }
@@ -263,7 +259,6 @@ export function initCatalog(products) {
 
   const CATEGORY_ORDER = [
     "Kolekcja",
-    "Klasyczne",
     "Dla par",
     "Rodzina",
     "Runy",
@@ -275,7 +270,6 @@ export function initCatalog(products) {
     "Zwierzęta",
     "Zestawy",
     "Personalizacja",
-    "Personalizacja (Grawer)",
     "Miasta",
   ];
 
