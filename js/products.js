@@ -1,5 +1,120 @@
 export const PRODUCTS = [
   {
+    id: "personalizacja-jaspis-drzewny",
+    name: "Bransoletka — Jaspis drzewny",
+    price: 160,
+    currency: "PLN",
+    colors: ["beige", "brown", "yellow", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-39-01.png"],
+    featured: false,
+    categories: ["Personalizacja"],
+    description:
+      "Bransoletka z naturalnego jaspisu drzewnego w ciepłych, ziemistych odcieniach beżu, karmelu i brązu, uzupełniona srebrnym elementem. Harmonijna kompozycja inspirowana naturą i strukturą drewna, nadająca biżuterii wyjątkowy, organiczny charakter. Jaspis drzewny kojarzony jest ze stabilnością, spokojem i połączeniem z naturą. Idealna jako codzienny dodatek dla osób ceniących naturalny styl. Możliwość personalizacji — wykonania graweru z imieniem, inicjałami, datą lub symbolem.",
+    specs: {
+      kamienie: "Jaspis drzewny",
+      metal: "Srebro 925",
+      waga: "0,74 g",
+    },
+    gallery: [
+      "./assets/images/product-39-01.png",
+      "./assets/images/product-39-02.png",
+      "./assets/images/product-39-03.png",
+    ],
+  },
+  {
+    id: "onyks-krzyz-meskie",
+    name: "Bransoletka — Onyks (krzyż)",
+    price: 145,
+    currency: "PLN",
+    colors: ["black", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-38-01.png"],
+    featured: false,
+    categories: ["Męskie", "Kolekcja"],
+    description:
+      "Bransoletka z naturalnego onyksu w głębokim, czarnym kolorze, uzupełniona srebrną zawieszką w kształcie krzyża. Klasyczna, elegancka kompozycja o wyrazistym charakterze. Onyks kojarzony jest z siłą, ochroną i pewnością siebie, a symbol krzyża podkreśla duchowy wymiar biżuterii. Idealna jako stylowy dodatek na co dzień lub znaczący prezent.",
+    specs: {
+      kamienie: "Onyks",
+      metal: "Srebro 925",
+      waga: "0,43 g",
+    },
+    gallery: [
+      "./assets/images/product-38-01.png",
+      "./assets/images/product-38-02.png",
+      "./assets/images/product-38-03.png",
+    ],
+  },
+  {
+    id: "symbole-agat-bialy-hamsa",
+    name: "Bransoletka — Biały agat (Hamsa)",
+    price: 140,
+    currency: "PLN",
+    colors: ["white", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-37-01.png"],
+    featured: false,
+    categories: ["Symbole"],
+    description:
+      "Bransoletka z naturalnego białego agatu o delikatnym, mlecznym odcieniu, uzupełniona srebrną zawieszką w kształcie dłoni Fatimy (Hamsa). Subtelna i elegancka kompozycja o spokojnym, minimalistycznym charakterze. Agat kojarzony jest z harmonią i równowagą, natomiast symbol Hamsy uznawany jest za znak ochrony i szczęścia. Idealna jako codzienny dodatek lub znaczący prezent.",
+    specs: {
+      kamienie: "Agat biały",
+      metal: "Srebro 925",
+      waga: "0,31 g",
+    },
+    gallery: [
+      "./assets/images/product-37-01.png",
+      "./assets/images/product-37-02.png",
+      "./assets/images/product-37-03.png",
+    ],
+  },
+  {
+    id: "personalizacja-larvikit-jaspis-turmalin",
+    name: "Bransoletka — Larvikit, jaspis i turmalin",
+    price: 175,
+    currency: "PLN",
+    colors: ["black", "gray", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-36-01.png"],
+    featured: false,
+    categories: ["Personalizacja"],
+    description:
+      "Bransoletka z naturalnych kamieni: larvikitu, jaspisu oraz turmalinu w stonowanych odcieniach czerni, szarości i grafitu, uzupełniona srebrnym elementem. Surowa, nowoczesna kompozycja o wyrazistym, męskim charakterze. Połączenie kamieni symbolizuje ochronę, stabilność i równowagę. Idealna jako codzienny dodatek dla osób ceniących minimalistyczny styl. Możliwość personalizacji — wykonania graweru z imieniem, inicjałami, datą lub symbolem.",
+    specs: {
+      kamienie: "Larvikit, jaspis, turmalin",
+      metal: "Srebro 925",
+      waga: "0,87 g",
+    },
+    gallery: [
+      "./assets/images/product-36-01.png",
+      "./assets/images/product-36-02.png",
+      "./assets/images/product-36-03.png",
+    ],
+  },
+  {
+    id: "runy-cytryn-fehu",
+    name: "Bransoletka — Cytryn (Fehu)",
+    price: 210,
+    currency: "PLN",
+    colors: ["yellow", "gold", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-35-01.png"],
+    featured: false,
+    categories: ["Runy"],
+    description:
+      "Bransoletka z cytrynu ze srebrną zawieszką runy Fehu. Fehu to runa pieniędzy, dobrobytu i przyciągania bogactwa. Cytryn wzmacnia jej działanie — wspiera sukces finansowy, pewność siebie i przyciąga nowe możliwości. Możliwość personalizacji — dowolny grawer na zawieszce.",
+    specs: {
+      kamienie: "Cytryn",
+      metal: "Srebro 925",
+      waga: "1,18 g",
+    },
+    gallery: [
+      "./assets/images/product-35-01.png",
+      "./assets/images/product-35-02.png",
+      "./assets/images/product-35-03.png",
+    ],
+  },
+  {
     id: "zodiak-akwamaryn",
     name: "Bransoletka — Akwamaryn",
     price: 150,
@@ -261,7 +376,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-23-01.png"],
     featured: false,
-    categories: ["Znaki zodiaku", "Kolekcja", "Symbole"],
+    categories: ["Znaki zodiaku", "Kolekcja"],
     description:
       "Bransoletka z granatu ze srebrną zawieszką. Srebrna zawieszka z symbolem Barana podkreśla odwagę, determinację i silny charakter tego znaku. Granat wzmacnia energię Barana — dodaje pasji, pewności siebie i motywacji do działania, jednocześnie chroniąc i stabilizując emocje.",
     specs: {
@@ -284,7 +399,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-22-01.png"],
     featured: false,
-    categories: ["Znaki zodiaku", "Kolekcja", "Symbole"],
+    categories: ["Znaki zodiaku", "Kolekcja"],
     description:
       "Bransoletka z różowego kwarcu i masy perłowej ze srebrną zawieszką serca z symbolem Lwa podkreśla siłę, pewność siebie i naturalny magnetyzm tego znaku. Różowy kwarc wnosi do energii Lwa równowagę — uczy delikatności, miłości i harmonii w relacjach. Masa perłowa dodaje spokoju, intuicji i wewnętrznego wyciszenia, tworząc idealne dopełnienie dla ognistej natury Lwa.",
     specs: {
@@ -345,7 +460,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-19-01.png"],
     featured: false,
-    categories: ["Znaki zodiaku", "Kolekcja", "Symbole"],
+    categories: ["Znaki zodiaku", "Kolekcja"],
     description:
       "Bransoletka z szarego agatu pasiastego ze srebrną zawieszką ze znakiem zodiaku Bliźnięta. Szary agat pasiasty symbolizuje równowagę, ochronę i klarowność myśli, wspierając wewnętrzną stabilność. Znak Bliźniąt oznacza komunikatywność, elastyczność i wielowymiarowość osobowości, czyniąc tę bransoletkę wyjątkowym talizmanem harmonii i wyrażania siebie.",
     specs: {
@@ -437,7 +552,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-15-01.png"],
     featured: false,
-    categories: ["Znaki zodiaku", "Kolekcja", "Symbole"],
+    categories: ["Znaki zodiaku", "Kolekcja"],
     description:
       "Bransoletka z białego kamienia księżycowego ze srebrną zawieszką ze znakiem zodiaku Rak. Kamień księżycowy wzmacnia intuicję, harmonię wewnętrzną i równowagę emocjonalną. Znak Raka symbolizuje wrażliwość, troskę oraz silną więź z domem i bliskimi, czyniąc tę bransoletkę wyjątkowym talizmanem.",
     specs: {

@@ -27,7 +27,7 @@ function getCategoryIcon(category) {
     case "Zwierzęta":
       return `<svg ${common}><path d="M8.5 12.5c-1.1 1.2-2 2.3-2 3.6 0 2 1.7 3.4 5.5 3.4s5.5-1.4 5.5-3.4c0-1.3-.9-2.4-2-3.6"/><path d="M9 9.5c0 1.4 1.3 2.5 3 2.5s3-1.1 3-2.5"/><path d="M7.2 10.4c-.9-.7-1.4-1.7-1.1-2.5.4-1 1.9-1 2.7.2"/><path d="M16.8 10.4c.9-.7 1.4-1.7 1.1-2.5-.4-1-1.9-1-2.7.2"/></svg>`;
     case "Zestawy":
-      return `<svg ${common}><path d="M7 7h10v10H7z"/><path d="M4 10V4h6"/><path d="M20 14v6h-6"/></svg>`;
+      return `<svg ${common}><path d="M7.5 8.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/><path d="M16.5 8.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/></svg>`;
     case "Personalizacja":
       return `<svg ${common}><path d="M4 20h4l10.5-10.5a2 2 0 0 0 0-2.8l-.2-.2a2 2 0 0 0-2.8 0L5.9 16.1 4 20z"/><path d="M13.5 6.5l4 4"/></svg>`;
     case "Miasta":
