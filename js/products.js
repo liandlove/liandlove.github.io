@@ -1,5 +1,74 @@
 export const PRODUCTS = [
   {
+    id: "kambaba-lisc",
+    name: "Bransoletka — Jaspis kambaba (liść)",
+    price: 150,
+    currency: "PLN",
+    colors: ["green", "black", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-42-01.png"],
+    featured: false,
+    categories: ["Kolekcja"],
+    description:
+      "Bransoletka z naturalnych kamieni: jaspisu kambaba, hematytu i diopsydu w głębokich odcieniach zieleni oraz czerni, uzupełniona srebrnymi elementami i delikatną zawieszką w kształcie liścia. Wyjątkowa, naturalna kompozycja inspirowana lasem i dziką przyrodą. Połączenie kamieni symbolizuje równowagę, siłę i odnowę. Idealna dla osób ceniących naturę oraz unikalny, wyrazisty styl.",
+    specs: {
+      kamienie: "Jaspis kambaba, hematyt, diopsyd, onyks",
+      metal: "Srebro 925",
+      waga: "0,40 g",
+    },
+    gallery: [
+      "./assets/images/product-42-01.png",
+      "./assets/images/product-42-02.png",
+      "./assets/images/product-42-03.png",
+    ],
+  },
+  {
+    id: "akwamaryn-samolot",
+    name: "Bransoletka — Akwamaryn (samolot)",
+    price: 180,
+    currency: "PLN",
+    colors: ["blue", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-41-01.png"],
+    featured: false,
+    categories: ["Kolekcja", "Miasta"],
+    description:
+      "Bransoletka z naturalnego akwamarynu w jasnych, błękitnych odcieniach, uzupełniona ozdobnymi srebrnymi przekładkami oraz zawieszką w kształcie samolotu. Lekka, świeża kompozycja inspirowana podróżami i wolnością. Akwamaryn kojarzony jest ze spokojem, harmonią i przejrzystością myśli, idealnie oddając charakter odkrywania świata. Doskonała dla osób kochających podróże i nowe doświadczenia.",
+    specs: {
+      kamienie: "Akwamaryn",
+      metal: "Srebro 925",
+      waga: "1,12 g",
+    },
+    gallery: [
+      "./assets/images/product-41-01.png",
+      "./assets/images/product-41-02.png",
+      "./assets/images/product-41-03.png",
+    ],
+  },
+  {
+    id: "litery-akwamaryn",
+    name: "Bransoletka — Akwamaryn (litera)",
+    price: 165,
+    currency: "PLN",
+    colors: ["blue", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-40-01.png"],
+    featured: false,
+    categories: ["Litery"],
+    description:
+      "Bransoletka z naturalnego akwamarynu w jasnych, błękitnych odcieniach, uzupełniona subtelnym srebrnym elementem. Delikatna i elegancka kompozycja inspirowana spokojem wody i naturą. Akwamaryn kojarzony jest z harmonią, wyciszeniem i przejrzystością myśli. Idealna jako codzienny dodatek lub minimalistyczny prezent.",
+    specs: {
+      kamienie: "Akwamaryn",
+      metal: "Srebro 925",
+      waga: "0,57 g",
+    },
+    gallery: [
+      "./assets/images/product-40-01.png",
+      "./assets/images/product-40-02.png",
+      "./assets/images/product-40-03.png",
+    ],
+  },
+  {
     id: "personalizacja-jaspis-drzewny",
     name: "Bransoletka — Jaspis drzewny",
     price: 160,
@@ -238,7 +307,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-29-01.png"],
     featured: false,
-    categories: ["Klasyczne", "Personalizacja (Grawer)", "Dla par"],
+    categories: ["Klasyczne", "Personalizacja (Grawer)"],
     description:
       "Bransoletka z naturalnych pereł o subtelnym, perłowym połysku, wykończona elementami ze srebra oraz zawieszką w formie gładkiego kółka. Elegancka i ponadczasowa kompozycja, która doskonale pasuje zarówno do codziennych, jak i bardziej formalnych stylizacji. Perły symbolizują czystość, harmonię i klasę. Zawieszka daje możliwość personalizacji — można wykonać grawer z imieniem, inicjałami, datą lub wyjątkowym symbolem, tworząc unikalny i osobisty dodatek lub prezent.",
     specs: {
@@ -353,7 +422,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-24-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    categories: ["Personalizacja", "Kolekcja"],
     description:
       "Bransoletka z jaspisu pasiastego ze srebrną zawieszką. Naturalna, spokojna kompozycja w odcieniach brązu. Jaspis wspiera równowagę i wytrwałość. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -418,7 +487,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-21-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    categories: ["Personalizacja", "Kolekcja"],
     description:
       "Bransoletka z kwarcu z turmalinem ze srebrną wstawką i zawieszką. Jasny kwarc z naturalnymi czarnymi inkluzjami tworzy minimalistyczną i elegancką kompozycję. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -483,7 +552,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-18-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    categories: ["Personalizacja", "Kolekcja"],
     description:
       "Bransoletka z awenturynu ze srebrnymi przekładkami i zawieszką. Delikatne, pudrowo-brzoskwiniowe odcienie kamienia tworzą lekką i harmonijną kompozycję. Awenturyn uznawany jest za kamień szczęścia, inspiracji i nowych możliwości. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -506,7 +575,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-17-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    categories: ["Personalizacja", "Kolekcja"],
     description:
       "Bransoletka z różowego kwarcu ze srebrną zawieszką. Różowy kwarc symbolizuje miłość, czułość i wewnętrzną harmonię. Gładką zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę, znak zodiaku lub własny symbol.",
     specs: {
@@ -598,7 +667,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-13-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    categories: ["Personalizacja", "Kolekcja"],
     description:
       "Bransoletka z ametystu ze srebrną zawieszką. Głębokie fioletowe i naturalne, ziemiste odcienie kamienia tworzą wyjątkową, tajemniczą kompozycję. Gładką zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -621,7 +690,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-12-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja", "Symbole"],
+    categories: ["Personalizacja", "Kolekcja"],
     description:
       "Bransoletka z jaspisu kiwi ze srebrną zawieszką. Delikatny, błękitno-miętowy odcień kamienia z naturalnymi inkluzjami tworzy świeżą i lekką kompozycję. Gładką zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -644,7 +713,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-01-01.png"],
     featured: true,
-    categories: ["Kolekcja", "Symbole", "Personalizacja"],
+    categories: ["Kolekcja", "Zwierzęta"],
     description:
       "Naturalne kamienie z białego agatu, zawieszka w kształcie królika wykonana ze srebra 925, kontur królika wykończony czarną emalią.",
     specs: {
@@ -692,7 +761,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-03-02.png"],
     featured: true,
-    categories: ["Dla par", "Kolekcja", "Personalizacja"],
+    categories: ["Dla par", "Zestawy", "Kolekcja"],
     description:
       "Bransoletka z różowego kwarcu i onyksu ze srebrnymi zawieszkami w kształcie serca. Delikatny różowy kwarc w połączeniu z głęboką czernią onyksu tworzy harmonijny i elegancki kontrast. Gładkie zawieszki można spersonalizować — dodać imiona, inicjały, datę, znak zodiaku lub własny symbol.",
     specs: {
@@ -716,7 +785,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-04-01.png"],
     featured: true,
-    categories: ["Dla par", "Kolekcja"],
+    categories: ["Dla par", "Zestawy", "Kolekcja"],
     description:
       "Bransoletka z różowego kwarcu i onyksu ze srebrnymi przekładkami i zawieszkami Playboy. Delikatny różowy kwarc w połączeniu z czarnym onyksem uzupełniają srebrne kuleczki. Zawieszki w formie królików Playboy — dziewczynka z kokardką i chłopiec z muszką — nadają biżuterii zabawny i stylowy charakter.",
     specs: {
