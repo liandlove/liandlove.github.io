@@ -323,7 +323,7 @@ export const PRODUCTS = [
   },
   {
     id: "opal-rzeczny-lapa-grawer",
-    name: "Bransoletka — opal rzeczny (łapa)",
+    name: "Bransoletka — opal i kamień rzeczny (łapa)",
     price: 150,
     currency: "PLN",
     colors: ["green", "silver"],
@@ -334,7 +334,7 @@ export const PRODUCTS = [
     description:
       "Bransoletka z naturalnego opalu rzecznego z dodatkiem kamieni w odcieniach zieleni oraz srebrną zawieszką w kształcie łapy. Delikatna, harmonijna kompozycja inspirowana naturą, idealna dla miłośników zwierząt. Opal kojarzony jest ze spokojem i równowagą, podkreślając subtelny charakter biżuterii. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub symbol.",
     specs: {
-      kamienie: "Opal (kamień rzeczny)",
+      kamienie: "Opal, kamień rzeczny",
       metal: "Srebro 925",
       waga: "0,67 g",
     },
@@ -376,7 +376,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-26-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja"],
+    categories: ["Personalizacja"],
     description:
       "Bransoletka z naturalnego akwamarynu w delikatnych, pastelowych odcieniach błękitu i jasnego beżu, wykończona srebrnym elementem. Lekka i subtelna kompozycja inspirowana spokojem morza i natury. Akwamaryn kojarzony jest z harmonią, wyciszeniem i przejrzystością myśli. Idealna jako codzienny dodatek lub prezent. Istnieje możliwość personalizacji — wykonania graweru z imieniem, inicjałami, datą lub symbolem.",
     specs: {
@@ -422,7 +422,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-24-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja"],
+    categories: ["Personalizacja"],
     description:
       "Bransoletka z jaspisu pasiastego ze srebrną zawieszką. Naturalna, spokojna kompozycja w odcieniach brązu. Jaspis wspiera równowagę i wytrwałość. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -445,7 +445,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-23-01.png"],
     featured: false,
-    categories: ["Znaki zodiaku", "Kolekcja"],
+    categories: ["Znaki zodiaku"],
     description:
       "Bransoletka z granatu ze srebrną zawieszką. Srebrna zawieszka z symbolem Barana podkreśla odwagę, determinację i silny charakter tego znaku. Granat wzmacnia energię Barana — dodaje pasji, pewności siebie i motywacji do działania, jednocześnie chroniąc i stabilizując emocje.",
     specs: {
@@ -468,7 +468,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-22-01.png"],
     featured: false,
-    categories: ["Znaki zodiaku", "Kolekcja"],
+    categories: ["Znaki zodiaku"],
     description:
       "Bransoletka z różowego kwarcu i masy perłowej ze srebrną zawieszką serca z symbolem Lwa podkreśla siłę, pewność siebie i naturalny magnetyzm tego znaku. Różowy kwarc wnosi do energii Lwa równowagę — uczy delikatności, miłości i harmonii w relacjach. Masa perłowa dodaje spokoju, intuicji i wewnętrznego wyciszenia, tworząc idealne dopełnienie dla ognistej natury Lwa.",
     specs: {
@@ -487,7 +487,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-21-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja"],
+    categories: ["Personalizacja"],
     description:
       "Bransoletka z kwarcu z turmalinem ze srebrną wstawką i zawieszką. Jasny kwarc z naturalnymi czarnymi inkluzjami tworzy minimalistyczną i elegancką kompozycję. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -529,7 +529,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-19-01.png"],
     featured: false,
-    categories: ["Znaki zodiaku", "Kolekcja"],
+    categories: ["Znaki zodiaku"],
     description:
       "Bransoletka z szarego agatu pasiastego ze srebrną zawieszką ze znakiem zodiaku Bliźnięta. Szary agat pasiasty symbolizuje równowagę, ochronę i klarowność myśli, wspierając wewnętrzną stabilność. Znak Bliźniąt oznacza komunikatywność, elastyczność i wielowymiarowość osobowości, czyniąc tę bransoletkę wyjątkowym talizmanem harmonii i wyrażania siebie.",
     specs: {
@@ -552,7 +552,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-18-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja"],
+    categories: ["Personalizacja"],
     description:
       "Bransoletka z awenturynu ze srebrnymi przekładkami i zawieszką. Delikatne, pudrowo-brzoskwiniowe odcienie kamienia tworzą lekką i harmonijną kompozycję. Awenturyn uznawany jest za kamień szczęścia, inspiracji i nowych możliwości. Zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -575,7 +575,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-17-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja"],
+    categories: ["Personalizacja"],
     description:
       "Bransoletka z różowego kwarcu ze srebrną zawieszką. Różowy kwarc symbolizuje miłość, czułość i wewnętrzną harmonię. Gładką zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę, znak zodiaku lub własny symbol.",
     specs: {
@@ -621,7 +621,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-15-01.png"],
     featured: false,
-    categories: ["Znaki zodiaku", "Kolekcja"],
+    categories: ["Znaki zodiaku"],
     description:
       "Bransoletka z białego kamienia księżycowego ze srebrną zawieszką ze znakiem zodiaku Rak. Kamień księżycowy wzmacnia intuicję, harmonię wewnętrzną i równowagę emocjonalną. Znak Raka symbolizuje wrażliwość, troskę oraz silną więź z domem i bliskimi, czyniąc tę bransoletkę wyjątkowym talizmanem.",
     specs: {
@@ -644,7 +644,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-14-01.png"],
     featured: false,
-    categories: ["Kolekcja", "Natura"],
+    categories: ["Kolekcja"],
     description:
       "Bransoletka z cytrynu ze srebrnymi przekładkami. Ciepłe, złocisto-miodowe odcienie cytrynu tworzą jasną i energetyczną kompozycję. Cytryn uważany jest za kamień obfitości i dobrobytu, przyciągający szczęście oraz sukces finansowy. Srebrne elementy dodają elegancji i harmonii.",
     specs: {
@@ -667,7 +667,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-13-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja"],
+    categories: ["Personalizacja"],
     description:
       "Bransoletka z ametystu ze srebrną zawieszką. Głębokie fioletowe i naturalne, ziemiste odcienie kamienia tworzą wyjątkową, tajemniczą kompozycję. Gładką zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -690,7 +690,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-12-01.png"],
     featured: false,
-    categories: ["Personalizacja", "Kolekcja"],
+    categories: ["Personalizacja"],
     description:
       "Bransoletka z jaspisu kiwi ze srebrną zawieszką. Delikatny, błękitno-miętowy odcień kamienia z naturalnymi inkluzjami tworzy świeżą i lekką kompozycję. Gładką zawieszkę można spersonalizować — wykonać dowolny grawer: imię, inicjały, datę lub własny symbol.",
     specs: {
@@ -737,7 +737,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-02-01.png"],
     featured: true,
-    categories: ["Kolekcja", "Dla par", "Zestawy"],
+    categories: ["Dla par", "Zestawy"],
     description:
       "Bransoletka z kamienia księżycowego i onyksu z srebrnymi zawieszkami Yin‑Yang. Kontrast jasnego kamienia księżycowego i głębokiej czerni onyksu symbolizuje harmonię przeciwieństw, a subtelne srebrne elementy dodają elegancji i znaczenia.",
     specs: {
@@ -761,7 +761,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-03-02.png"],
     featured: true,
-    categories: ["Dla par", "Zestawy", "Kolekcja"],
+    categories: ["Dla par", "Zestawy"],
     description:
       "Bransoletka z różowego kwarcu i onyksu ze srebrnymi zawieszkami w kształcie serca. Delikatny różowy kwarc w połączeniu z głęboką czernią onyksu tworzy harmonijny i elegancki kontrast. Gładkie zawieszki można spersonalizować — dodać imiona, inicjały, datę, znak zodiaku lub własny symbol.",
     specs: {
@@ -785,7 +785,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-04-01.png"],
     featured: true,
-    categories: ["Dla par", "Zestawy", "Kolekcja"],
+    categories: ["Dla par", "Zestawy"],
     description:
       "Bransoletka z różowego kwarcu i onyksu ze srebrnymi przekładkami i zawieszkami Playboy. Delikatny różowy kwarc w połączeniu z czarnym onyksem uzupełniają srebrne kuleczki. Zawieszki w formie królików Playboy — dziewczynka z kokardką i chłopiec z muszką — nadają biżuterii zabawny i stylowy charakter.",
     specs: {
@@ -809,7 +809,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-05-01.png"],
     featured: false,
-    categories: ["Natura", "Kolekcja"],
+    categories: ["Natura"],
     description:
       "Bransoletka z jadeitu w odcieniach różowo‑żółtych ze srebrną zawieszką w kształcie kwiatu hibiskusa. Ciepłe kolory kamieni tworzą subtelną i radosną kompozycję, a delikatna zawieszka w formie hibiskusa nadaje biżuterii lekkości i letniego charakteru.",
     specs: {
@@ -833,7 +833,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-06-01.png"],
     featured: false,
-    categories: ["Natura", "Kolekcja"],
+    categories: ["Natura"],
     description:
       "Bransoletka z naturalnego bursztynu i pereł ze srebrnymi przekładkami oraz centralną zawieszką w kształcie motyla. Ciepłe odcienie bursztynu pięknie łączą się z delikatnymi perłami, a subtelny motyl nadaje biżuterii lekkości i naturalnego uroku.",
     specs: {
