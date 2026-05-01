@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "warszawa-syrenka-labradoryt",
+    name: "Bransoletka — Labradoryt (Warszawa)",
+    price: 150,
+    currency: "PLN",
+    colors: ["gray", "blue", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-43-01.png"],
+    featured: false,
+    categories: ["Miasta"],
+    description:
+      "Bransoletka z naturalnego labradorytu w chłodnych, szaro-niebieskich odcieniach z delikatnym połyskiem, uzupełniona srebrną zawieszką z symbolem Warszawy (Syrenka). Elegancka i nowoczesna kompozycja inspirowana miejskim stylem i charakterem stolicy. Labradoryt kojarzony jest z intuicją, ochroną i wewnętrzną siłą. Idealna dla osób związanych z Warszawą lub ceniących jej klimat.",
+    specs: {
+      kamienie: "Labradoryt",
+      metal: "Srebro 925",
+      waga: "0,46 g",
+    },
+    gallery: [
+      "./assets/images/product-43-01.png",
+      "./assets/images/product-43-02.png",
+      "./assets/images/product-43-03.png",
+    ],
+  },
+  {
     id: "kambaba-lisc",
     name: "Bransoletka — Jaspis kambaba (liść)",
     price: 150,
