@@ -1145,10 +1145,191 @@ body.is-safari .modal-image {
   margin-top: 6px;
   padding: 12px 12px;
   border-radius: var(--radius);
+  background: rgba(248, 248, 247, 0.7);
   border: 1px solid rgba(13, 13, 13, 0.08);
-  background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-metal-selector {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: rgba(248, 248, 247, 0.5);
+  border: 1px solid rgba(13, 13, 13, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-metal-title {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(13, 13, 13, 0.75);
+  margin-bottom: 12px;
+}
+
+.metal-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.metal-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 2px solid rgba(13, 13, 13, 0.15);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  cursor: pointer;
+  transition: all 220ms var(--ease);
+  min-width: 80px;
+}
+
+.metal-btn:hover {
+  border-color: rgba(13, 13, 13, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 13, 13, 0.12);
+}
+
+.metal-btn.is-active {
+  border-color: var(--black);
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(13, 13, 13, 0.15);
+}
+
+.metal-texture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.metal-silver .metal-texture {
+  background: linear-gradient(135deg, 
+    #e8e8e8 0%, 
+    #c0c0c0 25%, 
+    #f5f5f5 50%, 
+    #d4d4d4 75%, 
+    #e0e0e0 100%);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+    0 2px 8px rgba(192, 192, 192, 0.3);
+}
+
+.metal-silver .metal-texture::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.6) 50%, 
+    transparent 70%);
+  animation: metalShine 3s infinite;
+}
+
+.metal-gold .metal-texture {
+  background: linear-gradient(135deg, 
+    #ffd700 0%, 
+    #ffed4e 25%, 
+    #fff8dc 50%, 
+    #f4e4bc 75%, 
+    #daa520 100%);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    inset 0 -2px 4px rgba(139, 69, 19, 0.3),
+    0 2px 8px rgba(255, 215, 0, 0.4);
+}
+
+.metal-gold .metal-texture::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.7) 50%, 
+    transparent 70%);
+  animation: metalShine 3s infinite;
+}
+
+.metal-platinum .metal-texture {
+  background: linear-gradient(135deg, 
+    #e5e4e2 0%, 
+    #d2d2d1 25%, 
+    #f5f5f5 50%, 
+    #e8e7e6 75%, 
+    #c9c8c6 100%);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.25),
+    0 2px 8px rgba(197, 196, 194, 0.3);
+}
+
+.metal-platinum .metal-texture::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.6) 50%, 
+    transparent 70%);
+  animation: metalShine 4s infinite;
+}
+
+@keyframes metalShine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+.metal-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--black);
+}
+
+.metal-btn.is-active .metal-label {
+  color: var(--black);
+}
+
+@media (max-width: 560px) {
+  .metal-options {
+    gap: 8px;
+  }
+  
+  .metal-btn {
+    padding: 10px 12px;
+    min-width: 70px;
+  }
+  
+  .metal-texture {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .metal-label {
+    font-size: 10px;
+  }
 }
 
 .modal-specs-title {

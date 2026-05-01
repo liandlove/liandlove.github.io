@@ -39,6 +39,23 @@ function ensureModalShell() {
           <h2 class="modal-title" id="modalTitle"></h2>
           <p class="modal-desc" id="modalDesc"></p>
           <div class="modal-specs" id="modalSpecs" hidden></div>
+          <div class="modal-metal-selector" id="modalMetalSelector">
+            <h3 class="modal-metal-title">Wybierz metal</h3>
+            <div class="metal-options">
+              <button type="button" class="metal-btn metal-silver" data-metal="silver" aria-label="Srebro" title="Srebro 925">
+                <span class="metal-texture"></span>
+                <span class="metal-label">Srebro</span>
+              </button>
+              <button type="button" class="metal-btn metal-gold" data-metal="gold" aria-label="Złoto" title="Złoto 585">
+                <span class="metal-texture"></span>
+                <span class="metal-label">Złoto</span>
+              </button>
+              <button type="button" class="metal-btn metal-platinum" data-metal="platinum" aria-label="Platyna" title="Platyna 950">
+                <span class="metal-texture"></span>
+                <span class="metal-label">Platyna</span>
+              </button>
+            </div>
+          </div>
           <div class="modal-meta">
             <span class="modal-price" id="modalPrice"></span>
           </div>
@@ -123,6 +140,7 @@ export function initProductModal(products) {
   const titleEl = root.querySelector("#modalTitle");
   const descEl = root.querySelector("#modalDesc");
   const specsEl = root.querySelector("#modalSpecs");
+  const metalSelectorEl = root.querySelector("#modalMetalSelector");
   const priceEl = root.querySelector("#modalPrice");
   const orderEl = root.querySelector("#modalOrder");
 
@@ -134,6 +152,7 @@ export function initProductModal(products) {
     !(titleEl instanceof HTMLElement) ||
     !(descEl instanceof HTMLElement) ||
     !(specsEl instanceof HTMLElement) ||
+    !(metalSelectorEl instanceof HTMLElement) ||
     !(priceEl instanceof HTMLElement) ||
     !(orderEl instanceof HTMLAnchorElement)
   ) {
@@ -144,6 +163,7 @@ export function initProductModal(products) {
   let activeIndex = 0;
   let lastFocused = null;
   let isScrollBlocked = false;
+  let activeMetal = "silver"; // Srebro jako domyślne
 
   function isInsideModalScrollable(target) {
     if (!(target instanceof Node)) return false;
@@ -189,9 +209,36 @@ export function initProductModal(products) {
     window.removeEventListener("keydown", onKeydownScroll);
   }
 
+  function updateMetalButtons() {
+    const buttons = metalSelectorEl.querySelectorAll(".metal-btn");
+    buttons.forEach(btn => {
+      const metal = btn.dataset.metal;
+      if (metal === activeMetal) {
+        btn.classList.add("is-active");
+      } else {
+        btn.classList.remove("is-active");
+      }
+    });
+  }
+
+  function updatePriceForMetal(product, metal) {
+    const basePrice = product.price;
+    let multiplier = 1;
+    
+    if (metal === "gold") {
+      multiplier = 3.5; // Złoto jest ~3.5x droższe od srebra
+    } else if (metal === "platinum") {
+      multiplier = 4.2; // Platyna jest ~4.2x droższa od srebra
+    }
+    
+    const newPrice = Math.round(basePrice * multiplier);
+    priceEl.textContent = formatPrice(newPrice, product.currency);
+  }
+
   function render(product) {
     activeProductId = product.id;
     activeIndex = 0;
+    activeMetal = "silver"; // Zawsze resetuj do srebra
 
     const images = (product.gallery?.length ? product.gallery : product.images) ?? [];
     const first = images[0] ?? "";
@@ -201,7 +248,9 @@ export function initProductModal(products) {
 
     titleEl.textContent = product.name;
     descEl.textContent = product.description ?? "Minimalistyczny projekt, dopracowany w detalu.";
-    priceEl.textContent = formatPrice(product.price, product.currency);
+    
+    updateMetalButtons();
+    updatePriceForMetal(product, activeMetal);
     orderEl.href = buildOrderLink();
 
     const specs = product.specs ?? null;
@@ -257,6 +306,26 @@ export function initProductModal(products) {
       lastFocused.focus({ preventScroll: true });
     }
   }
+
+  // Metal selection interactions
+  metalSelectorEl.addEventListener("click", (e) => {
+    const t = e.target;
+    if (!(t instanceof HTMLElement)) return;
+    
+    const metalBtn = t.closest(".metal-btn");
+    if (!metalBtn) return;
+    
+    const metal = metalBtn.dataset.metal;
+    if (!metal || metal === activeMetal) return;
+    
+    activeMetal = metal;
+    updateMetalButtons();
+    
+    const product = activeProductId ? byId.get(activeProductId) : null;
+    if (product) {
+      updatePriceForMetal(product, activeMetal);
+    }
+  });
 
   // Close interactions
   root.addEventListener("click", (e) => {
