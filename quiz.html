@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Quiz pomoże Ci znaleźć idealną bransoletkę dopasowaną do Twojego stylu. Odpowiedz na kilka pytań i odkryj swoją bransoletkę Li & Love."
+    />
+    <title>Quiz · Znajdź idealną bransoletkę | Li &amp; Love</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css?v=20260427-live1" />
+    <link rel="stylesheet" href="./css/quiz.css" />
+
+    <link rel="icon" href="./assets/images/logo-mark.png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#quiz-main">Przejdź do quizu</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Li &amp; Love — strona główna">
+          <img class="brand-logo" src="./assets/images/logo-header.png" alt="Li &amp; Love" />
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" aria-label="Główna nawigacja">
+          <a class="nav-link" href="./index.html">Strona główna</a>
+          <a class="nav-link" href="./catalog.html">Katalog</a>
+          <a class="nav-link is-active" href="./quiz.html">Quiz</a>
+          <a class="nav-link" href="#materials">Materiały</a>
+          <a class="nav-link" href="#contact">Kontakt</a>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="mobile-menu-backdrop" data-close="1"></div>
+      <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <a class="mobile-menu-link" href="./index.html">Strona główna</a>
+        <a class="mobile-menu-link" href="./catalog.html">Katalog</a>
+        <a class="mobile-menu-link" href="./quiz.html">Quiz</a>
+        <a class="mobile-menu-link" href="#materials">Materiały</a>
+        <a class="mobile-menu-link" href="#contact">Kontakt</a>
+      </div>
+    </div>
+
+    <main id="quiz-main" class="quiz-main">
+      <!-- Quiz Content -->
+      <div class="container">
+        <!-- Welcome Screen -->
+        <div class="quiz-screen welcome-screen" id="welcomeScreen">
+          <div class="screen-content">
+            <div class="section-head">
+              <h1 class="section-title">Znajdź swoją idealną bransoletkę</h1>
+              <p class="section-subtitle">
+                Odpowiedz na kilka pytań, a my pomożemy Ci znaleźć bransoletkę dopasowaną do Twojego stylu.
+              </p>
+            </div>
+            <div class="quiz-actions">
+              <button class="btn btn-primary btn-large" id="startQuizBtn">Rozpocznij quiz</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div class="quiz-screen question-screen hidden" id="questionScreen">
+          <div class="screen-content">
+            <!-- Progress Bar -->
+            <div class="quiz-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+              <div class="progress-text">
+                Pytanie <span id="currentQuestion">1</span> z <span id="totalQuestions">8</span>
+              </div>
+            </div>
+
+            <h2 class="question-title" id="questionTitle"></h2>
+            <div class="question-options" id="questionOptions"></div>
+            <div class="question-actions">
+              <button class="btn btn-secondary" id="backBtn" disabled>Wstecz</button>
+              <button class="btn btn-primary" id="nextBtn" disabled>Dalej</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="quiz-screen result-screen hidden" id="resultScreen">
+          <div class="screen-content">
+            <div class="section-head">
+              <h2 class="section-title">Twoja idealna bransoletka</h2>
+              <p class="section-subtitle">Na podstawie Twoich odpowiedzi znaleźliśmy dla Ciebie idealną bransoletkę.</p>
+            </div>
+            <div class="result-product" id="resultProduct"></div>
+            <div class="result-alternatives" id="resultAlternatives"></div>
+            <div class="result-actions">
+              <button class="btn btn-secondary" id="restartQuizBtn">Powtórz quiz</button>
+              <a href="./catalog.html" class="btn btn-ghost">Zobacz katalog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p class="footer-brand">Li &amp; Love</p>
+          <p class="footer-note">© Winky Designs</p>
+        </div>
+        <div class="footer-right">
+          <a class="footer-link" href="tel:+48888888555">+48 888 888 555</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="./js/quiz.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
