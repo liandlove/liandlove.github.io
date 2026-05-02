@@ -50,6 +50,10 @@ function ensureModalShell() {
                 <span class="metal-texture"></span>
                 <span class="metal-label">Złoto</span>
               </button>
+              <button type="button" class="metal-btn metal-rose-gold" data-metal="rose-gold" aria-label="Różowe złoto" title="Różowe złoto 585">
+                <span class="metal-texture"></span>
+                <span class="metal-label">Różowe złoto</span>
+              </button>
               <button type="button" class="metal-btn metal-platinum" data-metal="platinum" aria-label="Platyna" title="Platyna 950">
                 <span class="metal-texture"></span>
                 <span class="metal-label">Platyna</span>
@@ -227,6 +231,8 @@ export function initProductModal(products) {
     
     if (metal === "gold") {
       multiplier = 3.5; // Złoto jest ~3.5x droższe od srebra
+    } else if (metal === "rose-gold") {
+      multiplier = 3.8; // Różowe złoto jest ~3.8x droższe od srebra
     } else if (metal === "platinum") {
       multiplier = 4.2; // Platyna jest ~4.2x droższa od srebra
     }

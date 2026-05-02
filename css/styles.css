@@ -1264,6 +1264,33 @@ body.is-safari .modal-image {
   animation: metalShine 3s infinite;
 }
 
+.metal-rose-gold .metal-texture {
+  background: linear-gradient(135deg, 
+    #e8b4b8 0%, 
+    #d4a5a9 25%, 
+    #f0c6ca 50%, 
+    #e0b5b9 75%, 
+    #d6a5aa 100%);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(139, 69, 90, 0.3),
+    0 2px 8px rgba(212, 165, 169, 0.4);
+}
+
+.metal-rose-gold .metal-texture::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.7) 50%, 
+    transparent 70%);
+  animation: metalShine 3.5s infinite;
+}
+
 .metal-platinum .metal-texture {
   background: linear-gradient(135deg, 
     #e5e4e2 0%, 
