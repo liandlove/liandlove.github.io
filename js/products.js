@@ -6,7 +6,7 @@ export const PRODUCTS = [
     currency: "PLN",
     colors: ["green", "silver"],
     material: "sterling_silver",
-    images: ["./assets/images/product-44-01.png"],
+    images: ["./assets/images/product-44-01.jpg"],
     featured: false,
     categories: ["Symbole"],
     description:
@@ -17,9 +17,9 @@ export const PRODUCTS = [
       waga: "0,43 g",
     },
     gallery: [
-      "./assets/images/product-44-01.png",
-      "./assets/images/product-44-02.png",
-      "./assets/images/product-44-03.png",
+      "./assets/images/product-44-01.jpg",
+      "./assets/images/product-44-02.jpg",
+      "./assets/images/product-44-03.jpg",
     ],
   },
   {
