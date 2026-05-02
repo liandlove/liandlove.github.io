@@ -1,5 +1,28 @@
 export const PRODUCTS = [
   {
+    id: "jaspis-matcha-koniczynka",
+    name: "Bransoletka — Jaspis matcha (koniczynka)",
+    price: 140,
+    currency: "PLN",
+    colors: ["green", "silver"],
+    material: "sterling_silver",
+    images: ["./assets/images/product-44-01.png"],
+    featured: false,
+    categories: ["Symbole"],
+    description:
+      "Bransoletka z naturalnego jaspisu matcha w delikatnych, oliwkowo-zielonych odcieniach, uzupełniona srebrną zawieszką w kształcie czterolistnej koniczynki — symbolu szczęścia. Spokojna, harmonijna kompozycja inspirowana naturą i świeżością roślinności. Jaspis kojarzony jest z równowagą, stabilnością i wyciszeniem, a koniczynka dodaje biżuterii wyjątkowego, pozytywnego znaczenia.",
+    specs: {
+      kamienie: "Jaspis matcha",
+      metal: "Srebro 925",
+      waga: "0,43 g",
+    },
+    gallery: [
+      "./assets/images/product-44-01.png",
+      "./assets/images/product-44-02.png",
+      "./assets/images/product-44-03.png",
+    ],
+  },
+  {
     id: "warszawa-syrenka-labradoryt",
     name: "Bransoletka — Labradoryt (Warszawa)",
     price: 150,
