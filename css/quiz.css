@@ -179,6 +179,10 @@
   height: auto;
   border-radius: var(--radius);
   margin-bottom: var(--space-3);
+  display: block;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .result-product-name {
