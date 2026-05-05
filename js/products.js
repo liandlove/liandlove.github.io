@@ -1,5 +1,372 @@
 export const PRODUCTS = [
   {
+  "id": "opal-angelit-kamie-rzeczny",
+  "name": "Bransoletka — opal, angelit, kamień rzeczny",
+  "price": 300,
+  "currency": "PLN",
+  "colors": [
+    "green"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-58-01.png",
+    "./assets/images/product-58-02.png",
+    "./assets/images/product-58-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Zestawy"
+  ],
+  "description": "Zestaw dwóch bransoletek stworzony z myślą o przyjaciółkach – inspirowany kolorem oczu: zielonym i niebieskim. Delikatna, dopasowana kompozycja, która symbolizuje więź i wyjątkową relację.\n\nNa zawieszce możliwy grawer – data Waszego poznania, znaki zodiaku lub indywidualny symbol, który ma dla Was szczególne znaczenie.",
+  "specs": {
+    "kamienie": "opal, angelit, kamień rzeczny",
+    "metal": "",
+    "waga": ""
+  },
+  "gallery": [
+    "./assets/images/product-58-01.png",
+    "./assets/images/product-58-02.png",
+    "./assets/images/product-58-03.png"
+  ]
+}
+  ,{
+  "id": "opal-kamie-rzeczny",
+  "name": "Bransoletka — opal, kamień rzeczny",
+  "price": 150,
+  "currency": "PLN",
+  "colors": [
+    "green"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-57-01.png",
+    "./assets/images/product-57-02.png",
+    "./assets/images/product-57-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Personalizacja"
+  ],
+  "description": "Bransoletka z naturalnego opalu w odcieniach zieleni, przełamana jasnymi koralikami kamienia rzecznego. Spokojna, naturalna kolorystyka tworzy harmonijną i świeżą kompozycję.\nProsty, minimalistyczny design sprawia, że pasuje do codziennych stylizacji – można nosić samodzielnie lub łączyć z innymi bransoletkami.",
+  "specs": {
+    "kamienie": "opal, kamień rzeczny",
+    "metal": "Srebro 925",
+    "waga": "0,55 g"
+  },
+  "gallery": [
+    "./assets/images/product-57-01.png",
+    "./assets/images/product-57-02.png",
+    "./assets/images/product-57-03.png"
+  ]
+}
+  ,{
+  "id": "angelit-kamie-rzeczny",
+  "name": "Bransoletka — angelit, kamień rzeczny",
+  "price": 150,
+  "currency": "PLN",
+  "colors": [],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-56-01.png",
+    "./assets/images/product-56-02.png",
+    "./assets/images/product-56-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Personalizacja"
+  ],
+  "description": "Bransoletka z naturalnego angelitu w delikatnym, błękitnym odcieniu, przełamana jasnymi koralikami kamienia rzecznego. Subtelna i świeża kolorystyka tworzy lekką, codzienną kompozycję.\nMinimalistyczny design sprawia, że bransoletka pasuje do wielu stylizacji – idealna do noszenia solo lub w zestawieniu z innymi modelami.",
+  "specs": {
+    "kamienie": "angelit, kamień rzeczny",
+    "metal": "Srebro 925",
+    "waga": "0,65 g"
+  },
+  "gallery": [
+    "./assets/images/product-56-01.png",
+    "./assets/images/product-56-02.png",
+    "./assets/images/product-56-03.png"
+  ]
+}
+  ,{
+  "id": "jaspis-matcha-jaspis-dalmatyski-kamie-rzeczny",
+  "name": "Bransoletka — jaspis matcha, jaspis dalmatyński, kamień rzeczny",
+  "price": 450,
+  "currency": "PLN",
+  "colors": [
+    "green",
+    "beige"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-55-01.png",
+    "./assets/images/product-55-02.png",
+    "./assets/images/product-55-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Zestawy"
+  ],
+  "description": "Zestaw trzech bransoletek w naturalnych, stonowanych kolorach – beżu, oliwkowej zieleni i charakterystycznym wzorze jaspisu dalmatyńskiego. Spójna, codzienna kompozycja, która pasuje do wielu stylizacji.\n\nMożna nosić razem dla efektu warstwowego lub osobno – w zależności od okazji. Zielona bransoletka została uzupełniona zawieszką w kształcie czterolistnej koniczynki, która może stać się Twoim symbolem szczęścia i osobistym akcentem.",
+  "specs": {
+    "kamienie": "jaspis matcha, jaspis dalmatyński, kamień rzeczny",
+    "metal": "",
+    "waga": ""
+  },
+  "gallery": [
+    "./assets/images/product-55-01.png",
+    "./assets/images/product-55-02.png",
+    "./assets/images/product-55-03.png"
+  ]
+} 
+  ,{
+  "id": "produkt",
+  "name": "Bransoletki Zestaw",
+  "price": 320,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "black",
+    "white"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-54-01.png",
+    "./assets/images/product-54-02.png",
+    "./assets/images/product-54-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Zestawy"
+  ],
+  "description": "Zestaw dwóch bransoletek inspirowanych równowagą – połączenie jasnego i ciemnego kamienia w harmonijnej kompozycji. Jedna wykonana z białego agatu o delikatnej, mlecznej barwie, druga z obsydianu złocistego o głębokim, czarnym kolorze z subtelnym połyskiem. Obie uzupełnione srebrną zawieszką w kształcie kwiatu lotosu – symbolu harmonii, równowagi i wewnętrznej siły.",
+  "specs": {
+    "kamienie": "",
+    "metal": "",
+    "waga": ""
+  },
+  "gallery": [
+    "./assets/images/product-54-01.png",
+    "./assets/images/product-54-02.png",
+    "./assets/images/product-54-03.png"
+  ]
+}
+  ,{
+  "id": "agat-biay",
+  "name": "Bransoletka — agat biały",
+  "price": 160,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "white"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-53-01.png",
+    "./assets/images/product-53-02.png",
+    "./assets/images/product-53-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnego białego agatu o subtelnej, mlecznej barwie, uzupełniona srebrną zawieszką w kształcie kwiatu lotosu – symbolu harmonii i spokoju. Delikatna, minimalistyczna kompozycja inspirowana naturą. Agat kojarzony jest z równowagą, ochroną i wyciszeniem. Idealna na co dzień lub jako elegancki",
+  "specs": {
+    "kamienie": "agat biały",
+    "metal": "Srebro 925",
+    "waga": "0,59 g"
+  },
+  "gallery": [
+    "./assets/images/product-53-01.png",
+    "./assets/images/product-53-02.png",
+    "./assets/images/product-53-03.png"
+  ]
+}
+  ,{
+  "id": "obsydian-zocisty",
+  "name": "Bransoletka — obsydian złocisty",
+  "price": 160,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "black"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-52-01.png",
+    "./assets/images/product-52-02.png",
+    "./assets/images/product-52-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Męskie"
+  ],
+  "description": "Bransoletka z naturalnego obsydianu złocistego o głębokiej, czarnej barwie z subtelnym, złotym połyskiem widocznym w świetle. Uzupełniona srebrną zawieszką w kształcie kwiatu lotosu – symbolu harmonii i równowagi. Obsydian złocisty kojarzony jest z ochroną, siłą i pewnością siebie. Elegancka i wyrazista propozycja, idealna na co dzień lub jako wyjątkowy prezent.",
+  "specs": {
+    "kamienie": "obsydian złocisty",
+    "metal": "Srebro 925",
+    "waga": "0,59 g"
+  },
+  "gallery": [
+    "./assets/images/product-52-01.png",
+    "./assets/images/product-52-02.png",
+    "./assets/images/product-52-03.png"
+  ]
+},{
+  "id": "kamie-ksiycowy",
+  "name": "Bransoletka — kamień księżycowy",
+  "price": 260,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "white"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-51-01.png",
+    "./assets/images/product-51-02.png",
+    "./assets/images/product-51-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnego kamienia księżycowego o mleczno-białej barwie, subtelnie połyskującego przy świetle. Uzupełniona srebrnymi przekładkami, które dodają jej elegancji i lekkości. Kamień księżycowy symbolizuje intuicję, spokój i równowagę emocjonalną. Delikatna, ponadczasowa propozycja idealna zarówno na co dzień, jak i na wyjątkowe okazje.",
+  "specs": {
+    "kamienie": "kamień księżycowy",
+    "metal": "Srebro 925",
+    "waga": "1,70 g"
+  },
+  "gallery": [
+    "./assets/images/product-51-01.png",
+    "./assets/images/product-51-02.png",
+    "./assets/images/product-51-03.png"
+  ]
+}
+  ,{
+  "id": "jadeit-to-rowy",
+  "name": "Bransoletka — jadeit (żółto-różowy)",
+  "price": 260,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-50-01.png",
+    "./assets/images/product-50-02.png",
+    "./assets/images/product-50-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja",
+    "Personalizacja"
+  ],
+  "description": "Bransoletka z naturalnego jadeitu w ciepłych, pastelowych odcieniach żółci i różu, uzupełniona srebrnym elementem. Wyjątkowa, energetyczna kompozycja o delikatnym, a zarazem wyrazistym charakterze. Jadeit kojarzony jest z harmonią, dobrobytem i pozytywną energią, podkreślając unikalność biżuterii. Idealna jako stylowy dodatek lub wyjątkowy prezent. Możliwość personalizacji — wykonania graweru z imieniem, inicjałami, datą lub symbolem",
+  "specs": {
+    "kamienie": "jadeit (żółto-różowy)",
+    "metal": "Srebro 925",
+    "waga": "2,66 g"
+  },
+  "gallery": [
+    "./assets/images/product-50-01.png",
+    "./assets/images/product-50-02.png",
+    "./assets/images/product-50-03.png"
+  ]
+}
+  ,{
+  "id": "kryszta-grski",
+  "name": "Bransoletka — kryształ górski",
+  "price": 140,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-49-01.png",
+    "./assets/images/product-49-02.png",
+    "./assets/images/product-49-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Runy"
+  ],
+  "description": "Bransoletka z naturalnego kryształu górskiego, uzupełniona srebrną zawieszką z runą Algiz. Minimalistyczna i elegancka forma o delikatnym połysku.\n\nKryształ górski wzmacnia energię i klarowność umysłu, a runa Algiz symbolizuje ochronę i intuicję. Razem tworzą subtelny talizman wspierający i chroniący właściciela.",
+  "specs": {
+    "kamienie": "kryształ górski",
+    "metal": "Srebro 925",
+    "waga": "0,45 g"
+  },
+  "gallery": [
+    "./assets/images/product-49-01.png",
+    "./assets/images/product-49-02.png",
+    "./assets/images/product-49-03.png"
+  ]
+}
+  ,{
+  "id": "kwarc-rowy",
+  "name": "Bransoletka — kwarc różowy",
+  "price": 140,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-48-01.png",
+    "./assets/images/product-48-02.png",
+    "./assets/images/product-48-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Znaki zodiaku"
+  ],
+  "description": "Bransoletka z naturalnego kwarcu różowego w delikatnych, pastelowych odcieniach różu, uzupełniona srebrną zawieszką ze znakiem zodiaku Byk. Subtelna i elegancka kompozycja o romantycznym charakterze. Kwarc różowy kojarzony jest z miłością, harmonią i spokojem, a znak zodiaku podkreśla indywidualność i osobowość. Idealna jako osobisty talizman lub wyjątkowy prezent",
+  "specs": {
+    "kamienie": "kwarc różowy",
+    "metal": "Srebro 925",
+    "waga": "0,45 g"
+  },
+  "gallery": [
+    "./assets/images/product-48-01.png",
+    "./assets/images/product-48-02.png",
+    "./assets/images/product-48-03.png"
+  ]
+}
+  ,{
+  "id": "agat-biay",
+  "name": "Bransoletka — agat biały",
+  "price": 170,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "white"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-47-01.png",
+    "./assets/images/product-47-02.png",
+    "./assets/images/product-47-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Znaki zodiaku"
+  ],
+  "description": "Bransoletka z naturalnego białego agatu w subtelnych, mlecznych odcieniach, uzupełniona ozdobnymi srebrnymi elementami oraz zawieszką ze znakiem zodiaku Bliźnięta. Delikatna i elegancka kompozycja o symbolicznym charakterze. Agat kojarzony jest z harmonią, spokojem i równowagą, a znak zodiaku podkreśla indywidualność i osobowość. Idealna jako osobisty talizman lub wyjątkowy prezent",
+  "specs": {
+    "kamienie": "agat biały",
+    "metal": "Srebro 925",
+    "waga": "1,18 g"
+  },
+  "gallery": [
+    "./assets/images/product-47-01.png",
+    "./assets/images/product-47-02.png",
+    "./assets/images/product-47-03.png"
+  ]
+}
+  ,
+  {
+
     id: "jaspis-matcha-koniczynka",
     name: "Bransoletka — Jaspis matcha (koniczynka)",
     price: 140,
@@ -22,6 +389,71 @@ export const PRODUCTS = [
       "./assets/images/product-44-03.png",
     ],
   },
+  
+  {
+  "id": "howlit-biay",
+  "name": "Bransoletka — howlit biały",
+  "price": 140,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "white"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-46-01.png",
+    "./assets/images/product-46-02.png",
+    "./assets/images/product-46-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Miasta"
+  ],
+  "description": "Bransoletka z naturalnego howlitu białego o charakterystycznym, marmurkowym wzorze, uzupełniona srebrną zawieszką w kształcie Warszawy z napisem „Warszawa”. Minimalistyczna, elegancka kompozycja inspirowana miejskim stylem i tożsamością stolicy. Howlit kojarzony jest ze spokojem, cierpliwością i równowagą. Idealna dla osób związanych z Warszawą lub jako pamiątka z miast",
+  "specs": {
+    "kamienie": "howlit biały",
+    "metal": "Srebro 925",
+    "waga": "0,40 g"
+  },
+  "gallery": [
+    "./assets/images/product-46-01.png",
+    "./assets/images/product-46-02.png",
+    "./assets/images/product-46-03.png"
+  ]
+},
+  
+{
+  "id": "kamie-rzeczny-jaspis-matcha-jaspis-dalmatyski",
+  "name": "Bransoletka — kamień rzeczny, jaspis matcha, jaspis dalmatyński",
+  "price": 270,
+  "currency": "PLN",
+  "colors": [
+    "green",
+    "silver",
+    "beige"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-45-01.png",
+    "./assets/images/product-45-02.png",
+    "./assets/images/product-45-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnych kamieni: kamienia rzecznego, jaspisu matcha oraz jaspisu dalmatyńskiego, uzupełniona srebrnymi elementami. Harmonijna kompozycja łącząca delikatne odcienie beżu i zieleni z charakterystycznym, kontrastowym wzorem jaspisu dalmatyńskiego. Inspirowana naturą, równowagą i różnorodnością struktur. Kamienie te kojarzone są ze spokojem, stabilnością oraz pozytywną energią. Idealna jako stylowy dodatek na co dzień",
+  "specs": {
+    "kamienie": "kamień rzeczny, jaspis matcha, jaspis dalmatyński",
+    "metal": "Srebro 925",
+    "waga": "2,32 g"
+  },
+  "gallery": [
+    "./assets/images/product-45-01.png",
+    "./assets/images/product-45-02.png",
+    "./assets/images/product-45-03.png"
+  ]
+},
   {
     id: "warszawa-syrenka-labradoryt",
     name: "Bransoletka — Labradoryt (Warszawa)",
