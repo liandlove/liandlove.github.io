@@ -377,5 +377,11 @@ export function initProductModal(products) {
     e.preventDefault();
     onOpen(product);
   });
+
+  // Expose modal functions globally
+  window.productModal = {
+    open: onOpen,
+    close: onClose
+  };
 }
 

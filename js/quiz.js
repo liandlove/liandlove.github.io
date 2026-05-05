@@ -593,7 +593,7 @@ class QuizUI {
       <h3 class="result-product-name">${product.name}</h3>
       <div class="result-product-price">${this.formatPrice(product.price, product.currency)}</div>
       <p class="result-product-description">${product.description || 'Elegancka bransoletka, która doskonale uzupełni Twój styl.'}</p>
-      <a href="./index.html#contact" class="btn btn-primary">Zamów bransoletkę</a>
+      <button class="btn btn-primary" data-product-id="${product.id}">Zamów bransoletkę</button>
     `;
   }
 
@@ -607,7 +607,7 @@ class QuizUI {
       <h3 class="result-alternatives-title">Inne propozycje</h3>
       <div class="result-alternatives-list">
         ${alternatives.map(({ product }) => `
-          <a href="./index.html" class="alternative-product">
+          <button class="alternative-product" data-product-id="${product.id}">
             <img src="${product.images?.[0] || './assets/images/bracelet-hero.png'}" 
                  alt="${product.name}" 
                  class="alternative-product-image" />
@@ -615,7 +615,7 @@ class QuizUI {
               <div class="alternative-product-name">${product.name}</div>
               <div class="alternative-product-price">${this.formatPrice(product.price, product.currency)}</div>
             </div>
-          </a>
+          </button>
         `).join('')}
       </div>
     `;
@@ -636,10 +636,62 @@ class QuizUI {
 }
 
 // Initialize Quiz
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   const state = new QuizState();
   const scorer = new ProductScorer(PRODUCTS);
   const ui = new QuizUI(state, scorer);
+  
+  // Initialize product modal immediately after everything loads
+  if (typeof initProductModal === 'function') {
+    initProductModal(PRODUCTS);
+  }
+  
+  // Add event listeners for product modal functionality
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    
+    // Handle main product button
+    if (target.matches('.btn[data-product-id]') || target.closest('.btn[data-product-id]')) {
+      e.preventDefault();
+      const button = target.matches('.btn[data-product-id]') ? target : target.closest('.btn[data-product-id]');
+      const productId = button.getAttribute('data-product-id');
+      const product = PRODUCTS.find(p => p.id === productId);
+      
+      if (product) {
+        console.log('Opening modal for product:', product.id);
+        console.log('Product modal available:', !!window.productModal);
+        
+        // Use the standard product modal
+        if (window.productModal) {
+          window.productModal.open(product);
+        } else {
+          console.error('Product modal not available, redirecting to contact');
+          window.location.href = './index.html#contact';
+        }
+      }
+    }
+    
+    // Handle alternative product buttons
+    if (target.matches('.alternative-product[data-product-id]') || target.closest('.alternative-product[data-product-id]')) {
+      e.preventDefault();
+      const button = target.matches('.alternative-product[data-product-id]') ? target : target.closest('.alternative-product[data-product-id]');
+      const productId = button.getAttribute('data-product-id');
+      const product = PRODUCTS.find(p => p.id === productId);
+      
+      if (product) {
+        console.log('Opening modal for alternative product:', product.id);
+        console.log('Product modal available:', !!window.productModal);
+        
+        // Use the standard product modal
+        if (window.productModal) {
+          window.productModal.open(product);
+        } else {
+          console.error('Product modal not available, redirecting to contact');
+          window.location.href = './index.html#contact';
+        }
+      }
+    }
+  });
   
   // Make quiz available globally for debugging
   window.quiz = { state, scorer, ui };
