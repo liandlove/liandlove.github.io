@@ -1,5 +1,35 @@
 export const PRODUCTS = [
   {
+  "id": "angelit-peru",
+  "name": "Bransoletka — angelit peru",
+  "price": 270,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-64-01.png",
+    "./assets/images/product-64-02.png",
+    "./assets/images/product-64-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnego angelitu peru w delikatnym, błękitnym odcieniu, tworząca subtelną i elegancką kompozycję. Minimalistyczny design został uzupełniony srebrnym elementem w kształcie serca, który nadaje całości wyjątkowego charakteru i symbolizuje bliskość oraz emocje. Idealna jako codzienny dodatek lub prezent dla wyjątkowej osoby.",
+  "specs": {
+    "kamienie": "angelit peru",
+    "metal": "Srebro 925",
+    "waga": "2,66 g"
+  },
+  "gallery": [
+    "./assets/images/product-64-01.png",
+    "./assets/images/product-64-02.png",
+    "./assets/images/product-64-03.png"
+  ]
+}
+  ,{
   "id": "jaspis-kiwi-jaspis-dalmatyski-kamie-rzeczny",
   "name": "Bransoletka — jaspis kiwi, jaspis dalmatyński, kamień rzeczny",
   "price": 140,
