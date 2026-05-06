@@ -1,5 +1,186 @@
 export const PRODUCTS = [
   {
+  "id": "bursztyn-tygrysie-oko",
+  "name": "Bransoletka — bursztyn, tygrysie oko",
+  "price": 200,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-75-01.png",
+    "./assets/images/product-75-02.png",
+    "./assets/images/product-75-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnego tygrysiego oka i bursztynu w ciepłych, złocisto-brązowych odcieniach. Połączenie połyskującego tygrysiego oka z bursztynowymi akcentami tworzy wyrazistą i elegancką kompozycję inspirowaną naturą oraz ziemistymi kolorami. Srebrne elementy subtelnie podkreślają charakter bransoletki, nadając jej stylowego wykończenia. Idealna jako wyjątkowy dodatek na co dzień dla osób ceniących naturalne kamienie i oryginalny design.",
+  "specs": {
+    "kamienie": "bursztyn, tygrysie oko",
+    "metal": "Srebro 925",
+    "waga": "0,77 g"
+  },
+  "gallery": [
+    "./assets/images/product-75-01.png",
+    "./assets/images/product-75-02.png",
+    "./assets/images/product-75-03.png"
+  ]
+}
+  ,{
+  "id": "produkt",
+  "name": "Bransoletki zestaw",
+  "price": 315,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-74-01.png",
+    "./assets/images/product-74-02.png",
+    "./assets/images/product-74-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Zestawy"
+  ],
+  "description": "Zestaw dwóch bransoletek wykonanych z naturalnych kamieni: czerwonego jaspisu, jaspisu dalmatyńskiego oraz granatu. Intensywna czerwień połączona z charakterystycznym wzorem jaspisu dalmatyńskiego i ciemnymi akcentami granatu tworzy wyrazistą, spójną kompozycję. Jedna z bransoletek została uzupełniona srebrną zawieszką z symbolem Ankh — egipskim symbolem życia i siły. Zestaw świetnie prezentuje się noszony razem, ale każda z bransoletek równie dobrze sprawdzi się osobno jako mocny, stylowy dodatek na co dzień.",
+  "specs": {
+    "kamienie": "",
+    "metal": "Srebro 925",
+    "waga": "1,34 g"
+  },
+  "gallery": [
+    "./assets/images/product-74-01.png",
+    "./assets/images/product-74-02.png",
+    "./assets/images/product-74-03.png"
+  ]
+}
+  ,{
+  "id": "jaspis-czerwony-jaspis-dalmatyski-granat",
+  "name": "Bransoletka — jaspis czerwony, jaspis dalmatyński, granat",
+  "price": 175,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-73-01.png",
+    "./assets/images/product-73-02.png",
+    "./assets/images/product-73-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnych kamieni: czerwonego jaspisu, jaspisu dalmatyńskiego oraz granatu, tworzących wyrazistą kompozycję pełną kontrastów. Połączenie głębokiej czerwieni, ciemnych akcentów i charakterystycznego wzoru jaspisu dalmatyńskiego nadaje całości oryginalnego charakteru. Srebrne elementy subtelnie podkreślają nowoczesny styl bransoletki, dzięki czemu świetnie sprawdzi się jako wyjątkowy dodatek na co dzień",
+  "specs": {
+    "kamienie": "jaspis czerwony, jaspis dalmatyński, granat",
+    "metal": "Srebro 925",
+    "waga": "0,84 g"
+  },
+  "gallery": [
+    "./assets/images/product-73-01.png",
+    "./assets/images/product-73-02.png",
+    "./assets/images/product-73-03.png"
+  ]
+}
+  ,{
+  "id": "jaspis-czerwony",
+  "name": "Bransoletka — jaspis czerwony",
+  "price": 140,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-72-01.png",
+    "./assets/images/product-72-02.png",
+    "./assets/images/product-72-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Symbole"
+  ],
+  "description": "Bransoletka z naturalnego czerwonego jaspisu o intensywnej, głębokiej barwie, uzupełniona srebrną zawieszką z symbolem Ankh. Wyrazista kompozycja inspirowana starożytną symboliką i energią życia. Ankh, nazywany egipskim krzyżem życia, symbolizuje siłę, harmonię oraz odrodzenie, a czerwony jaspis podkreśla odwagę i pewność siebie. Stylowy dodatek o wyjątkowym charakterze, idealny na co dzień lub jako osobisty talizman.",
+  "specs": {
+    "kamienie": "jaspis czerwony",
+    "metal": "Srebro 925",
+    "waga": "0,50 g"
+  },
+  "gallery": [
+    "./assets/images/product-72-01.png",
+    "./assets/images/product-72-02.png",
+    "./assets/images/product-72-03.png"
+  ]
+}
+  ,{
+  "id": "kalcyt",
+  "name": "Bransoletka — kalcyt",
+  "price": 155,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-71-01.png",
+    "./assets/images/product-71-02.png",
+    "./assets/images/product-71-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Personalizacja"
+  ],
+  "description": "Bransoletka z naturalnego kalcytu w ciepłych, pastelowo-żółtych odcieniach, uzupełniona srebrną zawieszką w kształcie gwiazdki. Jasna, lekka kolorystyka nadaje całości subtelny i delikatny charakter. Minimalistyczny styl sprawia, że bransoletka świetnie komponuje się z codziennymi stylizacjami, a zawieszka dodaje jej wyjątkowego, nieco magicznego akcentu. Na zawieszce można wykonać dowolny grawer — datę, inicjały, symbol lub krótki napis, dzięki czemu bransoletka staje się wyjątkowo osobista.",
+  "specs": {
+    "kamienie": "kalcyt",
+    "metal": "Srebro 925",
+    "waga": "0,65 g"
+  },
+  "gallery": [
+    "./assets/images/product-71-01.png",
+    "./assets/images/product-71-02.png",
+    "./assets/images/product-71-03.png"
+  ]
+}
+  ,{
+  "id": "onyks",
+  "name": "Bransoletka — onyks",
+  "price": 140,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "black"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-70-01.png",
+    "./assets/images/product-70-02.png",
+    "./assets/images/product-70-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Runy"
+  ],
+  "description": "Bransoletka z naturalnego onyksu o głębokiej, czarnej barwie, uzupełniona srebrną zawieszką z runą Raido. Minimalistyczna i wyrazista kompozycja inspirowana symboliką drogi, ruchu i rozwoju. Runa Raido kojarzona jest z podążaniem własną ścieżką, zmianami i wewnętrzną harmonią, a onyks podkreśla siłę oraz pewność siebie. Stylowy dodatek na co dzień lub wyjątkowy talizman o symbolicznym znaczeniu.",
+  "specs": {
+    "kamienie": "onyks",
+    "metal": "Srebro 925",
+    "waga": "0,31 g"
+  },
+  "gallery": [
+    "./assets/images/product-70-01.png",
+    "./assets/images/product-70-02.png",
+    "./assets/images/product-70-03.png"
+  ]
+}
+  ,{
   "id": "produkt",
   "name": "Bransoletki Zestaw",
   "price": 360,
@@ -1545,7 +1726,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-02-01.png"],
     featured: true,
-    categories: ["Dla par", "Zestawy"],
+    categories: ["Parowe", "Zestawy"],
     description:
       "Bransoletka z kamienia księżycowego i onyksu z srebrnymi zawieszkami Yin‑Yang. Kontrast jasnego kamienia księżycowego i głębokiej czerni onyksu symbolizuje harmonię przeciwieństw, a subtelne srebrne elementy dodają elegancji i znaczenia.",
     specs: {
@@ -1569,7 +1750,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-03-02.png"],
     featured: true,
-    categories: ["Dla par", "Zestawy"],
+    categories: ["Parowe", "Zestawy"],
     description:
       "Bransoletka z różowego kwarcu i onyksu ze srebrnymi zawieszkami w kształcie serca. Delikatny różowy kwarc w połączeniu z głęboką czernią onyksu tworzy harmonijny i elegancki kontrast. Gładkie zawieszki można spersonalizować — dodać imiona, inicjały, datę, znak zodiaku lub własny symbol.",
     specs: {
@@ -1593,7 +1774,7 @@ export const PRODUCTS = [
     material: "sterling_silver",
     images: ["./assets/images/product-04-01.png"],
     featured: true,
-    categories: ["Dla par", "Zestawy"],
+    categories: ["Parowe", "Zestawy"],
     description:
       "Bransoletka z różowego kwarcu i onyksu ze srebrnymi przekładkami i zawieszkami Playboy. Delikatny różowy kwarc w połączeniu z czarnym onyksem uzupełniają srebrne kuleczki. Zawieszki w formie królików Playboy — dziewczynka z kokardką i chłopiec z muszką — nadają biżuterii zabawny i stylowy charakter.",
     specs: {
