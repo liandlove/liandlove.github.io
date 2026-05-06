@@ -135,44 +135,23 @@ const QUIZ_QUESTIONS = [
     ]
   },
   {
-    id: 'materials',
-    title: 'Jakie materiały preferujesz?',
+    id: 'gender',
+    title: 'Jaka płeć?',
     options: [
       {
-        id: 'stones',
-        text: 'Naturalne kamienie i minerały',
-        scores: { materials: 'stones', nature: 'high' }
+        id: 'male',
+        text: 'Mężczyzna',
+        scores: { gender: 'male' }
       },
       {
-        id: 'metal',
-        text: 'Głównie metal i srebro',
-        scores: { materials: 'metal', nature: 'low' }
+        id: 'female',
+        text: 'Kobieta',
+        scores: { gender: 'female' }
       },
       {
-        id: 'mixed',
-        text: 'Połączenie kamieni i metalu',
-        scores: { materials: 'mixed', nature: 'medium' }
-      }
-    ]
-  },
-  {
-    id: 'size',
-    title: 'Jaką wielkość bransoletki wolisz?',
-    options: [
-      {
-        id: 'delicate',
-        text: 'Delikatna i cienka',
-        scores: { size: 'delicate', weight: 'light' }
-      },
-      {
-        id: 'medium',
-        text: 'Średnia, klasyczna',
-        scores: { size: 'medium', weight: 'medium' }
-      },
-      {
-        id: 'chunky',
-        text: 'Grubsza, bardziej wyrazista',
-        scores: { size: 'chunky', weight: 'heavy' }
+        id: 'no_preference',
+        text: 'Nie chcę odpowiadać',
+        scores: { gender: null }
       }
     ]
   },
@@ -196,29 +175,19 @@ const QUIZ_QUESTIONS = [
         scores: { meaning: 'bonus', symbolism: 'medium' }
       }
     ]
-  },
-  {
-    id: 'budget',
-    title: 'Jaki jest Twój przewidywany budżet?',
-    options: [
-      {
-        id: 'affordable',
-        text: 'Do 150 zł',
-        scores: { budget: 'low', priceRange: [0, 150] }
-      },
-      {
-        id: 'medium',
-        text: '150-250 zł',
-        scores: { budget: 'medium', priceRange: [150, 250] }
-      },
-      {
-        id: 'premium',
-        text: 'Powyżej 250 zł',
-        scores: { budget: 'high', priceRange: [250, 1000] }
-      }
-    ]
   }
 ];
+
+// Scoring weights configuration
+const SCORE_WEIGHTS = {
+  style: 2.5,
+  colors: 2.0,
+  usage: 1.5,
+  materials: 1.5,
+  budget: 1.0,
+  gender: 2.5,
+  personality: 0.5
+};
 
 // Product Scoring System - Real Matching Algorithm
 class ProductScorer {
@@ -266,7 +235,7 @@ class ProductScorer {
       materials: null,
       budget: null,
       personality: null,
-      size: null,
+      gender: null,
       meaning: null
     };
 
@@ -296,11 +265,11 @@ class ProductScorer {
         // Budget preference
         if (scores.priceRange) profile.budget = scores.priceRange;
         
+        // Gender preference
+        if (scores.gender !== undefined) profile.gender = scores.gender;
+        
         // Personality preference
         if (scores.personality) profile.personality = scores.personality;
-        
-        // Size preference
-        if (scores.size) profile.size = scores.size;
         
         // Meaning preference
         if (scores.meaning) profile.meaning = scores.meaning;
@@ -317,68 +286,78 @@ class ProductScorer {
       colorMatch: 0,
       usageMatch: 0,
       materialMatch: 0,
+      metalMatch: 0,
+      genderMatch: 0,
       budgetMatch: 0,
       categoryMatch: 0
     };
 
-    // Style matching (weight: 25%)
+    // Style matching
     if (userProfile.style) {
       score.styleMatch = this.matchStyle(product, userProfile.style);
-      score.total += score.styleMatch * 2.5; // Weight: 25%
+      score.total += score.styleMatch * SCORE_WEIGHTS.style;
     }
 
-    // Color matching (weight: 20%)
+    // Color matching
     if (userProfile.colors.length > 0) {
       score.colorMatch = this.matchColors(product, userProfile.colors);
-      score.total += score.colorMatch * 2.0; // Weight: 20%
+      score.total += score.colorMatch * SCORE_WEIGHTS.colors;
     }
 
-    // Usage matching (weight: 15%)
+    // Usage matching
     if (userProfile.usage) {
       score.usageMatch = this.matchUsage(product, userProfile.usage);
-      score.total += score.usageMatch * 1.5; // Weight: 15%
+      score.total += score.usageMatch * SCORE_WEIGHTS.usage;
     }
 
-    // Materials matching (weight: 20%)
+    // Materials matching
     if (userProfile.materials) {
       score.materialMatch = this.matchMaterials(product, userProfile.materials);
-      score.total += score.materialMatch * 2.0; // Weight: 20%
+      score.total += score.materialMatch * SCORE_WEIGHTS.materials;
     }
 
-    // Budget matching (weight: 15%)
+    // Budget matching
     if (userProfile.budget) {
       score.budgetMatch = this.matchBudget(product, userProfile.budget);
-      score.total += score.budgetMatch * 1.5; // Weight: 15%
+      score.total += score.budgetMatch * SCORE_WEIGHTS.budget;
     }
 
-    // Category matching for personality (weight: 5%)
+    // Gender matching (only if not null)
+    if (userProfile.gender !== null && userProfile.gender !== undefined) {
+      score.genderMatch = this.matchGender(product, userProfile.gender);
+      score.total += score.genderMatch * SCORE_WEIGHTS.gender;
+    }
+
+    // Category matching for personality
     if (userProfile.personality) {
       score.categoryMatch = this.matchCategory(product, userProfile.personality);
-      score.total += score.categoryMatch * 0.5; // Weight: 5%
+      score.total += score.categoryMatch * SCORE_WEIGHTS.personality;
     }
 
     return score;
   }
 
   matchStyle(product, style) {
+    const categories = product.categories || [];
     const styleMap = {
       minimal: ['Miasta', 'Kolekcja'],
       elegant: ['Symbole', 'Kolekcja'],
       bold: ['Symbole', 'Kolekcja']
     };
 
-    if (product.categories && product.categories.some(cat => styleMap[style]?.includes(cat))) {
+    if (categories.some(cat => styleMap[style]?.includes(cat))) {
       return 10; // Perfect match
     }
     return 3; // No match
   }
 
   matchColors(product, colors) {
-    if (!product.colors || product.colors.length === 0) return 3;
+    const productColors = product.colors || [];
+    if (productColors.length === 0) return 3;
     
     let matchScore = 0;
     colors.forEach(color => {
-      if (product.colors.includes(color)) {
+      if (productColors.includes(color)) {
         matchScore += 10; // 10 points per matching color
       }
     });
@@ -396,15 +375,24 @@ class ProductScorer {
   }
 
   matchMaterials(product, materials) {
-    if (materials === 'stones' && product.specs?.kamienie) return 10;
+    const specs = product.specs || {};
+    if (materials === 'stones' && specs.kamienie) return 10;
     if (materials === 'metal' && product.material === 'sterling_silver') return 10;
-    if (materials === 'mixed' && product.specs?.kamienie && product.material === 'sterling_silver') return 10;
+    if (materials === 'mixed' && specs.kamienie && product.material === 'sterling_silver') return 10;
+    
+    return 5; // Default score
+  }
+
+  matchMetal(product, metal) {
+    if (metal === 'silver' && product.material === 'sterling_silver') return 10;
+    if (metal === 'gold' && product.material === 'gold') return 10;
+    if (metal === 'rose-gold' && product.material === 'rose_gold') return 10;
     
     return 5; // Default score
   }
 
   matchBudget(product, priceRange) {
-    const price = product.price;
+    const price = product.price || 0;
     
     if (price >= priceRange[0] && price <= priceRange[1]) {
       return 10; // Perfect budget match
@@ -422,16 +410,35 @@ class ProductScorer {
   }
 
   matchCategory(product, personality) {
+    const categories = product.categories || [];
     const personalityMap = {
       subtle: ['Miasta', 'Kolekcja'],
       balanced: ['Kolekcja', 'Miasta'],
       standout: ['Symbole']
     };
 
-    if (product.categories && product.categories.some(cat => personalityMap[personality]?.includes(cat))) {
+    if (categories.some(cat => personalityMap[personality]?.includes(cat))) {
       return 10; // Perfect match
     }
     return 3; // No match
+  }
+
+  matchGender(product, gender) {
+    // Safe handling for null/undefined gender
+    if (!gender) return 5; // Neutral score for no preference
+    
+    // Safe handling for missing categories
+    const categories = product.categories || [];
+    
+    // Check if product has gender-specific categories
+    if (gender === 'male' && categories.includes('Męskie')) {
+      return 10; // Perfect match for male
+    }
+    if (gender === 'female' && !categories.includes('Męskie')) {
+      return 10; // Perfect match for female (any non-male category)
+    }
+    
+    return 3; // No specific gender match
   }
 
   getBestMatch(productScores) {
