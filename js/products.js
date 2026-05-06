@@ -1,5 +1,153 @@
 export const PRODUCTS = [
   {
+  "id": "produkt",
+  "name": "Bransoletki Zestaw",
+  "price": 360,
+  "currency": "PLN",
+  "colors": [],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-69-01.png",
+    "./assets/images/product-69-02.png",
+    "./assets/images/product-69-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Zestawy"
+  ],
+  "description": "Zestaw dwóch bransoletek inspirowanych kontrastem delikatności i charakteru. Pierwsza wykonana z naturalnego kwarcu różowego w subtelnym, pudrowym odcieniu, uzupełniona zawieszką Hello Kitty. Druga z ciemniejszych kamieni o głębokiej, grafitowej kolorystyce z zawieszką Badtz-Maru, nadającą całości wyrazistego stylu. Połączenie jasnych i ciemnych tonów tworzy wyjątkowy duet inspirowany kultowymi postaciami Sanrio. Bransoletki można nosić razem lub osobno, dopasowując je do nastroju i stylizacji.",
+  "specs": {
+    "kamienie": "",
+    "metal": "",
+    "waga": ""
+  },
+  "gallery": [
+    "./assets/images/product-69-01.png",
+    "./assets/images/product-69-02.png",
+    "./assets/images/product-69-03.png"
+  ]
+}
+  ,{
+  "id": "kwarc-rowy",
+  "name": "Bransoletka — kwarc różowy",
+  "price": 175,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-68-01.png",
+    "./assets/images/product-68-02.png",
+    "./assets/images/product-68-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnego kwarcu różowego w delikatnym, pudrowo-różowym odcieniu, uzupełniona srebrną zawieszką inspirowaną Hello Kitty. Subtelna i urocza kompozycja łączy minimalistyczny styl z dziewczęcym charakterem. Kwarc różowy nadaje całości lekkiego, romantycznego wyglądu, dzięki czemu bransoletka świetnie sprawdzi się jako codzienny dodatek lub wyjątkowy prezent.",
+  "specs": {
+    "kamienie": "kwarc różowy",
+    "metal": "Srebro 925",
+    "waga": "0,77 g"
+  },
+  "gallery": [
+    "./assets/images/product-68-01.png",
+    "./assets/images/product-68-02.png",
+    "./assets/images/product-68-03.png"
+  ]
+}
+  ,{
+  "id": "granat",
+  "name": "Bransoletka — granat",
+  "price": 170,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-67-01.png",
+    "./assets/images/product-67-02.png",
+    "./assets/images/product-67-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Znaki zodiaku"
+  ],
+  "description": "Bransoletka z naturalnego granatu o głębokiej, bordowo-wiśniowej barwie, uzupełniona srebrną zawieszką ze znakiem zodiaku Barana. Wyrazista kolorystyka i minimalistyczna forma nadają jej eleganckiego charakteru. Granat doskonale komponuje się z energią znaku Barana, symbolizując siłę, determinację i pewność siebie. Idealna jako osobisty dodatek lub wyjątkowy prezent dla osób spod znaku Barana",
+  "specs": {
+    "kamienie": "granat",
+    "metal": "Srebro 925",
+    "waga": "0,71 g"
+  },
+  "gallery": [
+    "./assets/images/product-67-01.png",
+    "./assets/images/product-67-02.png",
+    "./assets/images/product-67-03.png"
+  ]
+}
+  ,{
+  "id": "lepidolit",
+  "name": "Bransoletka — lepidolit",
+  "price": 150,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-66-01.png",
+    "./assets/images/product-66-02.png",
+    "./assets/images/product-66-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Personalizacja"
+  ],
+  "description": "Bransoletka z naturalnego lepidolitu w subtelnych odcieniach fioletu i pudrowego różu, uzupełniona srebrnymi elementami oraz zawieszką w kształcie chmurki. Delikatna kolorystyka i minimalistyczna forma nadają jej lekkości oraz spokojnego charakteru. Idealna jako codzienny dodatek lub wyjątkowy prezent z możliwością nadania osobistego znaczenia.",
+  "specs": {
+    "kamienie": "lepidolit",
+    "metal": "Srebro 925",
+    "waga": "0,87 g"
+  },
+  "gallery": [
+    "./assets/images/product-66-01.png",
+    "./assets/images/product-66-02.png",
+    "./assets/images/product-66-03.png"
+  ]
+}
+  ,{
+  "id": "hematyt",
+  "name": "Bransoletka — hematyt",
+  "price": 145,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-65-01.png",
+    "./assets/images/product-65-02.png",
+    "./assets/images/product-65-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Runy"
+  ],
+  "description": "Bransoletka z naturalnego hematytu o głębokim, grafitowym połysku, uzupełniona srebrną zawieszką z runą Uruz – symbolem zdrowia, siły i wytrzymałości. Połączenie runy Uruz z hematytem podkreśla energię stabilności, odporności i wewnętrznej mocy. Minimalistyczna, wyrazista forma sprawia, że bransoletka świetnie sprawdzi się jako codzienny dodatek lub osobisty talizman.",
+  "specs": {
+    "kamienie": "hematyt",
+    "metal": "Srebro 925",
+    "waga": "0,35 g"
+  },
+  "gallery": [
+    "./assets/images/product-65-01.png",
+    "./assets/images/product-65-02.png",
+    "./assets/images/product-65-03.png"
+  ]
+}
+  ,{
   "id": "angelit-peru",
   "name": "Bransoletka — angelit peru",
   "price": 270,
