@@ -220,7 +220,7 @@ const QUIZ_QUESTIONS = [
   }
 ];
 
-// Product Scoring System - Simple Random Selection
+// Product Scoring System - Real Matching Algorithm
 class ProductScorer {
   constructor(products) {
     this.products = products;
@@ -229,19 +229,28 @@ class ProductScorer {
   calculateScores(answers) {
     console.log('Quiz answers:', answers);
     
-    // Simple random product selection
-    const randomIndex = Math.floor(Math.random() * this.products.length);
-    const selectedProduct = this.products[randomIndex];
+    // Build user profile from answers
+    const userProfile = this.buildUserProfile(answers);
+    console.log('User profile:', userProfile);
     
-    console.log('Selected product:', selectedProduct.name);
-    
-    // Create fake scores to make it look like scoring worked
+    // Initialize scores for all products
     const productScores = {};
-    this.products.forEach((product, index) => {
+    this.products.forEach(product => {
       productScores[product.id] = {
-        total: index === randomIndex ? 100 + Math.random() * 10 : Math.random() * 50,
-        random: Math.random()
+        total: 0,
+        styleMatch: 0,
+        colorMatch: 0,
+        usageMatch: 0,
+        materialMatch: 0,
+        budgetMatch: 0,
+        categoryMatch: 0
       };
+    });
+
+    // Calculate scores for each product based on user profile
+    this.products.forEach(product => {
+      const score = this.calculateProductScore(product, userProfile);
+      productScores[product.id] = score;
     });
 
     console.log('Product scores:', productScores);
@@ -249,8 +258,180 @@ class ProductScorer {
     return productScores;
   }
 
-  calculateProductScore(product, answerScores) {
-    return { total: Math.random() * 10 };
+  buildUserProfile(answers) {
+    const profile = {
+      style: null,
+      colors: [],
+      usage: null,
+      materials: null,
+      budget: null,
+      personality: null,
+      size: null,
+      meaning: null
+    };
+
+    // Extract preferences from answers
+    Object.values(answers).forEach(answer => {
+      if (answer && answer.scores) {
+        const scores = answer.scores;
+        
+        // Style preference
+        if (scores.style) profile.style = scores.style;
+        
+        // Color preferences
+        if (scores.colors) {
+          if (Array.isArray(scores.colors)) {
+            profile.colors = [...new Set([...profile.colors, ...scores.colors])];
+          } else {
+            profile.colors.push(scores.colors);
+          }
+        }
+        
+        // Usage preference
+        if (scores.usage) profile.usage = scores.usage;
+        
+        // Materials preference
+        if (scores.materials) profile.materials = scores.materials;
+        
+        // Budget preference
+        if (scores.priceRange) profile.budget = scores.priceRange;
+        
+        // Personality preference
+        if (scores.personality) profile.personality = scores.personality;
+        
+        // Size preference
+        if (scores.size) profile.size = scores.size;
+        
+        // Meaning preference
+        if (scores.meaning) profile.meaning = scores.meaning;
+      }
+    });
+
+    return profile;
+  }
+
+  calculateProductScore(product, userProfile) {
+    let score = {
+      total: 0,
+      styleMatch: 0,
+      colorMatch: 0,
+      usageMatch: 0,
+      materialMatch: 0,
+      budgetMatch: 0,
+      categoryMatch: 0
+    };
+
+    // Style matching (weight: 25%)
+    if (userProfile.style) {
+      score.styleMatch = this.matchStyle(product, userProfile.style);
+      score.total += score.styleMatch * 2.5; // Weight: 25%
+    }
+
+    // Color matching (weight: 20%)
+    if (userProfile.colors.length > 0) {
+      score.colorMatch = this.matchColors(product, userProfile.colors);
+      score.total += score.colorMatch * 2.0; // Weight: 20%
+    }
+
+    // Usage matching (weight: 15%)
+    if (userProfile.usage) {
+      score.usageMatch = this.matchUsage(product, userProfile.usage);
+      score.total += score.usageMatch * 1.5; // Weight: 15%
+    }
+
+    // Materials matching (weight: 20%)
+    if (userProfile.materials) {
+      score.materialMatch = this.matchMaterials(product, userProfile.materials);
+      score.total += score.materialMatch * 2.0; // Weight: 20%
+    }
+
+    // Budget matching (weight: 15%)
+    if (userProfile.budget) {
+      score.budgetMatch = this.matchBudget(product, userProfile.budget);
+      score.total += score.budgetMatch * 1.5; // Weight: 15%
+    }
+
+    // Category matching for personality (weight: 5%)
+    if (userProfile.personality) {
+      score.categoryMatch = this.matchCategory(product, userProfile.personality);
+      score.total += score.categoryMatch * 0.5; // Weight: 5%
+    }
+
+    return score;
+  }
+
+  matchStyle(product, style) {
+    const styleMap = {
+      minimal: ['Miasta', 'Kolekcja'],
+      elegant: ['Symbole', 'Kolekcja'],
+      bold: ['Symbole', 'Kolekcja']
+    };
+
+    if (product.categories && product.categories.some(cat => styleMap[style]?.includes(cat))) {
+      return 10; // Perfect match
+    }
+    return 3; // No match
+  }
+
+  matchColors(product, colors) {
+    if (!product.colors || product.colors.length === 0) return 3;
+    
+    let matchScore = 0;
+    colors.forEach(color => {
+      if (product.colors.includes(color)) {
+        matchScore += 10; // 10 points per matching color
+      }
+    });
+    
+    return matchScore > 0 ? Math.min(matchScore, 20) : 3; // Max 20 points
+  }
+
+  matchUsage(product, usage) {
+    // All bracelets are suitable for mixed usage
+    if (usage === 'mixed') return 10;
+    if (usage === 'daily') return 8; // Most products are daily-wearable
+    if (usage === 'special') return 6;
+    
+    return 5; // Default score
+  }
+
+  matchMaterials(product, materials) {
+    if (materials === 'stones' && product.specs?.kamienie) return 10;
+    if (materials === 'metal' && product.material === 'sterling_silver') return 10;
+    if (materials === 'mixed' && product.specs?.kamienie && product.material === 'sterling_silver') return 10;
+    
+    return 5; // Default score
+  }
+
+  matchBudget(product, priceRange) {
+    const price = product.price;
+    
+    if (price >= priceRange[0] && price <= priceRange[1]) {
+      return 10; // Perfect budget match
+    }
+    
+    // Close matches
+    if (price < priceRange[0] && (priceRange[0] - price) <= 50) return 8;
+    if (price > priceRange[1] && (price - priceRange[1]) <= 50) return 6;
+    
+    // Out of budget
+    if (price < priceRange[0]) return 4; // Under budget
+    if (price > priceRange[1]) return 2; // Over budget
+    
+    return 5; // Default
+  }
+
+  matchCategory(product, personality) {
+    const personalityMap = {
+      subtle: ['Miasta', 'Kolekcja'],
+      balanced: ['Kolekcja', 'Miasta'],
+      standout: ['Symbole']
+    };
+
+    if (product.categories && product.categories.some(cat => personalityMap[personality]?.includes(cat))) {
+      return 10; // Perfect match
+    }
+    return 3; // No match
   }
 
   getBestMatch(productScores) {

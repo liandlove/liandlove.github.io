@@ -1,5 +1,157 @@
 export const PRODUCTS = [
   {
+  "id": "jaspis-kiwi-jaspis-dalmatyski-kamie-rzeczny",
+  "name": "Bransoletka — jaspis kiwi, jaspis dalmatyński, kamień rzeczny",
+  "price": 140,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "beige"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-63-01.png",
+    "./assets/images/product-63-02.png",
+    "./assets/images/product-63-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Litery"
+  ],
+  "description": "Bransoletka z naturalnych kamieni w spokojnych, ziemistych odcieniach beżu, szarości i charakterystycznych wzorach jaspisu dalmatyńskiego. Połączenie jaspisu kiwi, kamienia rzecznego i jaspisu dalmatyńskiego tworzy lekką, naturalną kompozycję inspirowaną naturą. Uzupełniona srebrną zawieszką z literą, która nadaje biżuterii osobisty charakter i sprawia, że może stać się wyjątkowym symbolem związanym z ważną osobą, imieniem lub wspomnieniem.",
+  "specs": {
+    "kamienie": "jaspis kiwi, jaspis dalmatyński, kamień rzeczny",
+    "metal": "Srebro 925",
+    "waga": "0,28 g"
+  },
+  "gallery": [
+    "./assets/images/product-63-01.png",
+    "./assets/images/product-63-02.png",
+    "./assets/images/product-63-03.png"
+  ]
+}
+  ,{
+  "id": "kamie-ksiycowy",
+  "name": "Bransoletka — kamień księżycowy",
+  "price": 190,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-62-01.png",
+    "./assets/images/product-62-02.png",
+    "./assets/images/product-62-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnego kamienia księżycowego o delikatnej, mlecznej barwie z subtelnym połyskiem. Jasna, minimalistyczna forma nadaje jej lekkości i elegancji.\nUzupełniona srebrną zawieszką w kształcie półksiężyca, która podkreśla jej wyjątkowy, subtelny charakter.",
+  "specs": {
+    "kamienie": "kamień księżycowy",
+    "metal": "Srebro 925",
+    "waga": "0,43 g"
+  },
+  "gallery": [
+    "./assets/images/product-62-01.png",
+    "./assets/images/product-62-02.png",
+    "./assets/images/product-62-03.png"
+  ]
+}
+  ,{
+  "id": "produkt",
+  "name": "Zestaw Bransoletek",
+  "price": 300,
+  "currency": "PLN",
+  "colors": [
+    "green"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-61-01.png",
+    "./assets/images/product-61-02.png",
+    "./assets/images/product-61-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Zestawy"
+  ],
+  "description": "Zestaw dwóch bransoletek w głębokiej, naturalnej kolorystyce inspirowanej lasem. Kompozycja łączy jaspis kambaba, hematyt oraz diopsyd w odcieniach zieleni i czerni, tworząc spójną, wyrazistą całość. Jedna z bransoletek uzupełniona jest zawieszką w kształcie liścia, druga subtelnym akcentem roślinnym, co podkreśla ich naturalny charakter. Zestaw można nosić razem lub osobno, dopasowując do stylu – idealny dla osób, które lubią ciemne, minimalistyczne dodatki z charakterem.",
+  "specs": {
+    "kamienie": "",
+    "metal": "",
+    "waga": ""
+  },
+  "gallery": [
+    "./assets/images/product-61-01.png",
+    "./assets/images/product-61-02.png",
+    "./assets/images/product-61-03.png"
+  ]
+}
+  ,{
+  "id": "awenturyn",
+  "name": "Bransoletka — awenturyn",
+  "price": 150,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "beige"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-60-01.png",
+    "./assets/images/product-60-02.png",
+    "./assets/images/product-60-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnego awenturynu w delikatnych, pastelowych odcieniach – od jasnych beży po subtelne akcenty brzoskwini i szarości. Stonowana kolorystyka nadaje jej lekkości i uniwersalnego charakteru.\n\nUzupełniona srebrną zawieszką w kształcie serca, która symbolizuje bliskość i emocje, dodając całości wyjątkowego znaczenia",
+  "specs": {
+    "kamienie": "awenturyn",
+    "metal": "Srebro 925",
+    "waga": "0,55 g"
+  },
+  "gallery": [
+    "./assets/images/product-60-01.png",
+    "./assets/images/product-60-02.png",
+    "./assets/images/product-60-03.png"
+  ]
+}
+  ,{
+  "id": "awenturyn",
+  "name": "Bransoletka — awenturyn",
+  "price": 180,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-59-01.png",
+    "./assets/images/product-59-02.png",
+    "./assets/images/product-59-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka z naturalnego awenturynu w delikatnych, jasnych odcieniach, przełamanych subtelnymi, ciepłymi akcentami. Minimalistyczna i lekka forma sprawia, że świetnie komponuje się z codziennymi stylizacjami.\n\nUzupełniona srebrną zawieszką w kształcie kwiatu, która dodaje całości subtelności i kobiecego charakteru. Idealna do noszenia solo lub w zestawach.",
+  "specs": {
+    "kamienie": "awenturyn",
+    "metal": "Srebro 925",
+    "waga": "0,85 g"
+  },
+  "gallery": [
+    "./assets/images/product-59-01.png",
+    "./assets/images/product-59-02.png",
+    "./assets/images/product-59-03.png"
+  ]
+}
+  ,{
   "id": "opal-angelit-kamie-rzeczny",
   "name": "Bransoletka — opal, angelit, kamień rzeczny",
   "price": 300,
