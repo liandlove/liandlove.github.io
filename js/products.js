@@ -1,5 +1,36 @@
 export const PRODUCTS = [
+
 {
+  "id": "kwarcccc",
+  "name": "Bransoletka — kwarc",
+  "price": 290,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-77-01.png",
+    "./assets/images/product-77-02.png",
+    "./assets/images/product-77-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Parowe"
+  ],
+  "description": "Zestaw dwóch bransoletek wykonanych z naturalnego kwarcu o jasnej, subtelnej barwie, uzupełnionych srebrnymi zawieszkami w kształcie serca. Minimalistyczna i elegancka kompozycja symbolizująca bliskość oraz więź między dwiema osobami. Bransoletki zostały stworzone z myślą o personalizacji — na zawieszkach można wykonać dowolny grawer, np. inicjały, datę, ważny symbol lub krótki napis, tworząc wyjątkowy i osobisty zestaw",
+  "specs": {
+    "kamienie": "kwarc",
+    "metal": "Srebro 925",
+    "waga": "1,02 g"
+  },
+  "gallery": [
+    "./assets/images/product-77-01.png",
+    "./assets/images/product-77-02.png",
+    "./assets/images/product-77-03.png"
+  ]
+}
+  ,{
   "id": "jaspis-kambaba",
   "name": "Bransoletka — jaspis kambaba",
   "price": 140,
