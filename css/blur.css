@@ -1,0 +1,57 @@
+/* Blur Overlay Styles */
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.blur-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.blur-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+#blurInput {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#blurInput:focus {
+  border-color: #4a90e2;
+}
+
+/* Blur effect on main content when overlay is active */
+body.blur-active > *:not(.blur-overlay) {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  pointer-events: none;
+}
+
+body.blur-active {
+  overflow: hidden;
+}

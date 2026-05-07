@@ -1,5 +1,37 @@
 export const PRODUCTS = [
-  {
+{
+  "id": "jaspis-kambaba",
+  "name": "Bransoletka — jaspis kambaba",
+  "price": 140,
+  "currency": "PLN",
+  "colors": [
+    "green",
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-78-01.png",
+    "./assets/images/product-78-02.png",
+    "./assets/images/product-78-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Męska", 
+    "Personalizacja"
+  ],
+  "description": "Męska bransoletka z naturalnego jaspisu kambaba w głębokich odcieniach zieleni i czerni, inspirowanych naturą oraz leśnymi strukturami. Minimalistyczna forma i ciemna kolorystyka nadają jej wyrazistego, eleganckiego charakteru. Uzupełniona srebrnym elementem przeznaczonym pod personalizowany grawer — można umieścić na nim inicjały, datę, symbol lub krótki napis, tworząc wyjątkowy i osobisty dodatek.",
+  "specs": {
+    "kamienie": "jaspis kambaba",
+    "metal": "Srebro 925",
+    "waga": "0,50 g"
+  },
+  "gallery": [
+    "./assets/images/product-78-01.png",
+    "./assets/images/product-78-02.png",
+    "./assets/images/product-78-03.png"
+  ]
+}
+  ,{
   "id": "bursztyn-tygrysie-oko",
   "name": "Bransoletka — bursztyn, tygrysie oko",
   "price": 200,
