@@ -30,7 +30,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "produkt",
+  "id": "produkt12",
   "name": "Bransoletki zestaw",
   "price": 315,
   "currency": "PLN",
@@ -90,7 +90,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "jaspis-czerwony",
+  "id": "jaspis-czerwony12",
   "name": "Bransoletka — jaspis czerwony",
   "price": 140,
   "currency": "PLN",
@@ -120,7 +120,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "kalcyt",
+  "id": "kalcyttt",
   "name": "Bransoletka — kalcyt",
   "price": 155,
   "currency": "PLN",
@@ -150,7 +150,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "onyks",
+  "id": "onykssss",
   "name": "Bransoletka — onyks",
   "price": 140,
   "currency": "PLN",
@@ -181,7 +181,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "produkt",
+  "id": "produkt444",
   "name": "Bransoletki Zestaw",
   "price": 360,
   "currency": "PLN",
@@ -209,7 +209,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "kwarc-rowy",
+  "id": "kwarc-rowyzz",
   "name": "Bransoletka — kwarc różowy",
   "price": 175,
   "currency": "PLN",
@@ -239,7 +239,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "granat",
+  "id": "granatik",
   "name": "Bransoletka — granat",
   "price": 170,
   "currency": "PLN",
@@ -269,7 +269,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "lepidolit",
+  "id": "lepidolitik",
   "name": "Bransoletka — lepidolit",
   "price": 150,
   "currency": "PLN",
@@ -299,7 +299,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "hematyt",
+  "id": "hematytik",
   "name": "Bransoletka — hematyt",
   "price": 145,
   "currency": "PLN",
@@ -329,7 +329,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "angelit-peru",
+  "id": "angelit-peruan",
   "name": "Bransoletka — angelit peru",
   "price": 270,
   "currency": "PLN",
@@ -390,7 +390,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "kamie-ksiycowy",
+  "id": "kamie-ksiycowy-n",
   "name": "Bransoletka — kamień księżycowy",
   "price": 190,
   "currency": "PLN",
@@ -420,7 +420,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "produkt",
+  "id": "produkt777",
   "name": "Zestaw Bransoletek",
   "price": 300,
   "currency": "PLN",
@@ -450,7 +450,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "awenturyn",
+  "id": "awenturyniks",
   "name": "Bransoletka — awenturyn",
   "price": 150,
   "currency": "PLN",
@@ -481,7 +481,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "awenturyn",
+  "id": "awenturyn4ik",
   "name": "Bransoletka — awenturyn",
   "price": 180,
   "currency": "PLN",
@@ -511,7 +511,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "opal-angelit-kamie-rzeczny",
+  "id": "opal-angelit-kamie-rzeczny-n",
   "name": "Bransoletka — opal, angelit, kamień rzeczny",
   "price": 300,
   "currency": "PLN",
@@ -541,7 +541,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "opal-kamie-rzeczny",
+  "id": "opal-kamie-rzeczny-nie",
   "name": "Bransoletka — opal, kamień rzeczny",
   "price": 150,
   "currency": "PLN",
@@ -630,7 +630,7 @@ export const PRODUCTS = [
   ]
 } 
   ,{
-  "id": "produkt",
+  "id": "produkt69",
   "name": "Bransoletki Zestaw",
   "price": 320,
   "currency": "PLN",
@@ -693,7 +693,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "obsydian-zocisty",
+  "id": "obsydian-zocisty-m",
   "name": "Bransoletka — obsydian złocisty",
   "price": 160,
   "currency": "PLN",
@@ -723,7 +723,7 @@ export const PRODUCTS = [
     "./assets/images/product-52-03.png"
   ]
 },{
-  "id": "kamie-ksiycowy",
+  "id": "kamie-ksiycowy-pp",
   "name": "Bransoletka — kamień księżycowy",
   "price": 260,
   "currency": "PLN",
@@ -754,7 +754,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "jadeit-to-rowy",
+  "id": "jadeit-to-rowy-mop",
   "name": "Bransoletka — jadeit (żółto-różowy)",
   "price": 260,
   "currency": "PLN",
@@ -815,7 +815,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "kwarc-rowy",
+  "id": "kwarc-rowy-nipok",
   "name": "Bransoletka — kwarc różowy",
   "price": 140,
   "currency": "PLN",
@@ -845,7 +845,7 @@ export const PRODUCTS = [
   ]
 }
   ,{
-  "id": "agat-biay",
+  "id": "agat-biay-zc",
   "name": "Bransoletka — agat biały",
   "price": 170,
   "currency": "PLN",
@@ -902,7 +902,7 @@ export const PRODUCTS = [
   },
   
   {
-  "id": "howlit-biay",
+  "id": "howlit-biay-zxc",
   "name": "Bransoletka — howlit biały",
   "price": 140,
   "currency": "PLN",
