@@ -1,8 +1,282 @@
 export const PRODUCTS = [
-
-{
+  {
+  "id": "larvikit",
+  "name": "Bransoletka — larvikit",
+  "price": 170,
+  "currency": "PLN",
+  "colors": [],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-86-01.png",
+    "./assets/images/product-86-02.png",
+    "./assets/images/product-86-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Personalizacja"
+  ],
+  "description": "Bransoletka wykonana z naturalnego larvikitu w chłodnych odcieniach szarości i grafitu, z charakterystycznym, delikatnie połyskującym wzorem kamienia. Surowe piękno larvikitu świetnie komponuje się z codziennym stylem, tworząc uniwersalny dodatek zarówno dla kobiet, jak i mężczyzn. Na zawieszce istnieje możliwość wykonania dowolnego graweru, dzięki czemu bransoletka może stać się wyjątkową i osobistą pamiątką.",
+  "specs": {
+    "kamienie": "larvikit",
+    "metal": "Srebro 925",
+    "waga": "0,70 g"
+  },
+  "gallery": [
+    "./assets/images/product-86-01.png",
+    "./assets/images/product-86-02.png",
+    "./assets/images/product-86-03.png"
+  ]
+}
+  ,{
+  "id": "onykslididntpayme",
+  "name": "Bransoletka — onyks",
+  "price": 160,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "black"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-85-01.png",
+    "./assets/images/product-85-02.png",
+    "./assets/images/product-85-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka wykonana z naturalnego onyksu o głębokiej, czarnej barwie, tworzącej minimalistyczną i wyrazistą kompozycję. Gładkie kamienie nadają całości elegancki charakter, a srebrna zawieszka inspirowana kultowym symbolem Monster High — czaszką z kokardką — dodaje biżuterii unikalnego stylu z lekkim, alternatywnym klimatem. Idealna dla osób lubiących ciemniejsze akcenty, charakterystyczne dodatki i nowoczesny streetwearowy sty",
+  "specs": {
+    "kamienie": "onyks",
+    "metal": "Srebro 925",
+    "waga": "0,57 g"
+  },
+  "gallery": [
+    "./assets/images/product-85-01.png",
+    "./assets/images/product-85-02.png",
+    "./assets/images/product-85-03.png"
+  ]
+}
+  ,{
+  "id": "masa-perowa-pera-majorka-akwamaryn",
+  "name": "Bransoletka — masa perłowa, perła majorka, akwamaryn",
+  "price": 220,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-84-01.png",
+    "./assets/images/product-84-02.png",
+    "./assets/images/product-84-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Kolekcja"
+  ],
+  "description": "Bransoletka wykonana z masy perłowej, pereł majorka oraz naturalnego akwamarynu w delikatnych odcieniach błękitu i bieli. Jasna, subtelna kolorystyka nadaje całości lekki i elegancki charakter, a srebrne elementy pięknie podkreślają wyjątkowy styl biżuterii. Zawieszka z niebieskim sercem i skrzydłami dodaje kompozycji symbolicznego znaczenia, kojarząc się z wolnością, lekkością i bliskością ważnych emocji. Idealna jako delikatny dodatek na co dzień lub wyjątkowy prezent.",
+  "specs": {
+    "kamienie": "masa perłowa, perła majorka, akwamaryn",
+    "metal": "Srebro 925",
+    "waga": "1,25 g"
+  },
+  "gallery": [
+    "./assets/images/product-84-01.png",
+    "./assets/images/product-84-02.png",
+    "./assets/images/product-84-03.png"
+  ]
+}
+  ,{
+  "id": "kryszta-grski-z-turmalinem",
+  "name": "Bransoletka — kryształ górski z turmalinem",
+  "price": 250,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "black"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-83-01.png",
+    "./assets/images/product-83-02.png",
+    "./assets/images/product-83-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Litery"
+  ],
+  "description": "Bransoletka wykonana z naturalnego kryształu górskiego z turmalinem w kontrastowym połączeniu jasnych i ciemnych odcieni. Charakterystyczne czarne inkluzje nadają kamieniom wyjątkowy, niepowtarzalny wygląd, a srebrna zawieszka w kształcie serca dodaje całości eleganckiego charakteru. Model należy do kategorii personalizowanej — na zawieszce można wykonać dowolną literę, tworząc osobisty symbol związany z imieniem, ważną osobą lub wyjątkowym wspomnieniem.",
+  "specs": {
+    "kamienie": "kryształ górski z turmalinem",
+    "metal": "Srebro 925",
+    "waga": "2,66 g"
+  },
+  "gallery": [
+    "./assets/images/product-83-01.png",
+    "./assets/images/product-83-02.png",
+    "./assets/images/product-83-03.png"
+  ]
+}
+  ,{
+  "id": "rodonit-hematytiks89",
+  "name": "Bransoletka — rodonit, hematyt",
+  "price": 170,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "beige"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-82-01.png",
+    "./assets/images/product-82-02.png",
+    "./assets/images/product-82-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Personalizacja"
+  ],
+  "description": "Bransoletka wykonana z naturalnego rodonitu oraz hematytu w subtelnych odcieniach pudrowego różu, beżu i głębokiej czerni. Połączenie fasetowanych kamieni oraz ciemnych akcentów nadaje całości nowoczesny i elegancki charakter. Srebrna zawieszka została stworzona z myślą o personalizacji — można wykonać na niej dowolny grawer, np. inicjały, ważną datę, symbol lub krótki napis, tworząc wyjątkową i osobistą biżuterię.",
+  "specs": {
+    "kamienie": "rodonit, hematyt",
+    "metal": "Srebro 925",
+    "waga": "0,68 g"
+  },
+  "gallery": [
+    "./assets/images/product-82-01.png",
+    "./assets/images/product-82-02.png",
+    "./assets/images/product-82-03.png"
+  ]
+}
+,{
+  "id": "kwarc-rowy-masa-perowa",
+  "name": "Bransoletka — kwarc różowy, masa perłowa",
+  "price": 230,
+  "currency": "PLN",
+  "colors": [
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-81-01.png",
+    "./assets/images/product-81-02.png",
+    "./assets/images/product-81-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Litery"
+  ],
+  "description": "Bransoletka wykonana z naturalnego kwarcu różowego oraz masy perłowej w delikatnych odcieniach pudrowego różu i kremowej bieli. Subtelna kolorystyka nadaje całości elegancki i romantyczny charakter, a srebrna zawieszka z literą pozwala nadać biżuterii osobiste znaczenie. Litera może symbolizować imię bliskiej osoby, ważne wspomnienie lub własny znak rozpoznawczy, tworząc wyjątkowy i minimalistyczny dodatek na co dzień",
+  "specs": {
+    "kamienie": "kwarc różowy, masa perłowa",
+    "metal": "Srebro 925",
+    "waga": "1.20g"
+  },
+  "gallery": [
+    "./assets/images/product-81-01.png",
+    "./assets/images/product-81-02.png",
+    "./assets/images/product-81-03.png"
+  ]
+}
+  ,{
+  "id": "opalllll",
+  "name": "Bransoletka — opal",
+  "price": 150,
+  "currency": "PLN",
+  "colors": [
+    "green",
+    "silver"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-80-01.png",
+    "./assets/images/product-80-02.png",
+    "./assets/images/product-80-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Personalizacja",
+    "Oczy"
+  ],
+  "description": "Bransoletka wykonana z naturalnego opalu w głębokich odcieniach zieleni, inspirowanych kolorem zielonych oczu. Naturalne przejścia barw tworzą wyjątkową i harmonijną kompozycję, a srebrna zawieszka dodaje całości minimalistycznego charakteru. Model stworzony z myślą o personalizacji — na zawieszce można wykonać dowolny grawer, np. inicjały, datę, symbol lub krótki napis, tworząc osobisty i niepowtarzalny dodatek.",
+  "specs": {
+    "kamienie": "opal",
+    "metal": "Srebro 925",
+    "waga": "0,55 g"
+  },
+  "gallery": [
+    "./assets/images/product-80-01.png",
+    "./assets/images/product-80-02.png",
+    "./assets/images/product-80-03.png"
+  ]
+}
+  ,{
+  "id": "rodonitttiktok",
+  "name": "Bransoletka — rodonit",
+  "price": 150,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "beige"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-79-01.png",
+    "./assets/images/product-79-02.png",
+    "./assets/images/product-79-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Personalizacja"
+  ],
+  "description": "Bransoletka wykonana z naturalnego rodonitu w delikatnych odcieniach różu, pudrowego beżu i kremowej bieli. Harmonijna kolorystyka nadaje jej subtelny, romantyczny charakter, a srebrna zawieszka w kształcie serca podkreśla wyjątkowy styl biżuterii. Model stworzony z myślą o personalizacji — na zawieszce można wykonać dowolny grawer, np. inicjały, ważną datę, symbol lub krótki napis, tworząc osobisty i niepowtarzalny dodatek.",
+  "specs": {
+    "kamienie": "rodonit",
+    "metal": "Srebro 925",
+    "waga": "0,60 g"
+  },
+  "gallery": [
+    "./assets/images/product-79-01.png",
+    "./assets/images/product-79-02.png",
+    "./assets/images/product-79-03.png"
+  ]
+}
+  ,{
+  "id": "rodonit-kamie-rzeczny-ss",
+  "name": "Bransoletka — rodonit, kamień rzeczny",
+  "price": 170,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "beige"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-76-01.png",
+    "./assets/images/product-76-02.png",
+    "./assets/images/product-76-03.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Personalizacja"
+  ],
+  "description": "Bransoletka wykonana z naturalnego rodonitu oraz kamienia rzecznego w delikatnych odcieniach różu, beżu i kremowej bieli. Subtelna, pastelowa kolorystyka nadaje całości lekki i romantyczny charakter, a srebrna zawieszka w kształcie serca podkreśla jej wyjątkowy styl. Model stworzony z myślą o personalizacji — na zawieszce można wykonać dowolny grawer, np. inicjały, ważną datę, symbol lub krótki napis, tworząc osobistą i niepowtarzalną biżuterię.",
+  "specs": {
+    "kamienie": "rodonit, kamień rzeczny",
+    "metal": "Srebro 925",
+    "waga": "0,87 g"
+  },
+  "gallery": [
+    "./assets/images/product-76-01.png",
+    "./assets/images/product-76-02.png",
+    "./assets/images/product-76-03.png"
+  ]
+}
+  ,{
   "id": "kwarcccc",
-  "name": "Bransoletka — kwarc",
+  "name": "Bransoletka — kwarc różowy",
   "price": 290,
   "currency": "PLN",
   "colors": [
@@ -18,9 +292,9 @@ export const PRODUCTS = [
   "categories": [
     "Parowe"
   ],
-  "description": "Zestaw dwóch bransoletek wykonanych z naturalnego kwarcu o jasnej, subtelnej barwie, uzupełnionych srebrnymi zawieszkami w kształcie serca. Minimalistyczna i elegancka kompozycja symbolizująca bliskość oraz więź między dwiema osobami. Bransoletki zostały stworzone z myślą o personalizacji — na zawieszkach można wykonać dowolny grawer, np. inicjały, datę, ważny symbol lub krótki napis, tworząc wyjątkowy i osobisty zestaw",
+  "description": "Zestaw dwóch bransoletek wykonanych z naturalnego kwarcu różowego o jasnej, subtelnej barwie, uzupełnionych srebrnymi zawieszkami w kształcie serca. Minimalistyczna i elegancka kompozycja symbolizująca bliskość oraz więź między dwiema osobami. Bransoletki zostały stworzone z myślą o personalizacji — na zawieszkach można wykonać dowolny grawer, np. inicjały, datę, ważny symbol lub krótki napis, tworząc wyjątkowy i osobisty zestaw",
   "specs": {
-    "kamienie": "kwarc",
+    "kamienie": "kwarc różowy",
     "metal": "Srebro 925",
     "waga": "1,02 g"
   },
