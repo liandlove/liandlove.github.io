@@ -248,7 +248,8 @@ function buildProduct(index) {
   const description = extractDescription(text);
 
   const price = parsePrice(priceText);
-  const id = stone ? slugify(stone) : `produkt-${Math.floor(Math.random() * 100000)}`;
+  const baseId = stone ? slugify(stone) : "produkt";
+  const id = `${baseId}-${index}`;
   const safeStone = stone || "nowy model";
   const name = `Bransoletka — ${safeStone}`;
   const colors = detectColors(description + " " + safeStone);
