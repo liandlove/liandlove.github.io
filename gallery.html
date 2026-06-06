@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Galeria wszystkich zdjęć bransoletek Li & Love. Zobacz pełny przegląd modeli i detali."
+    />
+    <title>Galeria · Li &amp; Love</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css?v=20260427-live1" />
+    <link rel="stylesheet" href="./css/gallery.css?v=20260606-2" />
+
+    <link rel="icon" href="./assets/images/logo-mark.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/images/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/images/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/images/apple-touch-icon-60x60.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Li & Love" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Przejdź do galerii</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Li &amp; Love — strona główna">
+          <img class="brand-logo" src="./assets/images/logo-header.png" alt="Li &amp; Love" />
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" aria-label="Główna nawigacja">
+          <a class="nav-link" href="./index.html">Strona główna</a>
+          <a class="nav-link" href="./catalog.html">Katalog</a>
+          <a class="nav-link is-active" href="./gallery.html">Galeria</a>
+          <a class="nav-link" href="./quiz.html">Quiz</a>
+          <a class="nav-link" href="./index.html#materials">Materiały</a>
+          <a class="nav-link" href="./index.html#contact">Kontakt</a>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="mobile-menu-backdrop" data-close="1"></div>
+      <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <a class="mobile-menu-link" href="./index.html">Strona główna</a>
+        <a class="mobile-menu-link" href="./catalog.html">Katalog</a>
+        <a class="mobile-menu-link" href="./gallery.html">Galeria</a>
+        <a class="mobile-menu-link" href="./quiz.html">Quiz</a>
+        <a class="mobile-menu-link" href="./index.html#materials">Materiały</a>
+        <a class="mobile-menu-link" href="./index.html#contact">Kontakt</a>
+      </div>
+    </div>
+
+    <main id="main" class="gallery-page">
+      <section class="gallery-hero section" data-reveal>
+        <div class="container">
+          <p class="eyebrow">Galeria</p>
+          <h1 class="section-title">Wszystkie zdjęcia kolekcji</h1>
+          <p class="section-subtitle">
+            Pełny podgląd zdjęć wszystkich modeli. Kliknij dowolne zdjęcie, aby otworzyć je w pełnym rozmiarze.
+          </p>
+          <p class="gallery-count" id="galleryCount" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="section gallery-section" data-reveal>
+        <div class="container">
+          <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="gallery-lightbox" id="galleryLightbox" hidden>
+      <div class="gallery-lightbox-backdrop" data-close="1"></div>
+      <div class="gallery-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+        <button class="gallery-lightbox-close" id="galleryLightboxClose" type="button" aria-label="Zamknij podgląd">×</button>
+        <img class="gallery-lightbox-image" id="galleryLightboxImage" src="" alt="" />
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p class="footer-brand">Li &amp; Love</p>
+          <p class="footer-note">© Winky Designs</p>
+        </div>
+        <div class="footer-right">
+          <a class="footer-link" href="tel:+48888888555">+48 888 888 555</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js?v=20260426-akwa2"></script>
+    <script type="module" src="./js/gallery.js?v=20260606-2"></script>
+  </body>
+</html>
