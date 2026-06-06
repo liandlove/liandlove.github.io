@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Generator</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: #2a2a2a;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .dropzone {
+      border: 2px dashed #aaa;
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+      background: white;
+      margin-bottom: 10px;
+    }
+
+    .dropzone.active {
+      border-color: black;
+    }
+
+    .preview img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+
+    .status {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+
+    pre {
+      background: #111;
+      color: #0f0;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Product Generator</h2>
+
+<button class="secondary" onclick="pickProjectFolder()">Wybierz folder projektu</button>
+<div class="status" id="folderStatus">Folder nie wybrany.</div>
+
+<input type="number" id="productIndex" placeholder="Product number (np. 44)" />
+
+<div class="dropzone" data-index="0">
+  Drop Image 1 (main)
+  <div class="preview"></div>
+</div>
+
+<div class="dropzone" data-index="1">
+  Drop Image 2
+  <div class="preview"></div>
+</div>
+
+<div class="dropzone" data-index="2">
+  Drop Image 3
+  <div class="preview"></div>
+</div>
+
+<textarea id="textInput" placeholder="Wklej dane produktu..."></textarea>
+
+<button onclick="generateAndCopy()">Generate & Copy product</button>
+<button onclick="saveToProject()">Zapisz zdjęcia + dodaj do products.js</button>
+<button class="secondary" onclick="specialPushButton()">Special button: commit + push (copy)</button>
+
+<pre id="output"></pre>
+
+<script>
+let files = [null, null, null];
+let projectDirHandle = null;
+let lastProductMeta = null;
+
+const folderStatus = document.getElementById("folderStatus");
+
+document.querySelectorAll(".dropzone").forEach((zone) => {
+  zone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    zone.classList.add("active");
+  });
+
+  zone.addEventListener("dragleave", () => {
+    zone.classList.remove("active");
+  });
+
+  zone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    zone.classList.remove("active");
+
+    const index = Number(zone.dataset.index);
+    const file = e.dataTransfer.files[0];
+    if (!file) return;
+
+    files[index] = file;
+
+    const preview = zone.querySelector(".preview");
+    preview.innerHTML = "";
+
+    const img = document.createElement("img");
+    img.src = URL.createObjectURL(file);
+    preview.appendChild(img);
+  });
+});
+
+function setStatus(msg) {
+  folderStatus.textContent = msg;
+}
+
+async function pickProjectFolder() {
+  if (!("showDirectoryPicker" in window)) {
+    alert("Twoja przeglądarka nie wspiera File System Access API (użyj Chrome/Edge).");
+    return;
+  }
+
+  try {
+    const dir = await window.showDirectoryPicker();
+    await ensureProjectStructure(dir);
+    projectDirHandle = dir;
+    setStatus("Folder projektu wybrany poprawnie.");
+  } catch (error) {
+    if (error && error.name === "AbortError") return;
+    alert("To nie wygląda na folder projektu liandlove.github.io.");
+  }
+}
+
+async function ensureProjectStructure(root) {
+  const jsDir = await root.getDirectoryHandle("js");
+  await jsDir.getFileHandle("products.js");
+  const assetsDir = await root.getDirectoryHandle("assets");
+  await assetsDir.getDirectoryHandle("images");
+}
+
+function getIndex() {
+  const value = document.getElementById("productIndex").value;
+  if (!value) {
+    alert("Wpisz numer produktu!");
+    return null;
+  }
+  return String(value).trim();
+}
+
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function extractField(text, label) {
+  const regex = new RegExp(label + ":(.*)");
+  const match = text.match(regex);
+  return match ? match[1].trim() : "";
+}
+
+function extractDescription(text) {
+  const parts = text.split("Opis:");
+  return parts[1] ? parts[1].trim() : "";
+}
+
+function parsePrice(text) {
+  const parsed = parseInt(String(text).replace(/[^\d]/g, ""), 10);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function detectColors(text) {
+  const map = {
+    ziel: "green",
+    srebr: "silver",
+    czarn: "black",
+    bial: "white",
+    beż: "beige",
+    bez: "beige",
+    oliwk: "green",
+    rozow: "pink",
+    szar: "gray",
+    zl: "gold"
+  };
+
+  const found = [];
+  const lowered = text.toLowerCase();
+  for (const key in map) {
+    if (lowered.includes(key)) found.push(map[key]);
+  }
+  return [...new Set(found)];
+}
+
+function buildProduct(index) {
+  const text = document.getElementById("textInput").value;
+
+  const category = extractField(text, "Kategoria");
+  const priceText = extractField(text, "Cena");
+  const stone = extractField(text, "Rodzaj kamienia");
+  const metal = extractField(text, "Metal");
+  const weight = extractField(text, "Waga");
+  const description = extractDescription(text);
+
+  const price = parsePrice(priceText);
+  const id = stone ? slugify(stone) : `produkt-${Math.floor(Math.random() * 100000)}`;
+  const safeStone = stone || "nowy model";
+  const name = `Bransoletka — ${safeStone}`;
+  const colors = detectColors(description + " " + safeStone);
+
+  const base = `./assets/images/product-${index}`;
+  const images = files
+    .map((file, i) => (file ? `${base}-0${i + 1}.png` : null))
+    .filter(Boolean);
+
+  return {
+    id,
+    name,
+    price,
+    currency: "PLN",
+    colors,
+    material: "sterling_silver",
+    images,
+    featured: false,
+    categories: [category || "Kolekcja"],
+    description,
+    specs: {
+      kamienie: safeStone,
+      metal: metal || "Srebro 925",
+      waga: weight || ""
+    },
+    gallery: images
+  };
+}
+
+function generateAndCopy() {
+  const index = getIndex();
+  if (!index) return;
+
+  const product = buildProduct(index);
+  const json = JSON.stringify(product, null, 2);
+
+  document.getElementById("output").textContent = json;
+  lastProductMeta = { index, product };
+
+  navigator.clipboard.writeText(json).then(() => {
+    alert("Copied to clipboard ✅");
+  });
+}
+
+async function fileToPngBlob(file) {
+  const bitmap = await createImageBitmap(file);
+  const canvas = document.createElement("canvas");
+  canvas.width = bitmap.width;
+  canvas.height = bitmap.height;
+  const ctx = canvas.getContext("2d");
+  ctx.drawImage(bitmap, 0, 0);
+  return new Promise((resolve) => {
+    canvas.toBlob((blob) => resolve(blob), "image/png");
+  });
+}
+
+async function saveImages(index) {
+  const assetsDir = await projectDirHandle.getDirectoryHandle("assets");
+  const imagesDir = await assetsDir.getDirectoryHandle("images");
+
+  for (let i = 0; i < files.length; i += 1) {
+    const file = files[i];
+    if (!file) continue;
+
+    const pngBlob = await fileToPngBlob(file);
+    const fileName = `product-${index}-0${i + 1}.png`;
+    const targetFile = await imagesDir.getFileHandle(fileName, { create: true });
+    const writable = await targetFile.createWritable();
+    await writable.write(pngBlob);
+    await writable.close();
+  }
+}
+
+async function appendProductToProductsJs(product) {
+  const jsDir = await projectDirHandle.getDirectoryHandle("js");
+  const productsFileHandle = await jsDir.getFileHandle("products.js");
+  const file = await productsFileHandle.getFile();
+  const content = await file.text();
+
+  const insertPos = content.lastIndexOf("];");
+  if (insertPos === -1) {
+    throw new Error("Nie znaleziono końca tablicy PRODUCTS w js/products.js");
+  }
+
+  const before = content.slice(0, insertPos).trimEnd();
+  const needsComma = !before.endsWith(",") && !before.endsWith("[");
+  const productJson = JSON.stringify(product, null, 2);
+  const insertChunk = `${needsComma ? "," : ""}\n${productJson}\n`;
+  const next = content.slice(0, insertPos) + insertChunk + content.slice(insertPos);
+
+  const writable = await productsFileHandle.createWritable();
+  await writable.write(next);
+  await writable.close();
+}
+
+async function saveToProject() {
+  const index = getIndex();
+  if (!index) return;
+  if (!projectDirHandle) {
+    alert("Najpierw kliknij 'Wybierz folder projektu'.");
+    return;
+  }
+
+  const product = buildProduct(index);
+  if (!product.images.length) {
+    alert("Dodaj minimum 1 zdjęcie.");
+    return;
+  }
+
+  try {
+    await saveImages(index);
+    await appendProductToProductsJs(product);
+    document.getElementById("output").textContent = JSON.stringify(product, null, 2);
+    lastProductMeta = { index, product };
+    alert("Zapisane: zdjęcia + js/products.js ✅");
+  } catch (error) {
+    console.error(error);
+    alert("Błąd zapisu. Sprawdź uprawnienia do folderu i spróbuj ponownie.");
+  }
+}
+
+function specialPushButton() {
+  const idx = lastProductMeta?.index ? String(lastProductMeta.index) : "unknown";
+  const commitTitle = `add product ${idx} from generator`;
+  const commands = [
+    "git add .",
+    `git commit -m "${commitTitle}"`,
+    "git push"
+  ];
+
+  const text = commands.join("\n");
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Skopiowałem komendy git do schowka. Wklej je w terminalu projektu.");
+  });
+}
+</script>
+
+</body>
+</html>
