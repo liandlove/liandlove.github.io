@@ -191,6 +191,52 @@
   animation: resultsTick 320ms var(--ease);
 }
 
+.pagination {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pagination[hidden] {
+  display: none !important;
+}
+
+.pagination-btn {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(13, 13, 13, 0.18);
+  background: rgba(255, 255, 255, 0.8);
+  color: rgba(13, 13, 13, 0.82);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.pagination-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(13, 13, 13, 0.3);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.pagination-btn.is-active {
+  background: var(--black);
+  color: var(--off-white);
+  border-color: var(--black);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
 @keyframes resultsTick {
   from {
     opacity: 0.55;

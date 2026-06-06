@@ -188,6 +188,38 @@ function syncEmptyState(emptyEl, hasResults) {
   emptyEl.hidden = hasResults;
 }
 
+function renderPagination(container, currentPage, totalPages, onPageChange) {
+  if (!(container instanceof HTMLElement)) return;
+  if (totalPages <= 1) {
+    container.hidden = true;
+    container.replaceChildren();
+    return;
+  }
+
+  container.hidden = false;
+  const fragment = document.createDocumentFragment();
+
+  const createBtn = (label, page, options = {}) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "pagination-btn";
+    btn.textContent = label;
+    if (options.active) btn.classList.add("is-active");
+    if (options.disabled) btn.disabled = true;
+    btn.addEventListener("click", () => onPageChange(page));
+    return btn;
+  };
+
+  fragment.appendChild(createBtn("Prev", currentPage - 1, { disabled: currentPage === 1 }));
+
+  for (let page = 1; page <= totalPages; page += 1) {
+    fragment.appendChild(createBtn(String(page), page, { active: page === currentPage }));
+  }
+
+  fragment.appendChild(createBtn("Next", currentPage + 1, { disabled: currentPage === totalPages }));
+  container.replaceChildren(fragment);
+}
+
 function resetUI() {
   document.querySelectorAll('input[name="category"]').forEach((el) => {
     el.checked = false;
@@ -200,6 +232,7 @@ function resetUI() {
 }
 
 export function initCatalog(products) {
+  const PAGE_SIZE = 10;
   const grid = document.getElementById("catalogGrid");
   if (!grid) return;
 
@@ -207,6 +240,7 @@ export function initCatalog(products) {
 
   const categoriesRoot = document.getElementById("filterCategories");
   const resultsCount = document.getElementById("resultsCount");
+  const paginationRoot = document.getElementById("catalogPagination");
   const emptyState = document.getElementById("emptyState");
   const openBtn = document.getElementById("openFilters");
   const drawer = document.getElementById("filtersDrawer");
@@ -214,6 +248,7 @@ export function initCatalog(products) {
   const panel = document.getElementById("filtersPanel");
   let closeTimer = 0;
   let isScrollBlocked = false;
+  let currentPage = 1;
 
   function isInsideDrawerScrollable(target) {
     if (!(target instanceof Node)) return false;
@@ -320,13 +355,23 @@ export function initCatalog(products) {
     }, 260);
   }
 
-  function rerender() {
+  function rerender({ resetPage = false } = {}) {
+    if (resetPage) currentPage = 1;
     const state = getStateFromUI();
     const filtered = applyFilters(products, state);
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    if (currentPage > totalPages) currentPage = totalPages;
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    const pageItems = filtered.slice(start, end);
 
-    renderProductGrid(grid, filtered);
+    renderProductGrid(grid, pageItems);
     setResultsText(resultsCount, filtered.length, products.length);
     syncEmptyState(emptyState, filtered.length > 0);
+    renderPagination(paginationRoot, currentPage, totalPages, (page) => {
+      currentPage = page;
+      rerender();
+    });
   }
 
   const resetBtn = document.getElementById("resetFilters");
@@ -334,20 +379,20 @@ export function initCatalog(products) {
 
   function resetAndRender() {
     resetUI();
-    rerender();
+    rerender({ resetPage: true });
   }
 
   document.addEventListener("change", (e) => {
     const t = e.target;
     if (!(t instanceof HTMLElement)) return;
-    if (t.matches('input[name="category"]')) rerender();
+    if (t.matches('input[name="category"]')) rerender({ resetPage: true });
   });
 
   const minEl = document.getElementById("priceMin");
   const maxEl = document.getElementById("priceMax");
 
-  minEl?.addEventListener("input", rerender);
-  maxEl?.addEventListener("input", rerender);
+  minEl?.addEventListener("input", () => rerender({ resetPage: true }));
+  maxEl?.addEventListener("input", () => rerender({ resetPage: true }));
 
   resetBtn?.addEventListener("click", resetAndRender);
   resetBtnEmpty?.addEventListener("click", resetAndRender);
@@ -373,6 +418,6 @@ export function initCatalog(products) {
     if (!isMobile()) closeDrawer();
   });
 
-  rerender();
+  rerender({ resetPage: true });
 }
 

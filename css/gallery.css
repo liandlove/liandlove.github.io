@@ -24,6 +24,12 @@
   gap: 12px;
 }
 
+.gallery-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
 .gallery-item {
   display: block;
   width: 100%;

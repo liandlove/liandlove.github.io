@@ -25,10 +25,12 @@ function collectAllImages(products) {
 function renderGallery() {
   const galleryGrid = document.getElementById("galleryGrid");
   const galleryCount = document.getElementById("galleryCount");
+  const loadMoreButton = document.getElementById("galleryLoadMore");
   const lightbox = document.getElementById("galleryLightbox");
   const lightboxImage = document.getElementById("galleryLightboxImage");
   const lightboxClose = document.getElementById("galleryLightboxClose");
   if (!(galleryGrid instanceof HTMLElement)) return;
+  if (!(loadMoreButton instanceof HTMLButtonElement)) return;
   if (!(lightbox instanceof HTMLElement)) return;
   if (!(lightboxImage instanceof HTMLImageElement)) return;
 
@@ -37,8 +39,6 @@ function renderGallery() {
   if (galleryCount instanceof HTMLElement) {
     galleryCount.textContent = `Liczba zdjęć: ${allImages.length}`;
   }
-
-  const fragment = document.createDocumentFragment();
 
   let previousOverflow = "";
   const closeLightbox = () => {
@@ -72,7 +72,7 @@ function renderGallery() {
     closeLightbox();
   });
 
-  for (const image of allImages) {
+  const createGalleryItem = (image) => {
     const button = document.createElement("button");
     button.className = "gallery-item";
     button.type = "button";
@@ -84,12 +84,48 @@ function renderGallery() {
     img.alt = image.alt;
     img.loading = "lazy";
     img.decoding = "async";
+    img.setAttribute("fetchpriority", "low");
 
     button.appendChild(img);
-    fragment.appendChild(button);
-  }
+    return button;
+  };
 
-  galleryGrid.replaceChildren(fragment);
+  const INITIAL_SIZE = 20;
+  const LOAD_MORE_SIZE = 48;
+  let cursor = 0;
+
+  const renderBatch = (batchSize) => {
+    if (cursor >= allImages.length) {
+      loadMoreButton.hidden = true;
+      return;
+    }
+
+    const fragment = document.createDocumentFragment();
+    const limit = Math.min(cursor + batchSize, allImages.length);
+
+    for (let i = cursor; i < limit; i += 1) {
+      fragment.appendChild(createGalleryItem(allImages[i]));
+    }
+
+    galleryGrid.appendChild(fragment);
+    cursor = limit;
+
+    const remaining = allImages.length - cursor;
+    if (remaining <= 0) {
+      loadMoreButton.hidden = true;
+      return;
+    }
+
+    loadMoreButton.hidden = false;
+    loadMoreButton.textContent = `Pokaż więcej (${Math.min(remaining, LOAD_MORE_SIZE)})`;
+  };
+
+  loadMoreButton.addEventListener("click", () => {
+    renderBatch(LOAD_MORE_SIZE);
+  });
+
+  galleryGrid.replaceChildren();
+  requestAnimationFrame(() => renderBatch(INITIAL_SIZE));
 }
 
 document.addEventListener("DOMContentLoaded", renderGallery);
