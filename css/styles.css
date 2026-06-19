@@ -1623,6 +1623,9 @@ body.is-safari .feature {
 #contact.is-sequencing .section-actions .btn:nth-child(4) {
   animation-delay: 1180ms;
 }
+#contact.is-sequencing .section-actions .btn:nth-child(5) {
+  animation-delay: 1320ms;
+}
 
 /* Safari-safe: JS applies .is-pulse sequentially (cards + buttons) */
 #contact .is-pulse {
@@ -1829,6 +1832,9 @@ body.is-safari .feature {
   }
   .hero-copy {
     text-align: center;
+  }
+  .hero-subtitle {
+    margin-inline: auto;
   }
   .hero-actions {
     justify-content: center;

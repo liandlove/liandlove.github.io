@@ -278,8 +278,8 @@ function triggerContactSequence() {
   const featureDelays = [120, 320, 520];
   features.slice(0, 3).forEach((el, idx) => pulse(el, featureDelays[idx] ?? 120 + idx * 200));
 
-  const btnDelays = [760, 900, 1040, 1180];
-  buttons.slice(0, 4).forEach((el, idx) => pulse(el, btnDelays[idx] ?? 760 + idx * 140));
+  const btnDelays = [760, 900, 1040, 1180, 1320];
+  buttons.slice(0, 5).forEach((el, idx) => pulse(el, btnDelays[idx] ?? 760 + idx * 140));
 }
 
 function initContactSequence() {
