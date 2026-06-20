@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Li & Love - nowoczesne, minimalistyczne bransoletki z naturalnych kamieni i srebra 925."
+    />
+    <title>Li &amp; Love - Nowoczesny minimalizm</title>
+    <link rel="icon" href="./assets/images/logo-mark.png" />
+    <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
+    <style>
+      :root {
+        --ink: #111111;
+        --muted: #656565;
+        --line: rgba(17, 17, 17, 0.12);
+        --paper: #fbfbf9;
+        --soft: #f1f3f2;
+        --mist: #dfe7e4;
+        --white: #ffffff;
+        --container: 1180px;
+        --radius: 8px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        width: min(100% - 32px, var(--container));
+        margin-inline: auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid var(--line);
+        background: rgba(251, 251, 249, 0.88);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        min-height: 76px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .brand img {
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 5px;
+        background: rgba(255, 255, 255, 0.62);
+      }
+
+      .nav-links a {
+        border-radius: 999px;
+        padding: 9px 13px;
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: background 160ms ease, color 160ms ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        background: var(--ink);
+        color: var(--white);
+      }
+
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+        padding: 10px 16px;
+        background: var(--ink);
+        color: var(--white);
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+        min-height: calc(100vh - 76px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(48px, 7vw, 96px) max(32px, calc((100vw - var(--container)) / 2));
+        padding-right: clamp(28px, 5vw, 70px);
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 9.4em;
+        margin-bottom: 22px;
+        font-size: clamp(48px, 8vw, 112px);
+        font-weight: 650;
+        letter-spacing: -0.075em;
+        line-height: 0.9;
+      }
+
+      .hero-copy > p:not(.eyebrow) {
+        max-width: 560px;
+        margin-bottom: 34px;
+        color: var(--muted);
+        font-size: clamp(17px, 1.45vw, 22px);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+        padding: 12px 18px;
+        font-size: 12px;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+        transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button.primary {
+        background: var(--ink);
+        color: var(--white);
+      }
+
+      .button.secondary {
+        background: transparent;
+      }
+
+      .hero-media {
+        position: relative;
+        min-height: 560px;
+        background: var(--soft);
+        overflow: hidden;
+      }
+
+      .hero-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.16));
+        pointer-events: none;
+      }
+
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .hero-note {
+        position: absolute;
+        right: 22px;
+        bottom: 22px;
+        z-index: 1;
+        width: min(320px, calc(100% - 44px));
+        border: 1px solid rgba(255, 255, 255, 0.62);
+        border-radius: var(--radius);
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.76);
+        backdrop-filter: blur(16px);
+      }
+
+      .hero-note strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero-note span {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .section {
+        padding-block: clamp(64px, 9vw, 116px);
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 28px;
+        margin-bottom: 26px;
+      }
+
+      .section-head h2 {
+        max-width: 720px;
+        margin-bottom: 0;
+        font-size: clamp(34px, 5vw, 76px);
+        font-weight: 620;
+        letter-spacing: -0.06em;
+        line-height: 0.96;
+      }
+
+      .section-head p {
+        max-width: 340px;
+        margin-bottom: 4px;
+        color: var(--muted);
+      }
+
+      .editorial-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 14px;
+      }
+
+      .feature-image,
+      .mini-image,
+      .product {
+        position: relative;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--white);
+        overflow: hidden;
+      }
+
+      .feature-image {
+        min-height: 640px;
+      }
+
+      .mini-stack {
+        display: grid;
+        gap: 14px;
+      }
+
+      .mini-image {
+        min-height: 313px;
+      }
+
+      .feature-image img,
+      .mini-image img,
+      .product img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .image-label {
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        border-radius: 999px;
+        padding: 8px 12px;
+        background: rgba(255, 255, 255, 0.82);
+        color: var(--ink);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        backdrop-filter: blur(10px);
+      }
+
+      .values {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .value {
+        min-height: 250px;
+        padding: clamp(24px, 4vw, 42px);
+        border-right: 1px solid var(--line);
+      }
+
+      .value:last-child {
+        border-right: 0;
+      }
+
+      .value span {
+        display: block;
+        margin-bottom: 42px;
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .value h3 {
+        margin-bottom: 12px;
+        font-size: clamp(22px, 2.5vw, 34px);
+        font-weight: 610;
+        letter-spacing: -0.04em;
+        line-height: 1.05;
+      }
+
+      .value p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .product {
+        min-height: 100%;
+      }
+
+      .product-media {
+        aspect-ratio: 4 / 5;
+        background: var(--soft);
+        overflow: hidden;
+      }
+
+      .product img {
+        transition: transform 340ms ease;
+      }
+
+      .product:hover img {
+        transform: scale(1.025);
+      }
+
+      .product-body {
+        display: grid;
+        gap: 8px;
+        padding: 14px;
+      }
+
+      .product h3 {
+        margin-bottom: 0;
+        font-size: 15px;
+        font-weight: 620;
+        letter-spacing: -0.01em;
+      }
+
+      .product p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .price {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .contact-band {
+        border-top: 1px solid var(--line);
+        background: var(--ink);
+        color: var(--white);
+      }
+
+      .contact-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+        gap: 34px;
+        align-items: end;
+        padding-block: clamp(64px, 9vw, 112px);
+      }
+
+      .contact-inner h2 {
+        max-width: 780px;
+        margin-bottom: 22px;
+        font-size: clamp(42px, 7vw, 104px);
+        font-weight: 620;
+        letter-spacing: -0.075em;
+        line-height: 0.9;
+      }
+
+      .contact-inner p {
+        max-width: 520px;
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 18px;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .contact-list a {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: var(--radius);
+        padding: 15px 16px;
+        color: rgba(255, 255, 255, 0.78);
+        transition: border-color 160ms ease, color 160ms ease, background 160ms ease;
+      }
+
+      .contact-list a:hover {
+        border-color: rgba(255, 255, 255, 0.46);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--white);
+      }
+
+      footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        background: var(--ink);
+        color: rgba(255, 255, 255, 0.56);
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        padding-block: 24px;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 980px) {
+        .nav {
+          min-height: 68px;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+
+        .hero-copy {
+          order: 2;
+          padding: 44px 16px 58px;
+        }
+
+        .hero-media {
+          min-height: 68vh;
+        }
+
+        .section-head {
+          display: grid;
+        }
+
+        .editorial-grid,
+        .contact-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .feature-image,
+        .mini-image {
+          min-height: 360px;
+        }
+
+        .values,
+        .products {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .value:nth-child(2) {
+          border-right: 0;
+        }
+
+        .value:last-child {
+          grid-column: 1 / -1;
+          border-top: 1px solid var(--line);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .brand span {
+          display: none;
+        }
+
+        .nav-cta {
+          min-height: 40px;
+          padding-inline: 13px;
+        }
+
+        h1 {
+          font-size: clamp(46px, 15vw, 68px);
+        }
+
+        .hero-media {
+          min-height: 56vh;
+        }
+
+        .hero-note {
+          left: 14px;
+          right: 14px;
+          bottom: 14px;
+          width: auto;
+        }
+
+        .values,
+        .products {
+          grid-template-columns: 1fr;
+        }
+
+        .value,
+        .value:nth-child(2),
+        .value:last-child {
+          grid-column: auto;
+          border-right: 0;
+          border-top: 1px solid var(--line);
+        }
+
+        .value:first-child {
+          border-top: 0;
+        }
+
+        .footer-inner,
+        .contact-list a {
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="container nav">
+          <a class="brand" href="./indexv2.html" aria-label="Li & Love - strona testowa">
+            <img src="./assets/images/logo-mark.png" alt="" />
+            <span>Li &amp; Love</span>
+          </a>
+
+          <nav class="nav-links" aria-label="Nawigacja">
+            <a href="./catalog.html">Katalog</a>
+            <a href="./gallery.html">Galeria</a>
+            <a href="./quiz.html">Quiz</a>
+            <a href="#materials">Materiały</a>
+            <a href="#contact">Kontakt</a>
+          </nav>
+
+          <a class="nav-cta" href="./catalog.html">Zobacz teraz</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Srebro 925 / naturalne kamienie</p>
+            <h1>Subtelna biżuteria, wyraźny charakter.</h1>
+            <p>
+              Bransoletki tworzone ręcznie, z detalem, który nie krzyczy. Minimalizm,
+              personalizacja i kamienie dobrane do codziennego rytmu.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="./catalog.html">Zobacz katalog</a>
+              <a class="button secondary" href="#selection">Wybrane modele</a>
+            </div>
+          </div>
+
+          <div class="hero-media" aria-label="Bransoletka Li & Love">
+            <img src="./assets/images/product-84-01.png" alt="Bransoletka Li & Love z jasnymi kamieniami" />
+            <div class="hero-note">
+              <strong>Nowoczesny talizman</strong>
+              <span>Naturalne kamienie, srebrne zawieszki i subtelna personalizacja.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="materials">
+          <div class="container">
+            <div class="section-head">
+              <h2>Czyste formy. Prawdziwa tekstura.</h2>
+              <p>Nowa wersja strony stawia produkt na pierwszym planie: mniej dekoracji, więcej powietrza i mocniejsze zdjęcia.</p>
+            </div>
+
+            <div class="editorial-grid">
+              <article class="feature-image">
+                <img src="./assets/images/product-81-01.png" alt="Bransoletka z różowego kwarcu i masy perłowej" />
+                <span class="image-label">Perła / kwarc różowy</span>
+              </article>
+              <div class="mini-stack">
+                <article class="mini-image">
+                  <img src="./assets/images/product-83-01.png" alt="Bransoletka z kryształu górskiego z turmalinem" />
+                  <span class="image-label">Personalizacja</span>
+                </article>
+                <article class="mini-image">
+                  <img src="./assets/images/product-78-01.png" alt="Bransoletka z jaspisu kambaba" />
+                  <span class="image-label">Naturalne kamienie</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="values" aria-label="Wartości marki">
+          <article class="value">
+            <span>01</span>
+            <h3>Ręczne wykonanie</h3>
+            <p>Każda bransoletka ma własny rytm kamieni, kolorów i srebrnych detali.</p>
+          </article>
+          <article class="value">
+            <span>02</span>
+            <h3>Naturalne materiały</h3>
+            <p>Kamienie, perły, srebro 925 i kompozycje stworzone tak, by działały na co dzień.</p>
+          </article>
+          <article class="value">
+            <span>03</span>
+            <h3>Osobisty znak</h3>
+            <p>Grawer, litera albo symbol zmienia prostą bransoletkę w mały, osobisty talizman.</p>
+          </article>
+        </section>
+
+        <section class="section" id="selection">
+          <div class="container">
+            <div class="section-head">
+              <h2>Wybrane modele.</h2>
+              <p>Krótka selekcja modeli, które dobrze pokazują kierunek wizualny tej wersji.</p>
+            </div>
+
+            <div class="products">
+              <article class="product">
+                <a href="./catalog.html">
+                  <div class="product-media">
+                    <img src="./assets/images/product-86-01.png" alt="Bransoletka larvikit" />
+                  </div>
+                  <div class="product-body">
+                    <h3>Bransoletka - larvikit</h3>
+                    <p>Chłodne odcienie szarości i grafitu.</p>
+                    <span class="price">170 PLN</span>
+                  </div>
+                </a>
+              </article>
+
+              <article class="product">
+                <a href="./catalog.html">
+                  <div class="product-media">
+                    <img src="./assets/images/product-80-01.png" alt="Bransoletka opal" />
+                  </div>
+                  <div class="product-body">
+                    <h3>Bransoletka - opal</h3>
+                    <p>Głęboka zieleń i srebrna zawieszka.</p>
+                    <span class="price">150 PLN</span>
+                  </div>
+                </a>
+              </article>
+
+              <article class="product">
+                <a href="./catalog.html">
+                  <div class="product-media">
+                    <img src="./assets/images/product-77-01.png" alt="Zestaw bransoletek z kwarcem różowym" />
+                  </div>
+                  <div class="product-body">
+                    <h3>Zestaw - kwarc różowy</h3>
+                    <p>Dwie delikatne bransoletki z sercem.</p>
+                    <span class="price">290 PLN</span>
+                  </div>
+                </a>
+              </article>
+
+              <article class="product">
+                <a href="./catalog.html">
+                  <div class="product-media">
+                    <img src="./assets/images/product-75-01.png" alt="Bransoletka bursztyn i tygrysie oko" />
+                  </div>
+                  <div class="product-body">
+                    <h3>Bursztyn / tygrysie oko</h3>
+                    <p>Ciepła, naturalna kompozycja kamieni.</p>
+                    <span class="price">200 PLN</span>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-band" id="contact">
+          <div class="container contact-inner">
+            <div>
+              <h2>Gotowi na spokojniejszy styl?</h2>
+              <p>
+                To testowa wersja strony. Możesz porównać ją z obecną i zdecydować,
+                czy iść dalej w stronę bardziej minimalistycznego, magazynowego stylu.
+              </p>
+            </div>
+
+            <div class="contact-list" aria-label="Kontakt">
+              <a href="tel:+48888888555"><span>Telefon</span><strong>+48 888 888 555</strong></a>
+              <a href="https://t.me/fleur_de_lis_li"><span>Telegram</span><strong>@fleur_de_lis_li</strong></a>
+              <a href="https://www.instagram.com/bizuteria_li_andlove/"><span>Instagram</span><strong>Li &amp; Love</strong></a>
+              <a href="./catalog.html"><span>Katalog</span><strong>Zobacz produkty</strong></a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container footer-inner">
+          <span>Li &amp; Love</span>
+          <span>Alternatywna wersja strony głównej</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
