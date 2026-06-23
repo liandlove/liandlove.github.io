@@ -2294,6 +2294,35 @@ export const PRODUCTS = [
     ],
     tags: ["beads", "mens", "minimal"],
   },
+
+{
+  "id": "brak-sznurek-jubilerski-87",
+  "name": "Bransoletka — brak (sznurek jubilerski)",
+  "price": 190,
+  "currency": "PLN",
+  "colors": [
+    "silver",
+    "black",
+    "beige"
+  ],
+  "material": "sterling_silver",
+  "images": [
+    "./assets/images/product-87-01.png"
+  ],
+  "featured": false,
+  "categories": [
+    "Męskie"
+  ],
+  "description": "Męska bransoletka wykonana z trwałego, czarnego sznurka jubilerskiego o gęstym, klasycznym splocie makramowym. Główną ozdobę stanowią masywne, srebrne elementy o surowej, fakturowanej powierzchni, w tym detale o geometrycznych kształtach oraz motyw inspirowany antyczną monetą lub sygnetem. Wyrazisty i bezkompromisowy design sprawia, że bransoletka idealnie pasuje do nowoczesnego, męskiego stylu z rockowym lub streetwearowym akcentem. Doskonały wybór dla mężczyzn ceniących oryginalne i mocne dodatki z charakterem.",
+  "specs": {
+    "kamienie": "brak (sznurek jubilerski)",
+    "metal": "Srebro 925",
+    "waga": "3,50 g"
+  },
+  "gallery": [
+    "./assets/images/product-87-01.png"
+  ]
+}
 ];
 
 export const COLOR_META = {
